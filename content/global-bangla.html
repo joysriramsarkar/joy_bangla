@@ -1,0 +1,2359 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>গ্লোবাল বাংলা — বিশ্বে বাংলার পুনর্জাগরণ ২০৪০</title>
+<meta name="description" content="৩০ কোটি মানুষের ভাষাকে বিশ্বের অন্যতম শক্তিশালী ডিজিটাল, সাংস্কৃতিক ও অর্থনৈতিক ভাষায় পরিণত করার উন্মুক্ত মহাযজ্ঞ।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --bg-deep:    #060912;
+  --bg-surface: #0c101c;
+  --bg-card:    rgba(255,255,255,0.035);
+  --bg-card-h:  rgba(255,255,255,0.07);
+  --green:      #006A4E;
+  --green-lt:   #00e599;
+  --green-glow: rgba(0, 229, 153, 0.25);
+  --red:        #E3001B;
+  --red-lt:     #ff334b;
+  --red-glow:   rgba(255, 51, 75, 0.25);
+  --gold:       #f5b041;
+  --gold-lt:    #ffe066;
+  --gold-glow:  rgba(245, 176, 65, 0.25);
+  --purple:     #8b5cf6;
+  --purple-lt:  #a78bfa;
+  --text:       #f3f4f6;
+  --text-dim:   #9ca3af;
+  --border:     rgba(255,255,255,0.08);
+  --border-h:   rgba(255,255,255,0.18);
+  --radius:     16px;
+  --radius-sm:  10px;
+  --shadow:     0 12px 40px rgba(0,0,0,0.6);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Hind Siliguri', 'Inter', -apple-system, sans-serif;
+  background: var(--bg-deep);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--red); }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red-lt);
+  background: rgba(227,0,27,0.1);
+  border: 1px solid rgba(227,0,27,0.25);
+  padding: 4px 14px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+.section-title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.section-sub {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--text-dim);
+  max-width: 680px;
+  margin-bottom: 48px;
+}
+.tag-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 6px;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 4%; height: 68px;
+  background: rgba(6, 9, 18, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+.nav-brand {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 1.25rem; font-weight: 800; text-decoration: none; color: #fff;
+}
+.nav-flag-wrap {
+  position: relative; width: 30px; height: 19px; border-radius: 4px; overflow: hidden;
+  background: var(--green); display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 10px rgba(0,106,78,0.5);
+}
+.nav-flag-wrap::after {
+  content: ''; width: 11px; height: 11px; border-radius: 50%; background: var(--red);
+  transform: translateX(-15%);
+}
+.nav-links { display: flex; gap: 20px; list-style: none; }
+.nav-links a {
+  color: var(--text-dim); text-decoration: none; font-size: 0.9rem; font-weight: 500;
+  padding: 6px 10px; border-radius: 6px; transition: all 0.2s;
+}
+.nav-links a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.btn-doc {
+  background: rgba(245, 176, 65, 0.12); color: var(--gold-lt);
+  border: 1px solid rgba(245, 176, 65, 0.3); border-radius: 8px;
+  padding: 8px 16px; font-family: inherit; font-size: 0.85rem; font-weight: 700;
+  cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;
+}
+.btn-doc:hover { background: rgba(245, 176, 65, 0.22); transform: translateY(-1px); }
+.nav-cta {
+  background: var(--red); color: #fff; border: none; border-radius: 8px;
+  padding: 8px 18px; font-family: inherit; font-size: 0.85rem; font-weight: 700;
+  cursor: pointer; transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--red-lt); box-shadow: 0 0 20px var(--red-glow); transform: translateY(-1px); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 120px 6% 70px;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(227,0,27,0.18) 0%, transparent 55%),
+    radial-gradient(circle at 20% 75%, rgba(0,106,78,0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(245,176,65,0.12) 0%, transparent 45%);
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(227,0,27,0.12); border: 1px solid rgba(227,0,27,0.35);
+  border-radius: 100px; padding: 6px 18px; font-size: 0.85rem; font-weight: 700;
+  color: #ff99a6; margin-bottom: 24px; position: relative; z-index: 1;
+}
+.hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1; transform:scale(1);} 50%{opacity:0.4; transform:scale(0.8);} }
+.hero h1 {
+  font-size: clamp(2.6rem, 7.5vw, 5.8rem); font-weight: 900;
+  line-height: 1.12; letter-spacing: -0.03em;
+  position: relative; z-index: 1; max-width: 1050px;
+}
+.hero h1 .gr {
+  background: linear-gradient(135deg, #ff4d61, #f5b041, #00e599);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-sub {
+  font-size: clamp(1.05rem, 2.3vw, 1.3rem); color: #d1d5db; max-width: 750px;
+  margin: 24px auto 0; position: relative; z-index: 1;
+}
+.hero-tagline {
+  display: inline-block; margin-top: 18px;
+  font-size: 1rem; color: var(--green-lt); font-weight: 700;
+  position: relative; z-index: 1;
+  background: rgba(0, 229, 153, 0.08); border: 1px solid rgba(0, 229, 153, 0.25);
+  padding: 6px 18px; border-radius: 8px;
+}
+.hero-stats {
+  display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+  margin: 46px 0 36px; position: relative; z-index: 1;
+}
+.hstat {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+  padding: 16px 24px; border-radius: 14px; min-width: 160px;
+  backdrop-filter: blur(10px); transition: all 0.3s;
+}
+.hstat:hover { transform: translateY(-3px); border-color: var(--border-h); }
+.hstat-n { font-size: 2rem; font-weight: 900; line-height: 1; margin-bottom: 6px; }
+.hstat-l { font-size: 0.8rem; color: var(--text-dim); font-weight: 600; text-transform: uppercase; }
+.hero-actions {
+  display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+  position: relative; z-index: 1;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--red), #c70018); color: #fff;
+  border: none; border-radius: 10px; padding: 14px 28px;
+  font-family: inherit; font-size: 1rem; font-weight: 700; cursor: pointer;
+  box-shadow: 0 4px 20px var(--red-glow); transition: all 0.25s;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(227,0,27,0.45); }
+.btn-ghost {
+  background: rgba(255,255,255,0.06); color: #fff;
+  border: 1px solid var(--border); border-radius: 10px; padding: 14px 28px;
+  font-family: inherit; font-size: 1rem; font-weight: 600; cursor: pointer;
+  transition: all 0.25s;
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.12); border-color: var(--border-h); transform: translateY(-2px); }
+
+/* ── MARQUEE ── */
+.marquee-wrap {
+  width: 100%; overflow: hidden; background: #0b0f1a; border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border); padding: 14px 0; white-space: nowrap;
+}
+.marquee-inner { display: inline-flex; gap: 48px; animation: ticker 40s linear infinite; }
+.marquee-inner span {
+  font-size: 0.95rem; font-weight: 600; color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px;
+}
+.marquee-inner span b { color: var(--red-lt); font-weight: 800; }
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ── FLOATING CHARS ── */
+.bg-chars { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; opacity: 0.035; }
+.bg-char {
+  position: absolute; font-size: 3rem; font-weight: 800; color: #fff;
+  animation: floatUp linear infinite;
+}
+@keyframes floatUp {
+  0% { transform: translateY(105vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+/* ── CRISIS ── */
+.crisis { padding: 100px 0; position: relative; z-index: 1; }
+.crisis-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;
+}
+.crisis-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 32px 24px; transition: all 0.3s; position: relative; overflow: hidden;
+}
+.crisis-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent); opacity: 0; transition: opacity 0.3s;
+}
+.crisis-card:hover { transform: translateY(-4px); background: var(--bg-card-h); border-color: rgba(227,0,27,0.3); }
+.crisis-card:hover::before { opacity: 1; }
+.crisis-icon { font-size: 2.2rem; margin-bottom: 18px; }
+.crisis-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; color: #fff; }
+.crisis-card p { font-size: 0.92rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 16px; }
+.crisis-stat {
+  font-size: 0.85rem; font-weight: 700; color: var(--red-lt);
+  background: rgba(227,0,27,0.1); border: 1px solid rgba(227,0,27,0.2);
+  padding: 6px 12px; border-radius: 6px; display: inline-block;
+}
+
+/* ── LAB SECTIONS COMMON ── */
+.lab-section {
+  padding: 100px 0; background: #080c18; border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border); position: relative; z-index: 1;
+}
+.lab-card {
+  background: rgba(14, 18, 32, 0.7); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius); padding: 36px; backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+}
+
+/* ── TOKENIZER LAB ── */
+.tok-input-area {
+  display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;
+}
+.tok-input-area textarea {
+  width: 100%; background: #060912; border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; color: #fff; font-family: inherit; font-size: 1.05rem;
+  resize: vertical; min-height: 90px; outline: none; transition: border-color 0.2s;
+}
+.tok-input-area textarea:focus { border-color: var(--green-lt); }
+.tok-presets { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.tok-preset-btn {
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 6px;
+  color: var(--text-dim); font-size: 0.8rem; padding: 5px 12px; cursor: pointer; transition: all 0.2s;
+}
+.tok-preset-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.tok-compare-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px;
+}
+@media (max-width: 768px) { .tok-compare-grid { grid-template-columns: 1fr; } }
+.tok-box {
+  background: #060912; border: 1px solid var(--border); border-radius: 12px; padding: 20px;
+}
+.tok-box-head {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;
+  border-bottom: 1px solid var(--border); padding-bottom: 10px;
+}
+.tok-box-title { font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+.tok-chips-wrap {
+  display: flex; flex-wrap: wrap; gap: 6px; min-height: 80px; align-content: flex-start;
+  background: rgba(255,255,255,0.02); padding: 12px; border-radius: 8px; border: 1px dashed rgba(255,255,255,0.08);
+}
+.tok-chip {
+  padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; font-family: monospace; font-weight: 600;
+  display: inline-flex; align-items: center;
+}
+.tok-chip-bad {
+  background: rgba(227,0,27,0.18); border: 1px solid rgba(227,0,27,0.4); color: #ff99a6;
+}
+.tok-chip-good {
+  background: rgba(0,229,153,0.18); border: 1px solid rgba(0,229,153,0.4); color: #6ee7b7;
+}
+.tok-metrics-bar {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-top: 24px;
+}
+.tok-metric-item {
+  background: #060912; border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center;
+}
+.tok-metric-val { font-size: 1.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 4px; }
+.tok-metric-lbl { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; font-weight: 600; }
+
+/* ── AUDIO LAB ── */
+.audio-studio-wrap {
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px;
+}
+@media (max-width: 900px) { .audio-studio-wrap { grid-template-columns: 1fr; } }
+.audio-recorder-box {
+  background: #060912; border: 1px solid var(--border); border-radius: 14px; padding: 24px;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.prompt-sentence-card {
+  background: rgba(245, 176, 65, 0.05); border: 1px solid rgba(245, 176, 65, 0.25);
+  border-radius: 10px; padding: 18px; position: relative;
+}
+.prompt-tag {
+  font-size: 0.75rem; font-weight: 700; color: var(--gold-lt); text-transform: uppercase; margin-bottom: 8px;
+}
+.prompt-text {
+  font-size: 1.2rem; font-weight: 700; color: #fff; line-height: 1.5;
+}
+.prompt-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; }
+.prompt-btn {
+  background: rgba(255,255,255,0.06); border: 1px solid var(--border); border-radius: 6px;
+  color: #fff; padding: 4px 10px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;
+}
+.prompt-btn:hover { background: rgba(255,255,255,0.12); }
+#waveformCanvas {
+  width: 100%; height: 90px; background: #030509; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);
+}
+.record-controls {
+  display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+}
+.btn-record {
+  background: var(--red); color: #fff; border: none; border-radius: 8px; padding: 10px 20px;
+  font-family: inherit; font-size: 0.95rem; font-weight: 700; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;
+}
+.btn-record.recording { background: #991b1b; animation: pulse 1s infinite; }
+.btn-stop {
+  background: #374151; color: #fff; border: none; border-radius: 8px; padding: 10px 20px;
+  font-family: inherit; font-size: 0.95rem; font-weight: 700; cursor: pointer;
+  display: none; align-items: center; gap: 8px;
+}
+.btn-download-audio {
+  background: var(--green); color: #fff; border: none; border-radius: 8px; padding: 10px 18px;
+  font-family: inherit; font-size: 0.9rem; font-weight: 700; cursor: pointer; display: none; align-items: center; gap: 6px;
+}
+.audio-validation-box {
+  background: #060912; border: 1px solid var(--border); border-radius: 14px; padding: 24px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.val-card {
+  background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 10px; padding: 16px;
+}
+.val-actions { display: flex; gap: 10px; margin-top: 12px; }
+.btn-val-yes {
+  background: rgba(0,229,153,0.15); border: 1px solid rgba(0,229,153,0.4); color: var(--green-lt);
+  padding: 6px 14px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.85rem;
+}
+.btn-val-no {
+  background: rgba(227,0,27,0.15); border: 1px solid rgba(227,0,27,0.4); color: #ff99a6;
+  padding: 6px 14px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.85rem;
+}
+
+/* ── PILLARS ── */
+.pillars { padding: 100px 0; position: relative; z-index: 1; }
+.pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+.pillar-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 36px 28px; transition: all 0.3s; position: relative;
+}
+.pillar-card:hover { transform: translateY(-4px); background: var(--bg-card-h); border-color: var(--border-h); }
+.pillar-num {
+  position: absolute; top: 20px; right: 24px; font-size: 2.2rem; font-weight: 900;
+  color: rgba(255,255,255,0.08);
+}
+.pillar-icon { font-size: 2.4rem; margin-bottom: 20px; }
+.pillar-card h3 { font-size: 1.35rem; font-weight: 800; margin-bottom: 12px; color: #fff; }
+.pillar-card p { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; }
+
+/* ── FRONTS ── */
+.fronts { padding: 90px 0; background: #070a14; position: relative; z-index: 1; }
+.fronts-list { display: flex; flex-direction: column; gap: 18px; }
+.front-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 22px 28px; transition: all 0.25s;
+}
+.front-item:hover { background: var(--bg-card-h); border-color: var(--border-h); transform: translateX(6px); }
+.front-left { display: flex; align-items: center; gap: 24px; }
+.front-num { font-size: 1.5rem; font-weight: 900; color: var(--red-lt); font-family: monospace; }
+.front-content h3 { font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.front-content p { font-size: 0.9rem; color: var(--text-dim); }
+
+/* ── JOIN TRACKS ── */
+.join { padding: 100px 0; position: relative; z-index: 1; }
+.join-tracks { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.track {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s;
+}
+.track:hover { transform: translateY(-4px); border-color: var(--border-h); box-shadow: var(--shadow); }
+.track-head { padding: 24px; display: flex; gap: 14px; align-items: center; }
+.track-icon { font-size: 2rem; }
+.track-head h3 { font-size: 1.15rem; font-weight: 700; color: #fff; }
+.track-head span { font-size: 0.78rem; color: var(--text-dim); }
+.track-body { padding: 24px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.track-step { display: flex; gap: 10px; font-size: 0.88rem; color: #d1d5db; line-height: 1.5; }
+.step-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+.track-cta {
+  margin-top: auto; padding: 10px 16px; border-radius: 8px; font-size: 0.85rem;
+  font-weight: 700; text-align: center; text-decoration: none; display: block; transition: all 0.2s;
+}
+
+/* ── WIKIPEDIA RADAR ── */
+.wiki-radar { padding: 90px 0; background: #070b16; border-top: 1px solid var(--border); position: relative; z-index: 1; }
+.wiki-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.wiki-card {
+  background: #090e1c; border: 1px solid var(--border); border-radius: 12px; padding: 22px;
+  display: flex; flex-direction: column; gap: 12px; transition: all 0.25s;
+}
+.wiki-card:hover { border-color: rgba(0, 229, 153, 0.35); transform: translateY(-2px); }
+.wiki-head { display: flex; justify-content: space-between; align-items: flex-start; }
+.wiki-title { font-size: 1.1rem; font-weight: 700; color: #fff; }
+.wiki-en { font-size: 0.8rem; color: var(--text-dim); font-family: monospace; }
+.wiki-bar-wrap { margin: 6px 0; }
+.wiki-bar-labels { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-dim); margin-bottom: 4px; }
+.wiki-bar { height: 7px; background: #1f2937; border-radius: 4px; overflow: hidden; display: flex; }
+.wiki-bar-bn { background: var(--green-lt); }
+.wiki-bar-en { background: var(--red); }
+.wiki-cta {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  background: rgba(0, 229, 153, 0.12); border: 1px solid rgba(0, 229, 153, 0.3);
+  color: var(--green-lt); font-size: 0.82rem; font-weight: 700; text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; margin-top: auto; transition: all 0.2s;
+}
+.wiki-cta:hover { background: rgba(0, 229, 153, 0.22); }
+
+/* ── GLOSSARY ── */
+.glossary { padding: 100px 0; position: relative; z-index: 1; }
+.glossary-controls {
+  display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px;
+}
+.glossary-search-row {
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+.glossary-search-input {
+  flex: 1; min-width: 260px; background: #0a0e1c; border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 18px; color: #fff; font-family: inherit; font-size: 0.95rem;
+  outline: none; transition: border-color 0.2s;
+}
+.glossary-search-input:focus { border-color: var(--gold); }
+.btn-propose-term {
+  background: rgba(245, 176, 65, 0.12); color: var(--gold-lt); border: 1px solid rgba(245, 176, 65, 0.3);
+  border-radius: 10px; padding: 10px 20px; font-family: inherit; font-size: 0.9rem; font-weight: 700;
+  cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;
+}
+.btn-propose-term:hover { background: rgba(245, 176, 65, 0.22); }
+.glossary-filter { display: flex; gap: 8px; flex-wrap: wrap; }
+.gf-btn {
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 8px;
+  color: var(--text-dim); padding: 7px 16px; font-family: inherit; font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.gf-btn:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.gf-btn.active {
+  background: var(--gold); color: #000; border-color: var(--gold); font-weight: 700;
+}
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+.g-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 20px; transition: all 0.25s; display: flex; flex-direction: column; gap: 8px;
+}
+.g-card:hover { background: var(--bg-card-h); border-color: var(--border-h); transform: translateY(-3px); }
+.g-head { display: flex; justify-content: space-between; align-items: flex-start; }
+.g-en { font-size: 0.82rem; font-weight: 700; color: var(--gold); text-transform: uppercase; font-family: monospace; }
+.g-cat { font-size: 0.72rem; color: var(--text-dim); background: rgba(255,255,255,0.06); padding: 2px 8px; border-radius: 4px; }
+.g-bn { font-size: 1.25rem; font-weight: 800; color: #fff; }
+.g-def { font-size: 0.88rem; color: var(--text-dim); line-height: 1.5; }
+.g-eg { font-size: 0.8rem; color: #94a3b8; background: rgba(0,0,0,0.3); padding: 8px; border-radius: 6px; font-style: italic; }
+
+/* ── WORD OF DAY ── */
+.wod { padding: 90px 0; background: #070a14; position: relative; z-index: 1; }
+.wod-card {
+  max-width: 680px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 40px 32px; text-align: center; backdrop-filter: blur(10px);
+}
+.wod-date { font-size: 0.82rem; color: var(--text-dim); font-weight: 600; text-transform: uppercase; margin-bottom: 12px; }
+.wod-word { font-size: 3.5rem; font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 4px; }
+.wod-roman { font-size: 1rem; color: var(--gold); font-family: serif; margin-bottom: 16px; }
+.wod-def { font-size: 1.05rem; color: #e5e7eb; line-height: 1.6; margin-bottom: 18px; }
+.wod-eg { font-size: 0.95rem; color: var(--green-lt); font-style: italic; }
+.wod-nav { display: flex; justify-content: center; gap: 12px; margin-top: 24px; }
+.wod-btn {
+  background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: #fff;
+  border-radius: 8px; padding: 8px 16px; font-family: inherit; font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.wod-btn:hover { background: rgba(255,255,255,0.12); }
+.wod-speak { background: rgba(0,229,153,0.15); border-color: rgba(0,229,153,0.3); color: var(--green-lt); font-weight: 700; }
+
+/* ── ROADMAP ── */
+.roadmap { padding: 100px 0; position: relative; z-index: 1; }
+.timeline { display: flex; flex-direction: column; gap: 28px; }
+.tl-item {
+  display: flex; gap: 24px; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px; transition: all 0.3s;
+}
+.tl-item:hover { background: var(--bg-card-h); border-color: var(--border-h); transform: translateX(4px); }
+.tl-dot {
+  width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0; display: flex;
+  align-items: center; justify-content: center; font-weight: 900; font-size: 1.2rem;
+}
+.tl-p1 { background: rgba(227,0,27,0.15); border: 1px solid rgba(227,0,27,0.4); color: var(--red-lt); }
+.tl-p2 { background: rgba(245,176,65,0.15); border: 1px solid rgba(245,176,65,0.4); color: var(--gold-lt); }
+.tl-p3 { background: rgba(0,229,153,0.15); border: 1px solid rgba(0,229,153,0.4); color: var(--green-lt); }
+.tl-content h3 { font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 6px; }
+.tl-period { font-size: 0.85rem; color: var(--text-dim); font-weight: 600; text-transform: uppercase; margin-bottom: 12px; }
+.tl-list { display: flex; flex-direction: column; gap: 8px; }
+.tl-row { font-size: 0.92rem; color: #d1d5db; display: flex; align-items: center; gap: 8px; }
+.tl-row::before { content: '✓'; color: var(--green-lt); font-weight: 800; }
+
+/* ── COUNTERS ── */
+.counters { padding: 70px 0; background: #060912; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.counters-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; }
+.counter-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px 18px;
+}
+.counter-n { font-size: 3rem; font-weight: 900; line-height: 1; margin-bottom: 8px; }
+.counter-l { font-size: 0.85rem; color: var(--text-dim); font-weight: 600; }
+
+/* ── PLEDGE & WALL ── */
+.pledge { padding: 100px 0; position: relative; z-index: 1; }
+.pledge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+@media (max-width: 900px) { .pledge-grid { grid-template-columns: 1fr; } }
+.pledge-form {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 36px 30px; display: flex; flex-direction: column; gap: 18px;
+}
+.pledge-form h3 { font-size: 1.3rem; font-weight: 800; color: #fff; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 0.85rem; font-weight: 600; color: #d1d5db; }
+.form-group input, .form-group select, .form-group textarea {
+  background: #060912; border: 1px solid var(--border); border-radius: 8px;
+  padding: 10px 14px; color: #fff; font-family: inherit; font-size: 0.95rem; outline: none; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--red); }
+.pledge-submit {
+  background: linear-gradient(135deg, var(--red), #b91c1c); color: #fff; border: none; border-radius: 10px;
+  padding: 14px; font-family: inherit; font-size: 1rem; font-weight: 700; cursor: pointer;
+  transition: all 0.25s; box-shadow: 0 4px 15px var(--red-glow); margin-top: 6px;
+}
+.pledge-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(227,0,27,0.4); }
+.pledge-wall { display: flex; flex-direction: column; gap: 14px; }
+.pledge-wall h3 { font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 6px; }
+.pledge-items { display: flex; flex-direction: column; gap: 12px; max-height: 520px; overflow-y: auto; padding-right: 6px; }
+.pledge-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 18px;
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.pledge-top { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.pledge-avatar {
+  width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--green), var(--red));
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: #fff;
+}
+.pledge-name { font-weight: 700; color: #fff; font-size: 0.95rem; }
+.pledge-loc { font-size: 0.75rem; color: var(--text-dim); }
+.pledge-text { font-size: 0.9rem; color: #e5e7eb; font-style: italic; }
+
+/* ── MODALS ── */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
+  z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay.active { display: flex; }
+.modal-box {
+  background: #0c101d; border: 1px solid var(--border-h); border-radius: 18px;
+  max-width: 900px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 32px;
+  position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+.modal-close {
+  position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.08); border: none;
+  width: 34px; height: 34px; border-radius: 50%; color: #fff; font-size: 1.2rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+}
+.modal-close:hover { background: rgba(255,255,255,0.2); }
+
+/* ── CERTIFICATE CANVAS ── */
+#certCanvas {
+  width: 100%; max-width: 760px; height: auto; border-radius: 12px; margin: 18px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7); display: block; border: 1px solid rgba(245, 176, 65, 0.4);
+}
+.cert-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 14px; }
+.btn-cert-dl {
+  background: linear-gradient(135deg, var(--gold), #d97706); color: #000; border: none;
+  border-radius: 8px; padding: 12px 24px; font-weight: 800; font-family: inherit; font-size: 0.95rem;
+  cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-cert-share {
+  background: #1d4ed8; color: #fff; border: none; border-radius: 8px; padding: 12px 20px;
+  font-weight: 700; font-family: inherit; font-size: 0.95rem; cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+
+/* ── BLUEPRINT VIEWER ── */
+.bp-layout { display: grid; grid-template-columns: 260px 1fr; gap: 24px; margin-top: 20px; }
+@media (max-width: 800px) { .bp-layout { grid-template-columns: 1fr; } }
+.bp-nav {
+  background: #060912; border: 1px solid var(--border); border-radius: 12px; padding: 14px;
+  max-height: 60vh; overflow-y: auto; display: flex; flex-direction: column; gap: 4px;
+}
+.bp-nav-btn {
+  text-align: left; background: transparent; border: none; color: var(--text-dim);
+  padding: 8px 12px; border-radius: 6px; font-family: inherit; font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.bp-nav-btn:hover { background: rgba(255,255,255,0.06); color: #fff; }
+.bp-nav-btn.active { background: rgba(245, 176, 65, 0.15); color: var(--gold-lt); font-weight: 700; }
+.bp-body {
+  background: #060912; border: 1px solid var(--border); border-radius: 12px; padding: 24px;
+  max-height: 60vh; overflow-y: auto; line-height: 1.8;
+}
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 3000;
+  background: var(--green); color: #fff; padding: 12px 24px; border-radius: 10px;
+  font-weight: 700; font-size: 0.95rem; box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  display: flex; align-items: center; gap: 10px; opacity: 0; pointer-events: none;
+  transform: translateY(20px); transition: all 0.3s;
+}
+.toast.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+/* ── FOOTER ── */
+footer {
+  padding: 60px 4% 40px; background: #04060c; border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;
+}
+.footer-left { font-size: 0.9rem; color: var(--text-dim); line-height: 1.6; }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.footer-links a:hover { color: #fff; }
+
+</style>
+</head>
+<body>
+
+<div class="bg-chars" id="bgChars"></div>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <a href="#home" class="nav-brand">
+    <div class="nav-flag-wrap"></div>
+    <span>গ্লোবাল বাংলা</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#crisis">সমস্যা</a></li>
+    <li><a href="#ai-lab">এআই ল্যাব</a></li>
+    <li><a href="#audio-lab">ভয়েস স্টুডিও</a></li>
+    <li><a href="#wiki-radar">উইকি রাডার</a></li>
+    <li><a href="#glossary">পরিভাষাকোষ</a></li>
+    <li><a href="#roadmap">রোডম্যাপ</a></li>
+    <li><a href="#pledge">অঙ্গীকার</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-doc" onclick="openBlueprintModal()">📖 ২০৪০ দলিল</button>
+    <button class="nav-cta" onclick="document.getElementById('pledge').scrollIntoView({behavior:'smooth'})">অঙ্গীকার করুন</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-badge"><div class="dot"></div>একটি উন্মুক্ত বৈশ্বিক আন্দোলন ও প্ল্যাটফর্ম</div>
+  <h1>বাংলা আর <span class="gr">পিছিয়ে থাকবে না।</span><br>এবার বৈশ্বিক পুনর্জাগরণ।</h1>
+  <p class="hero-sub">বিশ্বের সপ্তম বৃহত্তম মাতৃভাষা — কিন্তু ইন্টারনেটে মাত্র ০.১%। নিছক আবেগ নয়, উন্নত কৃত্রিম বুদ্ধিমত্তা, বিশ্বমানের জ্ঞানভাণ্ডার ও অর্থনৈতিক শক্তিতে বাংলাকে রূপান্তরের সময় এখনই।</p>
+  <div class="hero-tagline">"Bangla-first, not Bangla-only — বিশ্বমানের উপযোগ ও মর্যাদা"</div>
+
+  <div class="hero-stats">
+    <div class="hstat">
+      <div class="hstat-n" style="color:var(--red-lt)">৩০ কোটি+</div>
+      <div class="hstat-l">মাতৃভাষী মানুষ</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-n" style="color:var(--gold)">৭ম</div>
+      <div class="hstat-l">বিশ্বে ভাষার স্থান</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-n" style="color:var(--red-lt)">০.১%</div>
+      <div class="hstat-l">ইন্টারনেট কন্টেন্ট</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-n" style="color:var(--green-lt)">২০৪০</div>
+      <div class="hstat-l">শীর্ষ শক্তির রূপকল্প</div>
+    </div>
+  </div>
+
+  <div class="hero-actions">
+    <button class="btn-primary" onclick="document.getElementById('ai-lab').scrollIntoView({behavior:'smooth'})">🧪 এআই পরীক্ষাগার চালান</button>
+    <button class="btn-ghost" onclick="document.getElementById('audio-lab').scrollIntoView({behavior:'smooth'})">🎙️ ভয়েস রেকর্ড করুন</button>
+    <button class="btn-ghost" onclick="openBlueprintModal()">📜 ২০৪০ দলিল পড়ুন</button>
+  </div>
+</section>
+
+<!-- REALITY MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span>🌐 ইন্টারনেটে পরিচিত ওয়েবসাইটের মাত্র <b>০.১%</b> বাংলা</span>
+    <span>🤖 আন্তর্জাতিক LLM-এ বাংলার টোকেন খরচ ইংরেজির চেয়ে <b>৪ গুণ বেশি</b></span>
+    <span>📖 বাংলা উইকিপিডিয়ায় নিবন্ধ মাত্র <b>১.৯ লাখ</b> — ইংরেজিতে <b>৬৯ লাখ</b></span>
+    <span>🎙️ বাংলা ওপেন স্পিচ কর্পাস মাত্র কয়েক হাজার ঘণ্টা — যেখানে ইংরেজিতে লাখ লাখ</span>
+    <span>📚 আধুনিক বিশ্বের শীর্ষ বিজ্ঞান ও প্রযুক্তির ৯৯% জ্ঞান এখনো বাংলায় অনূদিত হয়নি</span>
+    <span>💼 বৈশ্বিক ডিজিটাল অর্থনীতিতে বাংলার হিস্যা এখনো নগণ্য — এটি পাল্টাতে হবে</span>
+  </div>
+</div>
+
+<!-- CRISIS SECTION -->
+<section class="crisis" id="crisis">
+  <div class="container">
+    <div class="section-label">রোগনির্ণয় ও বাস্তবতা</div>
+    <h2 class="section-title">সংখ্যায় সুবিশাল,<br>কিন্তু আধুনিক বিশ্বে অদৃশ্য</h2>
+    <p class="section-sub">সমস্যাকে সঠিকভাবে না দেখলে সমাধান সম্ভব নয়। বাংলার সংকট বক্তার সংখ্যায় নয় — সংকট মূলধন, প্রযুক্তিগত উপযোগ ও ডিজিটাল উপস্থিতিতে।</p>
+
+    <div class="crisis-grid">
+      <div class="crisis-card">
+        <div class="crisis-icon">🌐</div>
+        <h3>ইন্টারনেটে চরম বৈষম্য</h3>
+        <p>W3Techs-এর ২০২৬ সালের হিসাব অনুযায়ী, ওয়েব কন্টেন্টের প্রায় ৫০% ইংরেজিতে, যেখানে ৩০ কোটি মানুষের বাংলা মাত্র ০.১%। বক্তার অনুপাতে বাংলা ইংরেজির চেয়ে ৪৯৫ গুণ পিছিয়ে।</p>
+        <span class="crisis-stat">অনুপাত: ১ : ৪৯৫</span>
+      </div>
+      <div class="crisis-card">
+        <div class="crisis-icon">🤖</div>
+        <h3>এআই টোকেন বৈষম্য ও ট্যাক্স</h3>
+        <p>বর্তমান আন্তর্জাতিক LLM-গুলো (GPT-4, Claude, LLaMA) ইংরেজি শব্দে ১টি টোকেন কাটে, কিন্তু যুক্তব্যঞ্জনসমৃদ্ধ বাংলায় ৩ থেকে ৫টি টোকেন কাটে। ফলে বাংলা AI চালানো ৩-৪ গুণ বেশি ব্যয়বহুল।</p>
+        <span class="crisis-stat">টোকেন জরিমানা: ৩০০% - ৫০০%</span>
+      </div>
+      <div class="crisis-card">
+        <div class="crisis-icon">📚</div>
+        <h3>উচ্চশিক্ষার জ্ঞানভাণ্ডার ঘাটতি</h3>
+        <p>সেমিকন্ডাক্টর, কোয়ান্টাম কম্পিউটিং, বায়োটেক ও মহাকাশবিজ্ঞানের মতো আধুনিক জ্ঞানের বেশিরভাগ শাখার বাংলায় কোনো মানসম্মত উন্মুক্ত রিসোর্স বা টেক্সটবুক নেই।</p>
+        <span class="crisis-stat">উইকি সক্রিয় সম্পাদক: ১,৬৭২ জন মাত্র</span>
+      </div>
+      <div class="crisis-card">
+        <div class="crisis-icon">👶</div>
+        <h3>প্রবাসে ভাষা হারানোর ঝুঁকি</h3>
+        <p>যুক্তরাজ্য, উত্তর আমেরিকা ও মধ্যপ্রাচ্যে বেড়ে ওঠা দ্বিতীয় ও তৃতীয় প্রজন্মের বাঙালি শিশুরা আধুনিক আকর্ষণীয় লার্নিং টুলের অভাবে মাতৃভাষা থেকে বিচ্ছিন্ন হয়ে পড়ছে।</p>
+        <span class="crisis-stat">ডুওলিঙ্গোতেও বাংলা কোর্স নেই</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI TOKENIZER LAB -->
+<section class="lab-section" id="ai-lab">
+  <div class="container">
+    <div class="section-label" style="background:rgba(0,229,153,0.1);color:var(--green-lt);border-color:rgba(0,229,153,0.3)">ইন্টারেক্টিভ এআই পরীক্ষাগার</div>
+    <h2 class="section-title">বাংলা এআই ও টোকেনাইজার ট্যাক্স ক্যালকুলেটর</h2>
+    <p class="section-sub">পশ্চিমের বৃহৎ ভাষা মডেলগুলো কেন বাংলায় দুর্বল এবং কেন তাদের এপিআই বিল ৪ গুণ বেশি আসে? সরাসরি নিচের ইনপুট বক্সে লিখে বা নমুনা বাক্য বেছে নিয়ে বাস্তব টোকেন ভাঙন পরীক্ষা করুন।</p>
+
+    <div class="lab-card">
+      <div class="tok-input-area">
+        <label style="font-weight:700;font-size:0.95rem;color:#fff;">বাংলা বাক্য লিখুন বা পরীক্ষা করুন:</label>
+        <textarea id="tokInput" placeholder="যেকোনো বাংলা বাক্য লিখুন...">আন্তর্জাতিক মাতৃভাষা দিবস ও কৃত্রিম বুদ্ধিমত্তার পুনর্জাগরণ</textarea>
+        <div class="tok-presets">
+          <span style="font-size:0.8rem;color:var(--text-dim);font-weight:600;">নমুনা বাক্য:</span>
+          <button class="tok-preset-btn" onclick="setTokPrompt('আন্তর্জাতিক মাতৃভাষা দিবস ও কৃত্রিম বুদ্ধিমত্তার পুনর্জাগরণ')">নমুনা ১: আন্তর্জাতিক ও AI</button>
+          <button class="tok-preset-btn" onclick="setTokPrompt('কম্পিউটার বিজ্ঞান, কোয়ান্টাম গণনা ও অ্যালগরিদম')">নমুনা ২: কোয়ান্টাম ও বিজ্ঞান</button>
+          <button class="tok-preset-btn" onclick="setTokPrompt('বিশ্বের দরবারে মাথা উঁচু করে দাঁড়াবে আমার মাতৃভাষা বাংলা')">নমুনা ৩: বৈশ্বিক বাংলা</button>
+          <button class="tok-preset-btn" onclick="setTokPrompt('যুক্তব্যঞ্জন ও ব্যাকরণিক রূপতত্ত্বের আধুনিকায়ন')">নমুনা ৪: ব্যাকরণ ও রূপতত্ত্ব</button>
+        </div>
+      </div>
+
+      <div class="tok-compare-grid">
+        <!-- Multilingual Tokenizer (Standard LLM) -->
+        <div class="tok-box" style="border-color:rgba(227,0,27,0.35);">
+          <div class="tok-box-head">
+            <div class="tok-box-title" style="color:#ff8090;">
+              <span>❌ সাধারণ বহুভাষিক LLM (GPT-4 / Claude / LLaMA)</span>
+            </div>
+            <span class="tag-badge" id="stdTokenCountBadge" style="background:rgba(227,0,27,0.2);color:#ff99a6;">১৬ টোকেন</span>
+          </div>
+          <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:10px;">ইংরেজি-কেন্দ্রিক বাইট-লেভেল পেয়ার এনকোডিং (BPE) যুক্তবর্ণ ও বর্ণ ভেঙে টুকরো টুকরো করে:</p>
+          <div class="tok-chips-wrap" id="stdChipsWrap"></div>
+          <div style="margin-top:14px;font-size:0.85rem;color:#fca5a5;">
+            ⚠️ <b>সমস্যা:</b> অতিরিক্ত টোকেন কাটার ফলে প্রসেসিং গতি ধীর হয় এবং প্রতি ১ মিলিয়ন শব্দে বিল ৪ গুণ বেশি হয়।
+          </div>
+        </div>
+
+        <!-- Optimized Morphological Tokenizer -->
+        <div class="tok-box" style="border-color:rgba(0,229,153,0.35);">
+          <div class="tok-box-head">
+            <div class="tok-box-title" style="color:var(--green-lt);">
+              <span>✅ বাংলা-অপটিমাইজড মরফোলজিক্যাল টোকেনাইজার</span>
+            </div>
+            <span class="tag-badge" id="optTokenCountBadge" style="background:rgba(0,229,153,0.2);color:#6ee7b7;">৫ টোকেন</span>
+          </div>
+          <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:10px;">বাংলার মূল ধাতু ও বিভক্তি সংরক্ষণকারী দেশীয় টোকেনাইজার (১ শব্দ = ১ বা ২ টোকেন):</p>
+          <div class="tok-chips-wrap" id="optChipsWrap"></div>
+          <div style="margin-top:14px;font-size:0.85rem;color:#86efac;">
+            ✨ <b>সুবিধা:</b> বিদ্যুতগতির ইনফারেন্স, ন্যায্য খরচ এবং মডেলের সঠিক ব্যাকরণ ও অর্থ বোঝার ক্ষমতা।
+          </div>
+        </div>
+      </div>
+
+      <!-- Metrics Summary -->
+      <div class="tok-metrics-bar">
+        <div class="tok-metric-item">
+          <div class="tok-metric-val" style="color:#ff8090;" id="mStdTokens">১৬</div>
+          <div class="tok-metric-lbl">সাধারণ LLM টোকেন</div>
+        </div>
+        <div class="tok-metric-item">
+          <div class="tok-metric-val" style="color:var(--green-lt);" id="mOptTokens">৫</div>
+          <div class="tok-metric-lbl">অপটিমাইজড টোকেন</div>
+        </div>
+        <div class="tok-metric-item">
+          <div class="tok-metric-val" style="color:var(--gold-lt);" id="mPenalty">৩.২ গুণ</div>
+          <div class="tok-metric-lbl">টোকেন ট্যাক্স (অতিরিক্ত বিল)</div>
+        </div>
+        <div class="tok-metric-item">
+          <div class="tok-metric-val" style="color:#a78bfa;" id="mCostSaved">৭০% সাশ্রয়</div>
+          <div class="tok-metric-lbl">দেশীয় মডেলে খরচ হ্রাস</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIO LAB / VOICE STUDIO -->
+<section class="lab-section" id="audio-lab" style="background:#050811;">
+  <div class="container">
+    <div class="section-label" style="background:rgba(245,176,65,0.1);color:var(--gold-lt);border-color:rgba(245,176,65,0.3)">ভয়েস ডেটাসেট স্টুডিও</div>
+    <h2 class="section-title">লাইভ বাংলা অডিও ল্যাব ও স্পিচ অবদান</h2>
+    <p class="section-sub">বাংলা স্পিচ-টু-টেক্সট (STT) ও ভয়েস AI তৈরির জন্য উন্মুক্ত কণ্ঠের অভাব সবচেয়ে বড় বাধা। আপনার ব্রাউজার থেকেই স্পষ্ট কণ্ঠে বাক্য পাঠ করে রেকর্ড করুন ও ডেটাসেটে দান করুন।</p>
+
+    <div class="audio-studio-wrap">
+      <!-- Recorder -->
+      <div class="audio-recorder-box">
+        <div class="prompt-sentence-card">
+          <div class="prompt-tag" id="promptCategory">সাহিত্য ও কাব্য</div>
+          <div class="prompt-text" id="promptText">"আকাশ ভরা সূর্য তারা, বিশ্ব ভরা প্রাণ, তাহারি মাঝখানে আমি পেয়েছি মোর স্থান।"</div>
+          <div class="prompt-nav">
+            <span style="font-size:0.8rem;color:var(--text-dim);" id="promptAuthor">— রবীন্দ্রনাথ ঠাকুর</span>
+            <div style="display:flex;gap:6px;">
+              <button class="prompt-btn" onclick="prevPrompt()">← আগেরটি</button>
+              <button class="prompt-btn" onclick="nextPrompt()">পরেরটি →</button>
+            </div>
+          </div>
+        </div>
+
+        <canvas id="waveformCanvas"></canvas>
+
+        <div class="record-controls">
+          <button class="btn-record" id="btnRecord" onclick="toggleRecording()">
+            <span style="display:inline-block;width:10px;height:10px;background:#fff;border-radius:50%;"></span>
+            <span id="recordBtnText">🎤 রেকর্ড শুরু করুন</span>
+          </button>
+          <button class="btn-stop" id="btnStop" onclick="stopRecording()">
+            ⏹️ রেকর্ড থামান
+          </button>
+          <span id="recordTimer" style="font-size:0.9rem;font-weight:700;color:var(--gold-lt);display:none;">০০:০০</span>
+          <button class="btn-download-audio" id="btnDownloadAudio" onclick="downloadRecordedAudio()">
+            💾 অডিও ফাইল ডাউনলোড (.webm)
+          </button>
+        </div>
+
+        <audio id="audioPlayback" controls style="width:100%;display:none;margin-top:4px;border-radius:8px;"></audio>
+        <div style="font-size:0.82rem;color:var(--text-dim);">
+          💡 <i>মাইক্রোফোন চালু করে স্বাভাবিক গতিতে স্পষ্ট উচ্চারণে বাক্যটি পাঠ করুন। কোনো ব্যক্তিগত তথ্য নেওয়া হয় না।</i>
+        </div>
+      </div>
+
+      <!-- Validator / Community Audio Validator -->
+      <div class="audio-validation-box">
+        <h3 style="font-size:1.15rem;font-weight:800;color:#fff;">🎧 কণ্ঠ যাচাইকরণ গেম</h3>
+        <p style="font-size:0.85rem;color:var(--text-dim);">অন্যদের রেকর্ড করা অডিও শুনে সঠিক উচ্চারণ কি না যাচাই করুন। এটি এআই ডেটাসেটের মান নিয়ন্ত্রণ করে।</p>
+        
+        <div class="val-card">
+          <div style="font-size:0.85rem;font-weight:700;color:var(--gold-lt);margin-bottom:6px;">বাক্য:</div>
+          <div style="font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:10px;">"কৃত্রিম বুদ্ধিমত্তা মানুষের জীবনমান উন্নত করবে।"</div>
+          <button class="prompt-btn" onclick="playSampleAudio()" style="margin-bottom:10px;padding:6px 14px;">▶️ নমুনা অডিও শুনুন</button>
+          <div class="val-actions">
+            <button class="btn-val-yes" onclick="voteAudio(true)">✓ উচ্চারণ সঠিক</button>
+            <button class="btn-val-no" onclick="voteAudio(false)">✕ অস্পষ্ট বা ত্রুটিপূর্ণ</button>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.03);padding:12px;border-radius:8px;border:1px solid var(--border);">
+          <span style="font-size:0.85rem;color:var(--text-dim);">আপনার আজকের অবদান:</span>
+          <span style="font-size:1.1rem;font-weight:800;color:var(--green-lt);" id="userContributionScore">৩টি রেকর্ড / ৫টি যাচাই</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars" id="pillars">
+  <div class="container">
+    <div class="section-label">কৌশলগত কাঠামো</div>
+    <h2 class="section-title">তিনটি স্তম্ভ,<br>একটি সম্মিলিত মহালক্ষ্য</h2>
+    <p class="section-sub">ভাষার পুনর্জাগরণ কেবল আবেগে ঘটে না। অর্থনৈতিক উপযোগ, আন্তর্জাতিক প্রেস্টিজ ও সুদৃঢ় ডিজিটাল অবকাঠামো — এই ত্রিমুখী সমীকরণে বাংলাকে নেতৃত্ব দিতে হবে।</p>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <span class="pillar-num">০১</span>
+        <div class="pillar-icon">⚙️</div>
+        <h3>উপযোগিতা (Utility)</h3>
+        <p>প্রযুক্তি, কোডিং, ব্যবসা, বিজ্ঞান ও কৃত্রিম বুদ্ধিমত্তার প্রতিটি শাখায় বাংলায় উচ্চমানের রিসোর্স নিশ্চিত করা। বাংলা ব্যবহার করলে মানুষের কাজ সহজ হবে এবং অর্থনৈতিক লাভ হবে।</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-num">০২</span>
+        <div class="pillar-icon">✨</div>
+        <h3>মর্যাদা ও প্রেস্টিজ (Prestige)</h3>
+        <p>আন্তর্জাতিক মানের সিনেমা, গেম, অ্যানিমেশন ও বৈজ্ঞানিক গবেষণা। কোরিয়ান 'হাললিউ' বা K-pop-এর মতো বাংলা সংস্কৃতি ও শিল্পকে বৈশ্বিক ব্র্যান্ডে পরিণত করা।</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-num">০৩</span>
+        <div class="pillar-icon">🏗️</div>
+        <h3>অবকাঠামো (Infrastructure)</h3>
+        <p>উন্মুক্ত অভিধান REST API, স্পিচ কর্পাস, প্রযুক্তি পরিভাষাকোষ, ইউনিকোড প্রমিতকরণ এবং আন্তর্জাতিক বাংলা দক্ষতা পরীক্ষা (BPT) প্রণয়ন।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIVE FRONTS -->
+<section class="fronts" id="fronts">
+  <div class="container">
+    <div class="section-label">পাঁচ সমান্তরাল রণক্ষেত্র</div>
+    <h2 class="section-title">একই সাথে পাঁচ দিকে কাজ</h2>
+    <p class="section-sub">বাংলার পুনর্জাগরণ একটি বহুমাত্রিক প্রক্রিয়া। পাঁচটি ফ্রন্টে সমান্তরাল অগ্রযাত্রা নিশ্চিত করতে হবে।</p>
+
+    <div class="fronts-list">
+      <div class="front-item">
+        <div class="front-left">
+          <div class="front-num">০১</div>
+          <div class="front-content">
+            <h3>কৃত্রিম বুদ্ধিমত্তা ও ভাষা প্রযুক্তি</h3>
+            <p>বাংলা LLM, উচ্চগতির মরফোলজিক্যাল টোকেনাইজার, ১ লাখ ঘণ্টার ওপেন স্পিচ কর্পাস ও আধুনিক OCR নির্মাণ।</p>
+          </div>
+        </div>
+        <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">সর্বোচ্চ জরুরি</span>
+      </div>
+      <div class="front-item">
+        <div class="front-left">
+          <div class="front-num">০২</div>
+          <div class="front-content">
+            <h3>উন্মুক্ত জ্ঞানভাণ্ডার ও উইকিপিডিয়া</h3>
+            <p>বিজ্ঞান, চিকিৎসা, প্রকৌশল ও ইতিহাসের প্রতিটি শাখায় বাংলায় উইকিপিডিয়া ও ওপেন সোর্স টেক্সটবুক সম্প্রসারণ।</p>
+          </div>
+        </div>
+        <span class="tag-badge" style="background:rgba(0,229,153,0.15);color:var(--green-lt);border:1px solid rgba(0,229,153,0.3);">ভিত্তিমূল</span>
+      </div>
+      <div class="front-item">
+        <div class="front-left">
+          <div class="front-num">০৩</div>
+          <div class="front-content">
+            <h3>শিক্ষা ও দ্বিতীয় প্রজন্ম</h3>
+            <p>CEFR-ভিত্তিক প্রমিত আন্তর্জাতিক শিক্ষাক্রম (A1-C2) ও প্রবাসের শিশুদের উপযোগী ইন্টারেক্টিভ গ্যামিফাইড লার্নিং অ্যাপ।</p>
+          </div>
+        </div>
+        <span class="tag-badge" style="background:rgba(245,176,65,0.15);color:var(--gold-lt);border:1px solid rgba(245,176,65,0.3);">গুরুত্বপূর্ণ</span>
+      </div>
+      <div class="front-item">
+        <div class="front-left">
+          <div class="front-num">০৪</div>
+          <div class="front-content">
+            <h3>সৃজনশীল শিল্প, বিনোদন ও গেমস</h3>
+            <p>বিশ্বমানের অ্যানিমেশন, সাই-ফাই সিরিজ, ইন্ডি ভিডিও গেমস ও বৈশ্বিক ডিস্ট্রিবিউশন প্ল্যাটফর্ম তৈরি।</p>
+          </div>
+        </div>
+        <span class="tag-badge" style="background:rgba(139,92,246,0.15);color:var(--purple-lt);border:1px solid rgba(139,92,246,0.3);">সাংস্কৃতিক শক্তি</span>
+      </div>
+      <div class="front-item">
+        <div class="front-left">
+          <div class="front-num">০৫</div>
+          <div class="front-content">
+            <h3>কূটনীতি, অর্থনীতি ও যৌথ শাসন</h3>
+            <p>বিশ্বের শীর্ষ বিশ্ববিদ্যালয়ে বাংলা চেয়ার, যৌথ ইন্দো-বাংলা টেক কনসোর্টিয়াম ও আন্তর্জাতিক বাণিজ্য সহজীকরণ।</p>
+          </div>
+        </div>
+        <span class="tag-badge" style="background:rgba(255,255,255,0.1);color:#d1d5db;border:1px solid var(--border);">দীর্ঘমেয়াদি</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WIKIPEDIA RADAR -->
+<section class="wiki-radar" id="wiki-radar">
+  <div class="container">
+    <div class="section-label" style="background:rgba(0,229,153,0.1);color:var(--green-lt);border-color:rgba(0,229,153,0.3)">জ্ঞান প্রসার হাব</div>
+    <h2 class="section-title">উইকিপিডিয়া অগ্রাধিকার রাডার</h2>
+    <p class="section-sub">ইংরেজি উইকিপিডিয়ায় যেসব আধুনিক বৈজ্ঞানিক বিষয়ে ৩০,০০০+ শব্দ রয়েছে, কিন্তু বাংলায় মাত্র কয়েকশ শব্দ বা সম্পূর্ণ শূন্য — তাদের তালিকা। সরাসরি ক্লিক করে আজই বাংলায় প্রথম বাক্যটি লিখুন।</p>
+
+    <div class="wiki-grid">
+      
+        <div class="wiki-card">
+          <div class="wiki-head">
+            <div>
+              <div class="wiki-title">কোয়ান্টাম পরিগণনা</div>
+              <div class="wiki-en">Quantum Computing</div>
+            </div>
+            <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">সর্বোচ্চ জরুরি</span>
+          </div>
+          <div class="wiki-bar-wrap">
+            <div class="wiki-bar-labels">
+              <span>বাংলা: <b>850 শব্দ</b> (3%)</span>
+              <span>ইংরেজি: <b>32,500 শব্দ</b></span>
+            </div>
+            <div class="wiki-bar">
+              <div class="wiki-bar-bn" style="width:3%;"></div>
+              <div class="wiki-bar-en" style="width:97%;"></div>
+            </div>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/কোয়ান্টাম পরিগণনা?action=edit" target="_blank" class="wiki-cta">
+            ✍️ বাংলা নিবন্ধ শুরু করুন →
+          </a>
+        </div>
+
+        <div class="wiki-card">
+          <div class="wiki-head">
+            <div>
+              <div class="wiki-title">ক্রিসপার জিন প্রকৌশল</div>
+              <div class="wiki-en">CRISPR Gene Editing</div>
+            </div>
+            <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">সর্বোচ্চ জরুরি</span>
+          </div>
+          <div class="wiki-bar-wrap">
+            <div class="wiki-bar-labels">
+              <span>বাংলা: <b>420 শব্দ</b> (2%)</span>
+              <span>ইংরেজি: <b>28,000 শব্দ</b></span>
+            </div>
+            <div class="wiki-bar">
+              <div class="wiki-bar-bn" style="width:2%;"></div>
+              <div class="wiki-bar-en" style="width:98%;"></div>
+            </div>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/ক্রিসপার জিন প্রকৌশল?action=edit" target="_blank" class="wiki-cta">
+            ✍️ বাংলা নিবন্ধ শুরু করুন →
+          </a>
+        </div>
+
+        <div class="wiki-card">
+          <div class="wiki-head">
+            <div>
+              <div class="wiki-title">সেমিকন্ডাক্টর ফ্যাব্রিকেশন ও ফোটোলিথোগ্রাফি</div>
+              <div class="wiki-en">Semiconductor Device Fabrication</div>
+            </div>
+            <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">সর্বোচ্চ জরুরি</span>
+          </div>
+          <div class="wiki-bar-wrap">
+            <div class="wiki-bar-labels">
+              <span>বাংলা: <b>০ শব্দ</b> (0%)</span>
+              <span>ইংরেজি: <b>41,200 শব্দ</b></span>
+            </div>
+            <div class="wiki-bar">
+              <div class="wiki-bar-bn" style="width:0%;"></div>
+              <div class="wiki-bar-en" style="width:100%;"></div>
+            </div>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/সেমিকন্ডাক্টর ফ্যাব্রিকেশন ও ফোটোলিথোগ্রাফি?action=edit" target="_blank" class="wiki-cta">
+            ✍️ বাংলা নিবন্ধ শুরু করুন →
+          </a>
+        </div>
+
+        <div class="wiki-card">
+          <div class="wiki-head">
+            <div>
+              <div class="wiki-title">ডিপ লার্নিং ট্রান্সফরমার আর্কিটেকচার</div>
+              <div class="wiki-en">Transformer (deep learning architecture)</div>
+            </div>
+            <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">অতি জরুরি</span>
+          </div>
+          <div class="wiki-bar-wrap">
+            <div class="wiki-bar-labels">
+              <span>বাংলা: <b>১১০ শব্দ</b> (1%)</span>
+              <span>ইংরেজি: <b>26,400 শব্দ</b></span>
+            </div>
+            <div class="wiki-bar">
+              <div class="wiki-bar-bn" style="width:1%;"></div>
+              <div class="wiki-bar-en" style="width:99%;"></div>
+            </div>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/ডিপ লার্নিং ট্রান্সফরমার আর্কিটেকচার?action=edit" target="_blank" class="wiki-cta">
+            ✍️ বাংলা নিবন্ধ শুরু করুন →
+          </a>
+        </div>
+
+        <div class="wiki-card">
+          <div class="wiki-head">
+            <div>
+              <div class="wiki-title">কঠিন-অবস্থা ব্যাটারি ও আধুনিক নবায়নযোগ্য গ্রিড</div>
+              <div class="wiki-en">Solid-state Battery</div>
+            </div>
+            <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">অতি জরুরি</span>
+          </div>
+          <div class="wiki-bar-wrap">
+            <div class="wiki-bar-labels">
+              <span>বাংলা: <b>৩১০ শব্দ</b> (1%)</span>
+              <span>ইংরেজি: <b>34,000 শব্দ</b></span>
+            </div>
+            <div class="wiki-bar">
+              <div class="wiki-bar-bn" style="width:1%;"></div>
+              <div class="wiki-bar-en" style="width:99%;"></div>
+            </div>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/কঠিন-অবস্থা ব্যাটারি ও আধুনিক নবায়নযোগ্য গ্রিড?action=edit" target="_blank" class="wiki-cta">
+            ✍️ বাংলা নিবন্ধ শুরু করুন →
+          </a>
+        </div>
+
+        <div class="wiki-card">
+          <div class="wiki-head">
+            <div>
+              <div class="wiki-title">জিরো ট্রাস্ট সাইবার নিরাপত্তা আর্কিটেকচার</div>
+              <div class="wiki-en">Zero Trust Architecture</div>
+            </div>
+            <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">অতি জরুরি</span>
+          </div>
+          <div class="wiki-bar-wrap">
+            <div class="wiki-bar-labels">
+              <span>বাংলা: <b>০ শব্দ</b> (0%)</span>
+              <span>ইংরেজি: <b>19,500 শব্দ</b></span>
+            </div>
+            <div class="wiki-bar">
+              <div class="wiki-bar-bn" style="width:0%;"></div>
+              <div class="wiki-bar-en" style="width:100%;"></div>
+            </div>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/জিরো ট্রাস্ট সাইবার নিরাপত্তা আর্কিটেকচার?action=edit" target="_blank" class="wiki-cta">
+            ✍️ বাংলা নিবন্ধ শুরু করুন →
+          </a>
+        </div>
+
+        <div class="wiki-card">
+          <div class="wiki-head">
+            <div>
+              <div class="wiki-title">জেমস ওয়েব মহাকাশ দূরবীক্ষণ আবিষ্কারসমূহ</div>
+              <div class="wiki-en">James Webb Space Telescope</div>
+            </div>
+            <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">মাঝারি</span>
+          </div>
+          <div class="wiki-bar-wrap">
+            <div class="wiki-bar-labels">
+              <span>বাংলা: <b>১,২০০ শব্দ</b> (3%)</span>
+              <span>ইংরেজি: <b>48,000 শব্দ</b></span>
+            </div>
+            <div class="wiki-bar">
+              <div class="wiki-bar-bn" style="width:3%;"></div>
+              <div class="wiki-bar-en" style="width:97%;"></div>
+            </div>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/জেমস ওয়েব মহাকাশ দূরবীক্ষণ আবিষ্কারসমূহ?action=edit" target="_blank" class="wiki-cta">
+            ✍️ বাংলা নিবন্ধ শুরু করুন →
+          </a>
+        </div>
+
+        <div class="wiki-card">
+          <div class="wiki-head">
+            <div>
+              <div class="wiki-title">বায়োইনফরমেটিক্স ও ডিএনএ সিকোয়েন্সিং প্রযুক্তি</div>
+              <div class="wiki-en">DNA Sequencing & Bioinformatics</div>
+            </div>
+            <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">অতি জরুরি</span>
+          </div>
+          <div class="wiki-bar-wrap">
+            <div class="wiki-bar-labels">
+              <span>বাংলা: <b>৫৫০ শব্দ</b> (2%)</span>
+              <span>ইংরেজি: <b>38,500 শব্দ</b></span>
+            </div>
+            <div class="wiki-bar">
+              <div class="wiki-bar-bn" style="width:2%;"></div>
+              <div class="wiki-bar-en" style="width:98%;"></div>
+            </div>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/বায়োইনফরমেটিক্স ও ডিএনএ সিকোয়েন্সিং প্রযুক্তি?action=edit" target="_blank" class="wiki-cta">
+            ✍️ বাংলা নিবন্ধ শুরু করুন →
+          </a>
+        </div>
+
+        <div class="wiki-card">
+          <div class="wiki-head">
+            <div>
+              <div class="wiki-title">নিউরোমরফিক পরিগণনা ও কৃত্রিম স্নায়ুচিপ</div>
+              <div class="wiki-en">Neuromorphic Computing</div>
+            </div>
+            <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">জরুরি</span>
+          </div>
+          <div class="wiki-bar-wrap">
+            <div class="wiki-bar-labels">
+              <span>বাংলা: <b>০ শব্দ</b> (0%)</span>
+              <span>ইংরেজি: <b>22,000 শব্দ</b></span>
+            </div>
+            <div class="wiki-bar">
+              <div class="wiki-bar-bn" style="width:0%;"></div>
+              <div class="wiki-bar-en" style="width:100%;"></div>
+            </div>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/নিউরোমরফিক পরিগণনা ও কৃত্রিম স্নায়ুচিপ?action=edit" target="_blank" class="wiki-cta">
+            ✍️ বাংলা নিবন্ধ শুরু করুন →
+          </a>
+        </div>
+
+        <div class="wiki-card">
+          <div class="wiki-head">
+            <div>
+              <div class="wiki-title">বিশ্ব চিপ সরবরাহ শৃঙ্খলা ও সেমিকন্ডাক্টর ভূরাজনীতি</div>
+              <div class="wiki-en">Semiconductor Industry Geopolitics</div>
+            </div>
+            <span class="tag-badge" style="background:rgba(227,0,27,0.15);color:var(--red-lt);border:1px solid rgba(227,0,27,0.3);">জরুরি</span>
+          </div>
+          <div class="wiki-bar-wrap">
+            <div class="wiki-bar-labels">
+              <span>বাংলা: <b>০ শব্দ</b> (0%)</span>
+              <span>ইংরেজি: <b>29,000 শব্দ</b></span>
+            </div>
+            <div class="wiki-bar">
+              <div class="wiki-bar-bn" style="width:0%;"></div>
+              <div class="wiki-bar-en" style="width:100%;"></div>
+            </div>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/বিশ্ব চিপ সরবরাহ শৃঙ্খলা ও সেমিকন্ডাক্টর ভূরাজনীতি?action=edit" target="_blank" class="wiki-cta">
+            ✍️ বাংলা নিবন্ধ শুরু করুন →
+          </a>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN TRACKS -->
+<section class="join" id="join">
+  <div class="container">
+    <div class="section-label">অংশগ্রহণ</div>
+    <h2 class="section-title">প্রতিটি বাঙালির জন্য সুনির্দিষ্ট ভূমিকা</h2>
+    <p class="section-sub">কোডিং না জানলেও কোনো বাধা নেই। প্রত্যেকে নিজের অবস্থান থেকে এই মহাযজ্ঞে কার্যকর অবদান রাখতে পারেন।</p>
+
+    <div class="join-tracks">
+      <div class="track">
+        <div class="track-head" style="background:rgba(227,0,27,0.06);border-bottom:1px solid rgba(227,0,27,0.15);">
+          <div class="track-icon">🎨</div>
+          <div>
+            <h3>কনটেন্ট ও সংস্কৃতি</h3>
+            <span>শিল্প ও লেখালেখি</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--red);"></div>
+            <span>সামাজিক মাধ্যমে মানসম্মত বাংলায় লিখুন, ক্যাপশন দিন (#GlobalBangla)।</span>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--red);"></div>
+            <span>বিজ্ঞান, ইতিহাস ও গণিত নিয়ে বাংলায় ইউটিউব ও পডকাস্ট তৈরি করুন।</span>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--red);"></div>
+            <span>প্রিয় বাংলা কবিতার ইংরেজি অনুবাদ করে বৈশ্বিক মাধ্যমে ছড়িয়ে দিন।</span>
+          </div>
+          <a href="#pledge" class="track-cta" style="background:rgba(227,0,27,0.15);color:#ff8090;border:1px solid rgba(227,0,27,0.3);">অঙ্গীকার করুন →</a>
+        </div>
+      </div>
+
+      <div class="track">
+        <div class="track-head" style="background:rgba(0,229,153,0.06);border-bottom:1px solid rgba(0,229,153,0.15);">
+          <div class="track-icon">📖</div>
+          <div>
+            <h3>জ্ঞান ও উইকিপিডিয়া</h3>
+            <span>উন্মুক্ত তথ্য সম্প্রসারণ</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--green-lt);"></div>
+            <span>বাংলা উইকিপিডিয়ায় প্রতি মাসে অন্তত ১টি নতুন নিবন্ধ বা অনুবাদ যোগ করুন।</span>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--green-lt);"></div>
+            <span>প্রোগ্রামিং ও আধুনিক প্রযুক্তির ইংরেজি ডকুমেন্টেশন বাংলায় অনুবাদ করুন।</span>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--green-lt);"></div>
+            <span>উচ্চমাধ্যমিক ও স্নাতক পর্যায়ের উন্মুক্ত বাংলা টেক্সটবুক রচনায় অংশ নিন।</span>
+          </div>
+          <a href="#wiki-radar" class="track-cta" style="background:rgba(0,229,153,0.15);color:var(--green-lt);border:1px solid rgba(0,229,153,0.3);">উইকি রাডার দেখুন →</a>
+        </div>
+      </div>
+
+      <div class="track">
+        <div class="track-head" style="background:rgba(245,176,65,0.06);border-bottom:1px solid rgba(245,176,65,0.15);">
+          <div class="track-icon">🎙️</div>
+          <div>
+            <h3>ভয়েস ও উপভাষা ডোনার</h3>
+            <span>স্পিচ এআইয়ের ভিত্তি</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--gold);"></div>
+            <span>আমাদের অডিও ল্যাবে গিয়ে প্রতিদিন অন্তত ৩টি বাক্য রেকর্ড করুন।</span>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--gold);"></div>
+            <span>আঞ্চলিক উপভাষা (সিলেট, চট্টগ্রাম, নোয়াখালী, রাজশাহী) কণ্ঠ রেকর্ড করুন।</span>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--gold);"></div>
+            <span>কমিউনিটি কণ্ঠ যাচাইকরণে অংশ নিয়ে অন্যদের রেকর্ডিং শুদ্ধতা যাচাই করুন।</span>
+          </div>
+          <a href="#audio-lab" class="track-cta" style="background:rgba(245,176,65,0.15);color:var(--gold-lt);border:1px solid rgba(245,176,65,0.3);">ভয়েস স্টুডিও খুলুন →</a>
+        </div>
+      </div>
+
+      <div class="track">
+        <div class="track-head" style="background:rgba(139,92,246,0.06);border-bottom:1px solid rgba(139,92,246,0.15);">
+          <div class="track-icon">💻</div>
+          <div>
+            <h3>ডেভেলপার ও AI গবেষক</h3>
+            <span>প্রযুক্তিগত সার্বভৌমত্ব</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--purple-lt);"></div>
+            <span>উচ্চমানের বাংলা টোকেনাইজার ও ওপেন NLP মডেল তৈরিতে কোড লিখুন।</span>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--purple-lt);"></div>
+            <span>আমাদের ওপেন সোর্স প্রযুক্তি পরিভাষাকোষ REST API-তে অংশ নিন।</span>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--purple-lt);"></div>
+            <span>Unicode NFC বানান পরীক্ষক ও স্বরলিপি রূপান্তর টুল তৈরিতে অবদান রাখুন।</span>
+          </div>
+          <a href="#glossary" class="track-cta" style="background:rgba(139,92,246,0.15);color:var(--purple-lt);border:1px solid rgba(139,92,246,0.3);">পরিভাষাকোষ দেখুন →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH GLOSSARY -->
+<section class="glossary" id="glossary">
+  <div class="container">
+    <div class="section-label">প্রমিত প্রযুক্তি পরিভাষাকোষ</div>
+    <h2 class="section-title">আধুনিক প্রযুক্তির প্রমিত বাংলা ভাষা</h2>
+    <p class="section-sub">কম্পিউটার বিজ্ঞান, কৃত্রিম বুদ্ধিমত্তা ও সফটওয়্যার প্রকৌশলের প্রমিত বাংলা পরিভাষা। বাংলায় কোডিং ও প্রযুক্তি আলোচনার ভিত্তি।</p>
+
+    <div class="glossary-controls">
+      <div class="glossary-search-row">
+        <input type="text" id="glossarySearch" class="glossary-search-input" placeholder="🔍 ইংরেজি বা বাংলায় পরিভাষা খুঁজুন (যেমন: Artificial Intelligence, Tokenizer, Encryption)..." oninput="filterGlossary()">
+        <button class="btn-propose-term" onclick="openProposeModal()">➕ নতুন পরিভাষা প্রস্তাব করুন</button>
+      </div>
+
+      <div class="glossary-filter" id="glossaryFilters">
+        <button class="gf-btn active" onclick="setGlossaryCategory('all', this)">সব (43)</button>
+        <button class="gf-btn" onclick="setGlossaryCategory('AI', this)">কৃত্রিম বুদ্ধিমত্তা</button>
+        <button class="gf-btn" onclick="setGlossaryCategory('Software', this)">সফটওয়্যার ও ওয়েব</button>
+        <button class="gf-btn" onclick="setGlossaryCategory('Security', this)">সাইবার নিরাপত্তা</button>
+        <button class="gf-btn" onclick="setGlossaryCategory('Network', this)">ক্লাউড ও নেটওয়ার্ক</button>
+        <button class="gf-btn" onclick="setGlossaryCategory('Science', this)">বিজ্ঞান ও গণিত</button>
+        <button class="gf-btn" onclick="setGlossaryCategory('Hardware', this)">হার্ডওয়্যার</button>
+      </div>
+    </div>
+
+    <div class="glossary-grid" id="glossaryGrid"></div>
+  </div>
+</section>
+
+<!-- WORD OF DAY -->
+<section class="wod" id="wod">
+  <div class="container">
+    <div class="section-label" style="text-align:center;display:block;margin:0 auto 12px;width:fit-content;">প্রতিদিন নতুন শব্দ</div>
+    <div class="wod-card">
+      <div class="wod-date" id="wodDate">আজকের শব্দ</div>
+      <div class="wod-word" id="wodWord">পুনর্জাগরণ</div>
+      <div class="wod-roman" id="wodRoman">/ punarjāgaraṇa /</div>
+      <div class="wod-def" id="wodDef">নতুন করে জেগে ওঠা বা নবজন্ম (Renaissance)। সুপ্ত সম্ভাবনাকে বিশ্বমঞ্চে পুনঃপ্রতিষ্ঠা করা।</div>
+      <div class="wod-eg" id="wodEg">"একুশ শতকে ডিজিটাল বিশ্বে ঘটবে বাংলার নতুন পুনর্জাগরণ।"</div>
+
+      <div class="wod-nav">
+        <button class="wod-btn" onclick="prevWord()">← আগের শব্দ</button>
+        <button class="wod-btn wod-speak" onclick="speakCurrentWord()">🔊 উচ্চারণ শুনুন</button>
+        <button class="wod-btn" onclick="nextWord()">পরের শব্দ →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP 2026-2040 -->
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <div class="section-label">দীর্ঘমেয়াদি রোডম্যাপ</div>
+    <h2 class="section-title">২০২৬ থেকে ২০৪০: রূপান্তরের ১৫ বছর</h2>
+    <p class="section-sub">ধারাবাহিক ও বাস্তবমুখী রোডম্যাপ — ভিত্তি গড়া থেকে বৈশ্বিক নেতৃত্বে পৌঁছানোর স্পষ্ট পর্যায়ক্রম।</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot tl-p1">১</div>
+        <div class="tl-content">
+          <div class="tl-period">পর্ব ১ — ২০২৬ থেকে ২০২৭ (ভিত্তি স্থাপন)</div>
+          <h3>ডিজিটাল অবকাঠামো ও উন্মুক্ত রিসোর্স</h3>
+          <div class="tl-list">
+            <div class="tl-row">২ লাখ+ শব্দের উন্মুক্ত বাংলা অভিধান ও REST API প্রকাশ।</div>
+            <div class="tl-row">AI ও আধুনিক প্রযুক্তির ১,০০০+ প্রমিত পরিভাষাকোষ চালু।</div>
+            <div class="tl-row">বাংলা কমন ভয়েস স্টুডিওর মাধ্যমে প্রথম ৫,০০০ ঘণ্টার ওপেন অডিও ডেটাসেট সংগ্রহ।</div>
+            <div class="tl-row">বাংলা-অপটিমাইজড ওপেন সোর্স টোকেনাইজার রিলিজ।</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot tl-p2">২</div>
+        <div class="tl-content">
+          <div class="tl-period">পর্ব ২ — ২০২৮ থেকে ২০৩০ (ইকোসিস্টেম বিস্তার)</div>
+          <h3>শিক্ষা, প্রযুক্তি ও বৈশ্বিক সম্প্রসারণ</h3>
+          <div class="tl-list">
+            <div class="tl-row">CEFR-ভিত্তিক আন্তর্জাতিক বাংলা শিক্ষাক্রম (A1-C2) ও মোবাইল লার্নিং অ্যাপ।</div>
+            <div class="tl-row">বিশ্বের শীর্ষ ২০টি আন্তর্জাতিক বিশ্ববিদ্যালয়ে বাংলা চেয়ার ও এক্সচেঞ্জ প্রোগ্রাম।</div>
+            <div class="tl-row">উইকিপিডিয়ায় বাংলা নিবন্ধ ৫ লাখে উন্নীতকরণ ও আধুনিক বিজ্ঞানের সম্পূর্ণ কাভারেজ।</div>
+            <div class="tl-row">১০ লাখ অ-বাঙালি শিক্ষার্থীর জন্য সহজ বাংলা শিক্ষাদান নেটওয়ার্ক।</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot tl-p3">৩</div>
+        <div class="tl-content">
+          <div class="tl-period">পর্ব ৩ — ২০৩১ থেকে ২০৪০ (বৈশ্বিক প্রাধান্য)</div>
+          <h3>গ্লোবাল বাংলা — প্রথম সারির বিশ্বশক্তি</h3>
+          <div class="tl-list">
+            <div class="tl-row">১ কোটি সক্রিয় বিদেশি বাংলা শিক্ষার্থী ও আন্তর্জাতিক বাংলা দক্ষতা পরীক্ষা (BPT)।</div>
+            <div class="tl-row">বিশ্বমানের অ্যানিমেশন, সাই-ফাই ও গেম ইন্ডাস্ট্রিতে বাংলার শীর্ষ অবস্থান।</div>
+            <div class="tl-row">ওয়েব কন্টেন্টে বাংলার অনুপাত ২% ছাড়িয়ে যাওয়া।</div>
+            <div class="tl-row">বিশ্বের শীর্ষ সব মাল্টিমডাল এআই ও সুপারকম্পিউটারে বাংলার সমমর্যাদা।</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTERS -->
+<div class="counters">
+  <div class="container">
+    <div class="counters-grid">
+      <div class="counter-card">
+        <div class="counter-n" style="color:var(--red-lt);" id="cntSpeakers">৩০</div>
+        <div class="counter-l">কোটি বিশ্বব্যাপী বক্তা</div>
+      </div>
+      <div class="counter-card">
+        <div class="counter-n" style="color:var(--gold-lt);" id="cntStudents">১</div>
+        <div class="counter-l">কোটি বিদেশি শিক্ষার্থী লক্ষ্য</div>
+      </div>
+      <div class="counter-card">
+        <div class="counter-n" style="color:var(--green-lt);" id="cntProjects">১</div>
+        <div class="counter-l">লাখ ওপেন সোর্স রিসোর্স</div>
+      </div>
+      <div class="counter-card">
+        <div class="counter-n" style="color:var(--purple-lt);" id="cntPct">২.০%</div>
+        <div class="counter-l">ইন্টারনেট কন্টেন্ট লক্ষ্যমাত্রা</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLEDGE SECTION -->
+<section class="pledge" id="pledge">
+  <div class="container">
+    <div class="section-label">আপনার ব্যক্তিগত সংকল্প</div>
+    <h2 class="section-title">অঙ্গীকার করুন ও অর্জন করুন<br>গ্লোবাল বাংলা দূত সনদ</h2>
+    <p class="section-sub">আপনার সামান্য উদ্যোগই একটি জাতির ভাষাকে বিশ্বমঞ্চে প্রতিষ্ঠিত করবে। আজই অঙ্গীকার করে তাৎক্ষণিক ডিজিটাল সনদপত্র ডাউনলোড করুন।</p>
+
+    <div class="pledge-grid">
+      <!-- Form -->
+      <div class="pledge-form">
+        <h3>✍️ আমার অঙ্গীকার</h3>
+        
+        <div class="form-group">
+          <label>আপনার পূর্ণ নাম:</label>
+          <input type="text" id="pName" placeholder="উদা: অনিন্দ্য রায় / জয় সরকার">
+        </div>
+
+        <div class="form-group">
+          <label>আপনার দেশ / অঞ্চল:</label>
+          <select id="pCountry">
+            <option value="">দেশ বা অঞ্চল নির্বাচন করুন</option>
+            <option value="🇧🇩 বাংলাদেশ">🇧🇩 বাংলাদেশ</option>
+            <option value="🇮🇳 ভারত (পশ্চিমবঙ্গ)">🇮🇳 ভারত (পশ্চিমবঙ্গ)</option>
+            <option value="🇮🇳 ভারত (ত্রিপুরা / আসাম / অন্যান্য)">🇮🇳 ভারত (ত্রিপুরা / আসাম / অন্যান্য)</option>
+            <option value="🇺🇸 যুক্তরাষ্ট্র">🇺🇸 যুক্তরাষ্ট্র</option>
+            <option value="🇬🇧 যুক্তরাজ্য">🇬🇧 যুক্তরাজ্য</option>
+            <option value="🇨🇦 কানাডা">🇨🇦 কানাডা</option>
+            <option value="🇦🇺 অস্ট্রেলিয়া">🇦🇺 অস্ট্রেলিয়া</option>
+            <option value="🇦🇪 সংযুক্ত আরব আমিরাত">🇦🇪 সংযুক্ত আরব আমিরাত</option>
+            <option value="🇸🇦 সৌদি আরব">🇸🇦 সৌদি আরব</option>
+            <option value="🇩🇪 জার্মানি">🇩🇪 জার্মানি</option>
+            <option value="🇯🇵 জাপান">🇯🇵 জাপান</option>
+            <option value="🌍 অন্যান্য দেশ">🌍 অন্যান্য দেশ</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>আপনার প্রাথমিক অঙ্গীকার:</label>
+          <select id="pCommit">
+            <option value="">একটি সংকল্প বেছে নিন</option>
+            <option value="প্রতিদিন অন্তত একটি মানসম্মত বাংলা পোস্ট বা কনটেন্ট তৈরি করব">প্রতিদিন অন্তত একটি মানসম্মত বাংলা পোস্ট বা কনটেন্ট তৈরি করব</option>
+            <option value="আমার সন্তান ও পরিবারে শুদ্ধ বাংলা চর্চা অব্যাহত রাখব">আমার সন্তান ও পরিবারে শুদ্ধ বাংলা চর্চা অব্যাহত রাখব</option>
+            <option value="বাংলা উইকিপিডিয়ায় প্রতি মাসে অন্তত একটি নতুন নিবন্ধ লিখব">বাংলা উইকিপিডিয়ায় প্রতি মাসে অন্তত একটি নতুন নিবন্ধ লিখব</option>
+            <option value="বাংলা ভয়েস স্টুডিও ও কমন ভয়েসে নিয়মিত অডিও রেকর্ড করব">বাংলা ভয়েস স্টুডিও ও কমন ভয়েসে নিয়মিত অডিও রেকর্ড করব</option>
+            <option value="প্রযুক্তি ও প্রোগ্রামিংয়ের গুরুত্বপূর্ণ পরিভাষা প্রমিত বাংলায় রূপান্তর করব">প্রযুক্তি ও প্রোগ্রামিংয়ের গুরুত্বপূর্ণ পরিভাষা প্রমিত বাংলায় রূপান্তর করব</option>
+            <option value="একজন অ-বাঙালি বন্ধুকে বাংলা ভাষা ও সংস্কৃতির সৌন্দর্য শেখাব">একজন অ-বাঙালি বন্ধুকে বাংলা ভাষা ও সংস্কৃতির সৌন্দর্য শেখাব</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>ব্যক্তিগত বার্তা বা স্বপ্ন (ঐচ্ছিক):</label>
+          <textarea id="pNote" rows="2" placeholder="বাংলার পুনর্জাগরণ নিয়ে আপনার ভাবনা লিখুন..."></textarea>
+        </div>
+
+        <button class="pledge-submit" onclick="handlePledgeSubmit()">
+          🤝 সংকল্প গ্রহণ করলাম ও সনদপত্র তৈরি করুন →
+        </button>
+      </div>
+
+      <!-- Live Wall -->
+      <div class="pledge-wall">
+        <h3>🌍 বিশ্বজুড়ে বাঙালির অঙ্গীকার প্রাচীর</h3>
+        <div class="pledge-items" id="pledgeList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <b>গ্লোবাল বাংলা (Global Bangla) — ২০৪০ বৈশ্বিক পুনর্জাগরণ মহাযজ্ঞ।</b><br>
+    ভাষা কেবল যোগাযোগের মাধ্যম নয় — ভাষা একটি জাতির চিন্তা, মর্যাদা ও অর্থনৈতিক সমৃদ্ধির ভিত্তি।<br>
+    <small style="color:#6b7280;">কোনো সংকীর্ণ দলীয় রাজনীতি নয়; বিশ্বের ৩০ কোটি বাঙালির সম্মিলিত উন্মুক্ত উদ্যোগ।</small>
+  </div>
+  <div class="footer-links">
+    <a href="#home">হোম</a>
+    <a href="#ai-lab">এআই ল্যাব</a>
+    <a href="#audio-lab">ভয়েস স্টুডিও</a>
+    <a href="#wiki-radar">উইকি রাডার</a>
+    <a href="#glossary">পরিভাষাকোষ</a>
+    <a href="javascript:void(0)" onclick="openBlueprintModal()">২০৪০ দলিল</a>
+    <a href="https://bn.wikipedia.org" target="_blank">উইকিপিডিয়া</a>
+  </div>
+</footer>
+
+<!-- MODAL: AMBASSADOR CERTIFICATE -->
+<div class="modal-overlay" id="certModal">
+  <div class="modal-box" style="text-align:center;">
+    <button class="modal-close" onclick="closeCertModal()">✕</button>
+    <h2 style="font-size:1.6rem;font-weight:900;color:var(--gold);margin-bottom:6px;">অভিনন্দন, গ্লোবাল বাংলা দূত!</h2>
+    <p style="font-size:0.95rem;color:var(--text-dim);margin-bottom:14px;">আপনার অঙ্গীকার আনুষ্ঠানিকভাবে নিবন্ধিত হয়েছে। আপনার বিশেষ সনদপত্রটি নিচে প্রদর্শিত হচ্ছে:</p>
+    
+    <canvas id="certCanvas" width="1200" height="800"></canvas>
+
+    <div class="cert-actions">
+      <button class="btn-cert-dl" onclick="downloadCertificate()">
+        📥 সনদপত্র ডাউনলোড করুন (PNG)
+      </button>
+      <a href="#" id="shareWa" target="_blank" class="btn-cert-share" style="background:#16a34a;">
+        💬 WhatsApp-এ শেয়ার
+      </a>
+      <a href="#" id="shareFb" target="_blank" class="btn-cert-share" style="background:#2563eb;">
+        📘 Facebook-এ শেয়ার
+      </a>
+      <a href="#" id="shareX" target="_blank" class="btn-cert-share" style="background:#0f172a;">
+        🐦 X-এ শেয়ার
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: BLUEPRINT 2040 READER -->
+<div class="modal-overlay" id="blueprintModal">
+  <div class="modal-box" style="max-width:1050px;">
+    <button class="modal-close" onclick="closeBlueprintModal()">✕</button>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--border);padding-bottom:14px;">
+      <div>
+        <h2 style="font-size:1.5rem;font-weight:900;color:#fff;">📜 বাংলা ২০৪০ পূর্ণাঙ্গ দলিল এক্সপ্লোরার</h2>
+        <p style="font-size:0.85rem;color:var(--text-dim);">২১টি খণ্ডের পূর্ণাঙ্গ বিশ্লেষণ, দশ দেশের সফল মডেল ও ১৫ বছরের অ্যাকশন ব্লুপ্রিন্ট</p>
+      </div>
+      <a href="bangla-2040-dlil.md" download="bangla-2040-dlil.md" class="btn-doc" style="flex-shrink:0;">
+        ⬇️ সম্পূর্ণ ৩১৯KB দলিল ডাউনলোড
+      </a>
+    </div>
+
+    <div class="bp-layout">
+      <div class="bp-nav" id="bpNav">
+        <button class="bp-nav-btn active" onclick="selectChapter('০', this)">
+          খণ্ড ০: দলিলের স্বভাব, সীমাবদ্ধতা ও পাঠক-নির্দেশনা
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১', this)">
+          খণ্ড ১: রোগনির্ণয় — সংখ্যায় বাংলা
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('২', this)">
+          খণ্ড ২: তত্ত্ব — ভাষা আসলে কীভাবে বড় হয়
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('৩', this)">
+          খণ্ড ৩: দশটি আন্তর্জাতিক উদাহরণ — সফল কৌশল
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('৪', this)">
+          খণ্ড ৪: কেন এত উদ্যোগ ব্যর্থ — স্বাধীন পর্যালোচনা
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('৫', this)">
+          খণ্ড ৫: লক্ষ্য পুনর্নির্ধারণ — ২০৪০-এ বিশ্বভাষা
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('৬', this)">
+          খণ্ড ৬: কৌশল ১ — কৃত্রিম বুদ্ধিমত্তা ও ভাষা প্রযুক্তি
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('৭', this)">
+          খণ্ড ৭: কৌশল ২ — লিপি, কীবোর্ড, ইনপুট ও প্রমিত অভিধান
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('৮', this)">
+          খণ্ড ৮: কৌশল ৩ — লিপি-ভাগ করা ভাষাগুলোর সাথে সংযোগ
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('৯', this)">
+          খণ্ড ৯: কৌশল ৪ — অনুবাদ ও দ্বিমুখী বিশ্বসেতু
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১০', this)">
+          খণ্ড ১০: কৌশল ৫ — শিক্ষা: তিনটি পৃথক বাজার
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১১', this)">
+          খণ্ড ১১: কৌশল ৬ — সৃজনশীল শিল্প, বিনোদন ও গ্লোবাল মিডিয়া
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১২', this)">
+          খণ্ড ১২: কৌশল ৭ — অর্থনীতি, বাণিজ্য ও চাকরি
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১৩', this)">
+          খণ্ড ১৩: কৌশল ৮ — প্রবাসী কূটনীতি ও সংস্কৃতি-দূত
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১৪', this)">
+          খণ্ড ১৪: কৌশল ৯ — দুই বঙ্গ ও বহুপাক্ষিক শাসন
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১৫', this)">
+          খণ্ড ১৫: মূল্যায়ন কাঠামো — কীভাবে মাপবেন
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১৬', this)">
+          খণ্ড ১৬: ১৫ বছরের রোডম্যাপ ও সম্পদ বণ্টন
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১৭', this)">
+          খণ্ড ১৭: ঝুঁকি, ব্যর্থতার শর্ত ও সাবধানতা
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১৮', this)">
+          খণ্ড ১৮: প্রথম ৯০ দিন — কার্যকর কর্মতালিকা
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('১৯', this)">
+          খণ্ড ১৯: আপনার জন্য ব্যক্তিগত প্লে-বুক
+        </button>
+<button class="bp-nav-btn" onclick="selectChapter('২০', this)">
+          খণ্ড ২০: উপসংহার — বিশ্বের দরবারে বাংলা
+        </button>
+      </div>
+      <div class="bp-body" id="bpBody">
+        <h3 id="bpTitle" style="font-size:1.3rem;font-weight:800;color:var(--gold-lt);margin-bottom:12px;"></h3>
+        <div id="bpContent" style="color:#d1d5db;font-size:0.98rem;line-height:1.8;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: PROPOSE TERM -->
+<div class="modal-overlay" id="proposeModal">
+  <div class="modal-box" style="max-width:540px;">
+    <button class="modal-close" onclick="closeProposeModal()">✕</button>
+    <h2 style="font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:6px;">নতুন প্রযুক্তি পরিভাষা প্রস্তাব করুন</h2>
+    <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:18px;">কম্পিউটার বিজ্ঞান বা এআইয়ের যেকোনো নতুন শব্দের প্রমিত বাংলা পরিভাষা প্রস্তাব করুন।</p>
+
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>ইংরেজি শব্দ (English Term):</label>
+      <input type="text" id="propEn" placeholder="উদা: Hallucination">
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>প্রস্তাবিত বাংলা প্রতিশব্দ (Bengali Translation):</label>
+      <input type="text" id="propBn" placeholder="উদা: বিভ্রান্তিমূলক তথ্য তৈরি / অমূলপ্রত্যক্ষণ">
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>শাখা (Category):</label>
+      <select id="propCat">
+        <option value="AI">কৃত্রিম বুদ্ধিমত্তা (AI)</option>
+        <option value="Software">সফটওয়্যার ও ওয়েব</option>
+        <option value="Security">সাইবার নিরাপত্তা</option>
+        <option value="Network">ক্লাউড ও নেটওয়ার্ক</option>
+        <option value="Science">বিজ্ঞান ও গণিত</option>
+        <option value="Hardware">হার্ডওয়্যার</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin-bottom:18px;">
+      <label>সংজ্ঞা বা ব্যাখ্যা (Definition):</label>
+      <textarea id="propDef" rows="3" placeholder="শব্দটির অর্থ ও ব্যবহার ব্যাখ্যা করুন..."></textarea>
+    </div>
+
+    <button class="pledge-submit" onclick="submitProposedTerm()">
+      ➕ পরিভাষা সংরক্ষণ ও জমা দিন
+    </button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span>✓</span>
+  <span id="toastMsg">অঙ্গীকার সংরক্ষিত হয়েছে!</span>
+</div>
+
+<script>
+// ── DATA STORES ──
+const glossaryData = [{"en": "Artificial Intelligence", "bn": "কৃত্রিম বুদ্ধিমত্তা", "cat": "AI", "def": "কম্পিউটার সিস্টেমের মাধ্যমে মানুষের বুদ্ধিবৃত্তিক কাজের রূপায়ণ।", "eg": "AI স্বাস্থ্যসেবায় বিপ্লব ঘটাচ্ছে।"}, {"en": "Machine Learning", "bn": "যন্ত্র শিখন", "cat": "AI", "def": "পূর্ববর্তী উপাত্ত বিশ্লেষণ করে স্বয়ংক্রিয়ভাবে সিদ্ধান্ত বা পূর্বাভাস গ্রহণের পদ্ধতি।", "eg": "মেশিন লার্নিং দিয়ে আবহাওয়ার পূর্বাভাস দেওয়া হয়।"}, {"en": "Deep Learning", "bn": "গভীর শিখন", "cat": "AI", "def": "বহুস্তরীয় নিউরাল নেটওয়ার্কভিত্তিক শিখন পদ্ধতি যা জটিল বিন্যাস বুঝতে সক্ষম।", "eg": "ডিপ লার্নিং ছবি ও কণ্ঠ সনাক্তকরণে ব্যবহৃত হয়।"}, {"en": "Neural Network", "bn": "স্নায়ুজাল / নিউরাল নেটওয়ার্ক", "cat": "AI", "def": "মানব মস্তিষ্কের স্নায়ুকোষের অনুকরণে গঠিত কৃত্রিম পরিগণনা কাঠামো।", "eg": "কৃত্রিম স্নায়ুজাল জটিল ভাষা অনুবাদ করে।"}, {"en": "Large Language Model (LLM)", "bn": "বৃহৎ ভাষা মডেল", "cat": "AI", "def": "বিলিয়ন বিলিয়ন শব্দের ওপর প্রশিক্ষিত ডিপ লার্নিং মডেল যা পাঠ্য তৈরি ও বিশ্লেষণ করে।", "eg": "GPT-4 ও Claude হলো বৃহৎ ভাষা মডেলের উদাহরণ।"}, {"en": "Tokenizer", "bn": "টোকেন বিভাজক", "cat": "AI", "def": "পাঠ্যকে ক্ষুদ্র ক্ষুদ্র অর্থবহ অংশে (শব্দখণ্ড বা বর্ণে) রূপান্তরের অ্যালগরিদম।", "eg": "বাংলার জন্য কার্যকর টোকেনাইজার তৈরি করা অপরিহার্য।"}, {"en": "Embedding", "bn": "ভেক্টর সন্নিবেশ", "cat": "AI", "def": "শব্দ বা ধারণাকে বহুমাত্রিক গাণিতিক ভেক্টরে রূপান্তরের কৌশল।", "eg": "শব্দার্থিক মিল খোঁজার জন্য এমবেডিং অপরিহার্য।"}, {"en": "Fine-Tuning", "bn": "সূক্ষ্ম সমন্বয়", "cat": "AI", "def": "একটি প্রাক-প্রশিক্ষিত মডেলকে সুনির্দিষ্ট কোনো কাজের জন্য পুনর্বার প্রশিক্ষণ দেওয়া।", "eg": "বাংলা চিকিৎসা তথ্যের ওপর মডেল ফাইন-টিউনিং করা হয়েছে।"}, {"en": "Vector Database", "bn": "ভেক্টর তথ্যভাণ্ডার", "cat": "AI", "def": "উচ্চমাত্রিক ভেক্টর উপাত্ত সংরক্ষণ ও দ্রুত সাদৃশ্য অনুসন্ধানের ডেটাবেস।", "eg": "RAG সিস্টেমে ভেক্টর ডেটাবেস ব্যবহার করা হয়।"}, {"en": "Prompt Engineering", "bn": "নির্দেশ নকশাকরণ", "cat": "AI", "def": "AI থেকে নিখুঁত উত্তর পাওয়ার জন্য ইনপুট নির্দেশনা পরিকল্পিতভাবে সাজানো।", "eg": "ভালো ফলাফল পেতে প্রম্পট ইঞ্জিনিয়ারিং জানা দরকার।"}, {"en": "Inference", "bn": "সিদ্ধান্ত গ্রহণ / অনুমান", "cat": "AI", "def": "প্রশিক্ষিত মডেল দ্বারা নতুন কোনো ইনপুটের উত্তর তৈরি করা।", "eg": "ক্লাউডে মডেল ইনফারেন্সের খরচ কমানো হচ্ছে।"}, {"en": "Supervised Learning", "bn": "তত্ত্বাবধানযুক্ত শিখন", "cat": "AI", "def": "লেবেলযুক্ত উপাত্তের সাহায্যে মডেলকে সঠিক উত্তর শেখানোর পদ্ধতি।", "eg": "ছবি শ্রেণিবিন্যাস সুপারভাইজড লার্নিংয়ের মাধ্যমে হয়।"}, {"en": "Backend", "bn": "পশ্চাৎভাগ / ব্যাকএন্ড", "cat": "Software", "def": "ওয়েব বা অ্যাপের পেছনের অংশ যা ডেটা প্রসেসিং, ডেটাবেস ও ব্যবসায়িক যুক্তি পরিচালনা করে।", "eg": "Node.js দিয়ে ব্যাকএন্ড তৈরি করা হয়েছে।"}, {"en": "Frontend", "bn": "সম্মুখভাগ / ফ্রন্টএন্ড", "cat": "Software", "def": "ব্যবহারকারীর দৃশ্যমান ইন্টারফেস যা ব্রাউজার বা ডিভাইসে রেন্ডার হয়।", "eg": "React ও CSS দিয়ে আধুনিক ফ্রন্টএন্ড সাজানো হয়।"}, {"en": "API", "bn": "অ্যাপ্লিকেশন প্রোগ্রামিং ইন্টারফেস", "cat": "Software", "def": "ভিন্ন ভিন্ন সফটওয়্যারের মধ্যে যোগাযোগ ও তথ্য আদান-প্রদানের মাধ্যম।", "eg": "আবহাওয়া তথ্যের জন্য উন্মুক্ত API ব্যবহার করুন।"}, {"en": "Database", "bn": "উপাত্তভাণ্ডার / ডেটাবেস", "cat": "Software", "def": "সুসংগঠিত উপাত্তের স্থায়ী ডিজিটাল সংরক্ষণাগার।", "eg": "PostgreSQL একটি বিশ্বস্ত রিলেশনাল ডেটাবেস।"}, {"en": "Open Source", "bn": "মুক্ত উৎস", "cat": "Software", "def": "যে সফটওয়্যারের সোর্স কোড সবার জন্য উন্মুক্ত, পরীক্ষণযোগ্য ও পরিবর্তনযোগ্য।", "eg": "Linux হলো বিশ্বের সবচেয়ে সফল ওপেন সোর্স প্রকল্প।"}, {"en": "Framework", "bn": "পরিকাঠামো / ফ্রেমওয়ার্ক", "cat": "Software", "def": "সফটওয়্যার তৈরির পূর্বনির্মিত কাঠামো ও লাইব্রেরির সমন্বয়।", "eg": "Next.js একটি জনপ্রিয় ওয়েব ফ্রেমওয়ার্ক।"}, {"en": "Compiler", "bn": "অনুবাদক / কম্পাইলার", "cat": "Software", "def": "মানুষের পঠনযোগ্য কোডকে মেশিনের বোঝার উপযোগী বাইনারিতে রূপান্তরক।", "eg": "Rust কম্পাইলার মেমোরি নিরাপত্তা নিশ্চিত করে।"}, {"en": "Debugging", "bn": "ত্রুটি সংশোধন", "cat": "Software", "def": "কোডের ভুল বা বাগ খুঁজে বের করে সমাধানের প্রক্রিয়া।", "eg": "লগ বিশ্লেষণ করে বাগটি ডিবাগ করা হলো।"}, {"en": "Refactoring", "bn": "কোড পুনর্গঠন", "cat": "Software", "def": "সফটওয়্যারের বাহ্যিক আচরণ অপরিবর্তিত রেখে ভেতরের কোডের মান ও পঠনযোগ্যতা বৃদ্ধি।", "eg": "পারফরম্যান্স বাড়াতে কোড রিফ্যাক্টরিং চলছে।"}, {"en": "Asynchronous", "bn": "অসমকালীন", "cat": "Software", "def": "মূল কাজের গতি না থামিয়ে সমান্তরালভাবে কোনো ব্যাকগ্রাউন্ড কাজ চালানোর পদ্ধতি।", "eg": "জাভাস্ক্রিপ্ট অ্যাসিনক্রোনাস কলব্যাক সমর্থন করে।"}, {"en": "Microservices", "bn": "অনুসেবা স্থাপত্য", "cat": "Software", "def": "একটি বড় অ্যাপ্লিকেশনকে ক্ষুদ্র ক্ষুদ্র স্বাধীন সেবায় বিভক্ত করে পরিচালনা।", "eg": "স্কেলিং সহজ করতে মাইক্রোসার্ভিস স্থাপত্য বেছে নেওয়া হয়েছে।"}, {"en": "Git Repository", "bn": "সংস্করণ সংরক্ষণাগার", "cat": "Software", "def": "কোডের ইতিহাস ও প্রতিটি পরিবর্তনের ট্র্যাক রাখার ভাণ্ডার।", "eg": "GitHub-এ প্রজেক্টের রিপোজিটরি তৈরি করুন।"}, {"en": "Encryption", "bn": "গুপ্তায়ন / সংকেতায়ন", "cat": "Security", "def": "সাধারণ তথ্যকে বিশেষ অ্যালগরিদমে রূপান্তর করে অপাঠ্য গোপনীয় তথ্যে পরিণত করা।", "eg": "এন্ড-টু-এন্ড এনক্রিপশন চ্যাটের গোপনীয়তা রক্ষা করে।"}, {"en": "Decryption", "bn": "ব্যক্তিকরণ / পাঠোদ্ধার", "cat": "Security", "def": "সংকেতায়িত তথ্যকে মূল পঠনযোগ্য আকারে ফিরিয়ে আনা।", "eg": "গোপন কী ব্যবহার করে বার্তাটি ডিক্রিপ্ট করা হলো।"}, {"en": "Vulnerability", "bn": "নিরাপত্তাহীনতা / ঝুঁকি", "cat": "Security", "def": "সফটওয়্যারে থাকা ত্রুটি যা ব্যবহার করে আক্রমণকারী সিস্টেমে অনুপ্রবেশ করতে পারে।", "eg": "জরুরি প্যাচ দিয়ে সিস্টেমের দুর্বলতা সারানো হয়েছে।"}, {"en": "Zero-Day Vulnerability", "bn": "শূন্য-দিবস ঝুঁকি", "cat": "Security", "def": "অজ্ঞাত নিরাপত্তা ত্রুটি যার জন্য নিরাপত্তা প্যাচ এখনও বের হয়নি।", "eg": "ব্রাউজারে জিরো-ডে বাগ সনাক্ত করা হয়েছে।"}, {"en": "Phishing", "bn": "প্রতারণামূলক ফাঁদ", "cat": "Security", "def": "ভুয়া ওয়েবসাইট বা ইমেইল দিয়ে সংবেদনশীল পাসওয়ার্ড হাতিয়ে নেওয়ার কৌশল।", "eg": "অচেনা লিংকে ক্লিক করে ফিশিংয়ের ফাঁদে পড়বেন না।"}, {"en": "Two-Factor Authentication", "bn": "দ্বি-স্তর বিশিষ্ট প্রমাণীকরণ (2FA)", "cat": "Security", "def": "পাসওয়ার্ডের সাথে বাড়তি ওটিপি বা ফিঙ্গারপ্রিন্ট দিয়ে অ্যাকাউন্ট রক্ষা।", "eg": "অ্যাকাউন্টের সুরক্ষায় 2FA চালু করুন।"}, {"en": "Zero Trust Architecture", "bn": "জিরো ট্রাস্ট আর্কিটেকচার", "cat": "Security", "def": "কোনো ডিভাইস বা ব্যবহারকারীকে পূর্ব-অনুমোদন না দিয়ে প্রতি পদক্ষেপে যাচাইকরণ।", "eg": "আধুনিক ক্লাউড সুরক্ষায় জিরো ট্রাস্ট মানা হয়।"}, {"en": "Cloud Computing", "bn": "মেঘীয় পরিগণনা / ক্লাউড", "cat": "Network", "def": "ইন্টারনেটের মাধ্যমে দূরবর্তী ডেটাসেন্টার থেকে কম্পিউটিং সেবা গ্রহণ।", "eg": "AWS ও Azure শীর্ষস্থানীয় ক্লাউড প্রোভাইডার।"}, {"en": "Load Balancer", "bn": "ভার ভারসাম্যক", "cat": "Network", "def": "নেটওয়ার্ক ট্রাফিককে একাধিক সার্ভারের মধ্যে সুষমভাবে বণ্টনকারী যন্ত্র বা সফটওয়্যার।", "eg": "লোড ব্যালেন্সার সার্ভারের ক্র্যাশ হওয়া রোধ করে।"}, {"en": "Containerization", "bn": "ধারকায়ন / কন্টেইনার তৈরি", "cat": "Network", "def": "অ্যাপ্লিকেশন ও তার সব লাইব্রেরিকে একটি বহনযোগ্য ইউনিটে প্যাকেজ করা।", "eg": "Docker দিয়ে সহজেই কন্টেইনার তৈরি করা যায়।"}, {"en": "Bandwidth", "bn": "ব্যান্ডপ্রস্থ", "cat": "Network", "def": "নির্দিষ্ট সময়ে নেটওয়ার্কের মধ্য দিয়ে প্রবাহিত হতে পারা সর্বোচ্চ তথ্যের হার।", "eg": "হাই-ডেফিনিশন ভিডিও স্ট্রিমিংয়ে বেশি ব্যান্ডউইডথ লাগে।"}, {"en": "Latency", "bn": "কালবিলম্ব / প্রতিক্রিয়া সময়", "cat": "Network", "def": "একটি সংকেত প্রেরক থেকে প্রাপকের কাছে পৌঁছাতে যে সময় নেয়।", "eg": "অনলাইন গেমিংয়ে কম লেটেন্সি জরুরি।"}, {"en": "Scalability", "bn": "প্রসারণযোগ্যতা", "cat": "Network", "def": "চাহিদা বাড়লে কোনো সিস্টেমের কর্মক্ষমতা সহজে বাড়ানোর সক্ষমতা।", "eg": "সিস্টেমটি কোটি ব্যবহারকারীর চাপ নিতে সক্ষম।"}, {"en": "Quantum Computing", "bn": "কোয়ান্টাম পরিগণনা", "cat": "Science", "def": "কোয়ান্টাম মেকানিক্সের কণা-ধর্মকে ব্যবহার করে অতিদ্রুত হিসাব করার আধুনিক বিজ্ঞান।", "eg": "কোয়ান্টাম কম্পিউটার জটিল অণু গবেষণায় বিপ্লব ঘটাবে।"}, {"en": "Algorithm", "bn": "কলনবিধি / অ্যালগরিদম", "cat": "Science", "def": "কোনো নির্দিষ্ট সমস্যা সমাধানের ধাপে ধাপে বিন্যস্ত সুনির্দিষ্ট নিয়মাবলী।", "eg": "দক্ষ অ্যালগরিদম প্রোগ্রামের সময় বাঁচায়।"}, {"en": "Semiconductor", "bn": "অর্ধপরিবাহী / সেমিকন্ডাক্টর", "cat": "Hardware", "def": "যে পদার্থের পরিবাহিতা ধাতু ও অন্তরকের মাঝামাঝি; ইলেকট্রনিক চিপের মূল উপাদান।", "eg": "সিলিকন হলো সবচেয়ে বহুল ব্যবহৃত সেমিকন্ডাক্টর।"}, {"en": "Integrated Circuit (IC)", "bn": "সমন্বিত বর্তনী", "cat": "Hardware", "def": "একটি ক্ষুদ্র সিলিকন চিপের ওপর নির্মিত লাখ লাখ ট্রানজিস্টরের বর্তনী।", "eg": "আধুনিক কম্পিউটারের প্রাণ হলো আইসি।"}, {"en": "Internet of Things (IoT)", "bn": "বস্তুসমূহের অন্তর্জাল", "cat": "Hardware", "def": "ইন্টারনেটের সাথে যুক্ত থাকা সেন্সর ও স্মার্ট যন্ত্রপাতির বিশ্বব্যাপী নেটওয়ার্ক।", "eg": "স্মার্ট হোমের লাইট ও পাখা IoT-এর অংশ।"}, {"en": "Motherboard", "bn": "মূল বর্তনী বোর্ড", "cat": "Hardware", "def": "কম্পিউটারের প্রধান সার্কিট বোর্ড যা সব উপাদানকে সংযুক্ত করে।", "eg": "মাদারবোর্ডে প্রসেসর ও র‍্যাম সংযুক্ত থাকে।"}];
+const audioPrompts = [{"cat": "সাহিত্য ও কাব্য", "text": "আকাশ ভরা সূর্য তারা, বিশ্ব ভরা প্রাণ, তাহারি মাঝখানে আমি পেয়েছি মোর স্থান।", "author": "রবীন্দ্রনাথ ঠাকুর"}, {"cat": "বিজ্ঞান ও প্রযুক্তি", "text": "কৃত্রিম বুদ্ধিমত্তা ও ভাষা মডেল মানব সভ্যতার জ্ঞানচর্চায় যুগান্তকারী রূপান্তর ঘটাচ্ছে।", "author": "প্রযুক্তি নিবন্ধ"}, {"cat": "ইতিহাস ও চেতনা", "text": "রক্ত দিয়ে কেনা আমাদের মাতৃভাষা বাংলা, বিশ্বের দরবারে সগৌরবে মাথা তুলে দাঁড়াবে।", "author": "একুশের চেতনা"}, {"cat": "কথ্য — ঢাকা", "text": "দোস্ত, কাল বিকেলে ধানমন্ডির আড্ডায় কিন্তু তোরে থাকতেই হবে, ওপেন সোর্স প্রজেক্টের কাজ শুরু করব।", "author": "নাগরিক কথ্য"}, {"cat": "কথ্য — কলকাতা", "text": "কাল বিকেলে কফি হাউসে দেখা হচ্ছে তো? বইমেলা আর নতুন অনুবাদ পত্রিকাটা নিয়ে চূড়ান্ত কথা বলব।", "author": "নগর কথ্য"}, {"cat": "আঞ্চলিক — চট্টগ্রাম", "text": "তোয়ার লাই আঁই একখান গান বানাইসি, হুনবা নাকি? চিটাগাংয়ের বাতাস খুব শান্ত।", "author": "চাটগাঁইয়া উপভাষা"}, {"cat": "আঞ্চলিক — সিলেট", "text": "আমরার সুরমা গাঙের পানি ও মাটি খুব সুন্দর, সুযোগ পাইলে একবার ঘুরিয়া যাইবায়।", "author": "সিলেটি উপভাষা"}, {"cat": "আঞ্চলিক — রাজশাহী ও উত্তরবঙ্গ", "text": "আমের দিনে একবার রাজশাহী ঘুরতে আসুন, পদ্মা নদীর ধারের বাতাসটা প্রাণ জুড়িয়ে দেয়।", "author": "বরেন্দ্রী উপভাষা"}];
+const wordsOfDay = [{"word": "অনুভূতি", "roman": "anubhūti", "pos": "বিশেষ্য", "def": "অন্তর দিয়ে উপলব্ধ ভাব বা সংবেদন। মানুষের প্রতিটি সৃষ্টি অনুভূতির ফসল।", "eg": "ভাষার গভীরতা কেবল ব্যাকরণে নয়, অন্তরের গভীর অনুভূতিতে।"}, {"word": "পুনর্জাগরণ", "roman": "punarjāgaraṇa", "pos": "বিশেষ্য", "def": "নতুন করে জেগে ওঠা বা নবজন্ম (Renaissance)। সুপ্ত সম্ভাবনাকে বিশ্বমঞ্চে পুনঃপ্রতিষ্ঠা করা।", "eg": "একুশ শতকে ডিজিটাল বিশ্বে ঘটবে বাংলার নতুন পুনর্জাগরণ।"}, {"word": "দিগন্ত", "roman": "diganta", "pos": "বিশেষ্য", "def": "যেখানে আকাশ ও পৃথিবী মিলিত হয়েছে বলে মনে হয়; সম্ভাবনার সীমানা।", "eg": "বাংলা ভাষা ও প্রযুক্তির সংযোগে উন্মোচিত হবে সম্ভাবনার নতুন দিগন্ত।"}, {"word": "অন্বেষণ", "roman": "anbēṣaṇa", "pos": "বিশেষ্য", "def": "সত্য, জ্ঞান বা নব আবিষ্কারের উদ্দেশ্যে গভীর সন্ধান বা গবেষণা।", "eg": "উন্মুক্ত জ্ঞানের অন্বেষণে প্রতিটি বাঙালির অংশগ্রহণ কাম্য।"}, {"word": "সৌহার্দ্য", "roman": "sauhārdya", "pos": "বিশেষ্য", "def": "হৃদয়ের সুসম্পর্ক, অকৃত্রিম বন্ধুত্ব ও পারস্পরিক সম্প্রীতি।", "eg": "বিশ্বের প্রতিটি প্রান্তে বাঙালির পারস্পরিক সৌহার্দ্যই আমাদের শক্তির উৎস।"}, {"word": "ঐক্যতান", "roman": "oikyatāna", "pos": "বিশেষ্য", "def": "বহু সুরের সমন্বয়ে সৃষ্ট সুসংগত ও সম্মিলিত সংগীত বা সম্মেলন।", "eg": "বাংলা ভাষার সমৃদ্ধির জন্য দুই বাংলা ও প্রবাসের ঐক্যতান প্রয়োজন।"}, {"word": "সংকল্প", "roman": "saṅkalpa", "pos": "বিশেষ্য", "def": "কোনো সৎ ও মহৎ কাজ সম্পন্ন করার দৃঢ় মানসিক প্রতিজ্ঞা।", "eg": "আমাদের সংকল্প — বাংলাকে বিশ্বের অন্যতম শীর্ষ ডিজিটাল ভাষা হিসেবে প্রতিষ্ঠা করা।"}];
+const chaptersSummary = [{"num": "০", "title": "দলিলের স্বভাব, সীমাবদ্ধতা ও পাঠক-নির্দেশনা", "summary": "দলিলটি নিছক ভাবাবেগ নয়; সিদ্ধান্ত-সহায়ক অনুমান, সম্ভাবনা বণ্টন ও ৩টি প্রধান প্রশ্নের (উপযোগ, পরিমাপযোগ্যতা, স্থায়িত্ব) ওপর প্রতিষ্ঠিত বাস্তব রোডম্যাপ।"}, {"num": "১", "title": "রোগনির্ণয় — সংখ্যায় বাংলা", "summary": "বাংলা বিশ্বে বক্তায় ৭ম, মাতৃভাষায় ৬ষ্ঠ (২৪+ কোটি)। অথচ ইন্টারনেটে মাত্র ০.১%, উইকিপিডিয়া অনুপাত ১:৪৯৫। সংকট জনসংখ্যার নয়, সংকট মূলধন ও আধুনিক উপযোগের।"}, {"num": "২", "title": "তত্ত্ব — ভাষা আসলে কীভাবে বড় হয়", "summary": "একটি ভাষার বৈশ্বিক মর্যাদা নির্ধারিত হয় ৩টি স্তম্ভে: ১. অর্থনৈতিক উপযোগ (চাকরি/ব্যবসা), ২. আন্তর্জাতিক সংস্কৃতি ও প্রেস্টিজ, ৩. মজবুত ডিজিটাল ও প্রাতিষ্ঠানিক অবকাঠামো।"}, {"num": "৩", "title": "দশটি আন্তর্জাতিক উদাহরণ — সফল কৌশল", "summary": "কোরিয়ান (হাললিউ ও K-pop), হিব্রু (পুনর্জাগরণ), ফরাসি (কূটনীতি), জাপানি (অ্যানিমে/টেক) ও ম্যান্ডারিনের আন্তর্জাতিক উত্থানের বিশ্লেষণ এবং বাংলার জন্য শিক্ষণীয় কৌশল।"}, {"num": "৪", "title": "কেন এত উদ্যোগ ব্যর্থ — স্বাধীন পর্যালোচনা", "summary": "অতীতের ব্যর্থতার কারণ: আবেগসর্বস্ব কর্মসূচি, প্রকল্প-ভিত্তিক ক্ষণস্থায়ী বাজেট, দুই বাংলার রাজনৈতিক বিচ্ছিন্নতা, এবং মাপকাঠিবিহীন অগভীর উদ্যোগ।"}, {"num": "৫", "title": "লক্ষ্য পুনর্নির্ধারণ — ২০৪০-এ বিশ্বভাষা", "summary": "২০৪০ সালে বাংলা হবে কৃত্রিম বুদ্ধিমত্তার প্রথম শ্রেণির ভাষা, বৈশ্বিক উচ্চশিক্ষা ও প্রযুক্তির ভাষা, এবং কমপক্ষে ১ কোটি অ-বাঙালি শিক্ষার্থীর পাঠ্য।"}, {"num": "৬", "title": "কৌশল ১ — কৃত্রিম বুদ্ধিমত্তা ও ভাষা প্রযুক্তি", "summary": "টোকেনাইজার সংস্কার, ১ লাখ ঘণ্টার ওপেন স্পিচ কর্পাস, দেশীয় হাই-পারফরম্যান্স বেঞ্চমার্ক এবং বিশ্বের সেরা মাল্টিমডাল LLM-এ বাংলার সমমর্যাদা নিশ্চিতকরণ।"}, {"num": "৭", "title": "কৌশল ২ — লিপি, কীবোর্ড, ইনপুট ও প্রমিত অভিধান", "summary": "Unicode NFC স্বাভাবিকীকরণ, মোবাইল ও ওএসে প্রমিত জেসচার ইনপুট, আধুনিক ২ লাখ+ শব্দের ওপেন সোর্স REST API অভিধান প্রণয়ন।"}, {"num": "৮", "title": "কৌশল ৩ — লিপি-ভাগ করা ভাষাগুলোর সাথে সংযোগ", "summary": "অসমিয়া, বিষ্ণুপ্রিয়া মণিপুরী সহ পূর্বাঞ্চলীয় লিপি পরিবারের সাথে যৌথ ভাষা-প্রযুক্তি কনসোর্টিয়াম তৈরি এবং আঞ্চলিক নেতৃত্ব গ্রহণ।"}, {"num": "৯", "title": "কৌশল ৪ — অনুবাদ ও দ্বিমুখী বিশ্বসেতু", "summary": "বিশ্বের ক্লাসিক ও শীর্ষ বৈজ্ঞানিক সাহিত্যের বাংলায় অনুবাদ এবং সেরা বাংলা সাহিত্যের বিশ্বমানের ইংরেজি ও স্প্যানিশ অনুবাদ নিশ্চিতকরণ।"}, {"num": "১০", "title": "কৌশল ৫ — শিক্ষা: তিনটি পৃথক বাজার", "summary": "১. স্থানীয় বিদ্যালয়/কলেজ (STEM বাংলায়), ২. প্রবাসের দ্বিতীয়-তৃতীয় প্রজন্ম (গ্যামিফাইড অ্যাপ), ৩. আন্তর্জাতিক বিদেশি শিক্ষার্থী (CEFR A1-C2 পাঠ্যক্রম ও BPT পরীক্ষা)।"}, {"num": "১১", "title": "কৌশল ৬ — সৃজনশীল শিল্প, বিনোদন ও গ্লোবাল মিডিয়া", "summary": "বিশ্বমানের অ্যানিমেশন, সাই-ফাই ও ভৌতিক ফিকশন ফ্র্যাঞ্চাইজ, আন্তর্জাতিক ওটিটি কো-প্রোডাকশন এবং বিশ্বমানের বাংলা ইন্ডি ভিডিও গেমস।"}, {"num": "১২", "title": "কৌশল ৭ — অর্থনীতি, বাণিজ্য ও চাকরি", "summary": "আন্তর্জাতিক কর্পোরেট ও টেক সেবায় বাংলাকে বাধ্যতামূলক ও লাভজনক বিকল্প করা; ফ্রিল্যান্সিং ও টেক উদ্যোক্তাদের জন্য বাংলা ইকোসিস্টেম।"}, {"num": "১৩", "title": "কৌশল ৮ — প্রবাসী কূটনীতি ও সংস্কৃতি-দূত", "summary": "যুক্তরাষ্ট্র, যুক্তরাজ্য, কানাডা ও উপসাগরীয় দেশগুলোতে প্রবাসী বাঙালি নেটওয়ার্ককে সংগঠিত করে বৈশ্বিক বিশ্ববিদ্যালয়গুলোতে বাংলা চেয়ার স্থাপন।"}, {"num": "১৪", "title": "কৌশল ৯ — দুই বঙ্গ ও বহুপাক্ষিক শাসন", "summary": "ঢাকা, কলকাতা ও আগরতলার অ্যাকাডেমিক ও বাণিজ্যিক সংযোগ বৃদ্ধি, অভিন্ন বানান নীতি সংস্কার এবং সাংস্কৃতিক বাণিজ্য সম্প্রসারণ।"}, {"num": "১৫", "title": "মূল্যায়ন কাঠামো — কীভাবে মাপবেন", "summary": "৫টি প্রধান সূচক: ওয়েব কন্টেন্ট শতাংশ, উইকিপিডিয়া নিবন্ধ সংখ্যা, এআই বেঞ্চমার্ক স্কোর, বিদেশি শিক্ষার্থীর সংখ্যা এবং বৈশ্বিক কনটেন্ট রপ্তানি রাজস্ব।"}, {"num": "১৬", "title": "১৫ বছরের রোডম্যাপ ও সম্পদ বণ্টন", "summary": "পর্যায় ১ (২০২৬-২৭: ডিজিটাল ভিত্তি), পর্যায় ২ (২০২৮-৩০: ইকোসিস্টেম বিস্তার), পর্যায় ৩ (২০৩১-৪০: বৈশ্বিক প্রাধান্য ও নেতৃত্ব)।"}, {"num": "১৭", "title": "ঝুঁকি, ব্যর্থতার শর্ত ও সাবধানতা", "summary": "রাজনৈতিক মেরুকরণ, বৌদ্ধিক চাতুর্য, অর্থহীন প্রতীকীবাদ ও ধারাবাহিকতার অভাব থেকে সচেতন থাকা।"}, {"num": "১৮", "title": "প্রথম ৯০ দিন — কার্যকর কর্মতালিকা", "summary": "সপ্তাহভিত্তিক বিস্তারিত চেকলিস্ট যা যে কেউ কোনো বাজেট বা অনুমতি ছাড়াই আজ থেকে ব্যক্তিগতভাবে শুরু করতে পারেন।"}, {"num": "১৯", "title": "আপনার জন্য ব্যক্তিগত প্লে-বুক", "summary": "ডেভেলপার, ছাত্র, শিক্ষক, লেখক, প্রবাসী এবং সাধারণ নাগরিকের জন্য সুনির্দিষ্ট কর্মপরিকল্পনা।"}, {"num": "২০", "title": "উপসংহার — বিশ্বের দরবারে বাংলা", "summary": "ভাষার ভবিষ্যৎ কোনো দৈব ঘটনা নয়; এটি কোটি মানুষের সদিচ্ছা ও প্রযুক্তিগত নির্মাণের ফলাফল। জয় বাংলা, জয় বাঙালির পুনর্জাগরণ।"}];
+
+// ── FLOATING LETTERS ──
+const banglaLetters = ['অ','আ','ই','উ','ঋ','এ','ঐ','ও','ঔ','ক','খ','গ','ঘ','ঙ','চ','ছ','জ','ঝ','ঞ','ট','ঠ','ড','ঢ','ণ','ত','থ','দ','ধ','ন','প','ফ','ব','ভ','ম','য','র','ল','শ','ষ','স','হ','ড়','ঢ়','য়','ৎ','ং','ঃ','ঁ'];
+const bgCharsEl = document.getElementById('bgChars');
+for(let i=0; i<24; i++){
+  const span = document.createElement('div');
+  span.className = 'bg-char';
+  span.textContent = banglaLetters[Math.floor(Math.random()*banglaLetters.length)];
+  span.style.left = (Math.random()*96) + '%';
+  span.style.animationDuration = (18 + Math.random()*25) + 's';
+  span.style.animationDelay = (Math.random()*15) + 's';
+  span.style.fontSize = (2 + Math.random()*2.5) + 'rem';
+  bgCharsEl.appendChild(span);
+}
+
+// ── TOKENIZER LAB SIMULATOR ──
+function simulateTokenizer(text){
+  if(!text || !text.trim()){
+    text = "আন্তর্জাতিক মাতৃভাষা দিবস";
+  }
+  const words = text.trim().split(/\s+/);
+  
+  // Standard Multilingual Tokenizer simulation (breaks Bengali conjuncts into sub-byte fragments)
+  const stdTokens = [];
+  words.forEach(w => {
+    // Split into smaller byte/sub-word fragments
+    if(w.length <= 2){
+      stdTokens.push(w);
+    } else {
+      let i = 0;
+      while(i < w.length){
+        const chunkLen = (i % 2 === 0) ? 2 : 1;
+        stdTokens.push(w.slice(i, i + chunkLen));
+        i += chunkLen;
+      }
+    }
+  });
+
+  // Optimized Bengali Morphological Tokenizer (1 word = 1 or 2 morphemic tokens)
+  const optTokens = [];
+  words.forEach(w => {
+    // Bengali suffixes
+    const suffixes = ['ের', 'দের', 'কে', 'তে', 'গুলো', 'সমূহ', 'করণ', 'শীল', 'বান', 'হীন'];
+    let matched = false;
+    for(const suf of suffixes){
+      if(w.endsWith(suf) && w.length > suf.length + 2){
+        optTokens.push(w.slice(0, -suf.length));
+        optTokens.push('-' + suf);
+        matched = true;
+        break;
+      }
+    }
+    if(!matched) optTokens.push(w);
+  });
+
+  const stdCount = stdTokens.length;
+  const optCount = optTokens.length;
+  const ratio = (stdCount / Math.max(1, optCount)).toFixed(1);
+
+  // Render chips
+  const stdWrap = document.getElementById('stdChipsWrap');
+  const optWrap = document.getElementById('optChipsWrap');
+  
+  stdWrap.innerHTML = stdTokens.map(t => `<span class="tok-chip tok-chip-bad">${t}</span>`).join('');
+  optWrap.innerHTML = optTokens.map(t => `<span class="tok-chip tok-chip-good">${t}</span>`).join('');
+
+  document.getElementById('stdTokenCountBadge').textContent = `${stdCount} টোকেন`;
+  document.getElementById('optTokenCountBadge').textContent = `${optCount} টোকেন`;
+  document.getElementById('mStdTokens').textContent = stdCount;
+  document.getElementById('mOptTokens').textContent = optCount;
+  document.getElementById('mPenalty').textContent = `${ratio} গুণ`;
+  
+  const savedPct = Math.round(((stdCount - optCount) / stdCount) * 100);
+  document.getElementById('mCostSaved').textContent = `${Math.max(0, savedPct)}% সাশ্রয়`;
+}
+
+const tokInput = document.getElementById('tokInput');
+tokInput.addEventListener('input', () => simulateTokenizer(tokInput.value));
+function setTokPrompt(txt){
+  tokInput.value = txt;
+  simulateTokenizer(txt);
+}
+simulateTokenizer(tokInput.value);
+
+// ── AUDIO STUDIO & LIVE RECORDER ──
+let currentPromptIdx = 0;
+function renderAudioPrompt(){
+  const p = audioPrompts[currentPromptIdx];
+  document.getElementById('promptCategory').textContent = p.cat;
+  document.getElementById('promptText').textContent = `"${p.text}"`;
+  document.getElementById('promptAuthor').textContent = `— ${p.author}`;
+}
+function nextPrompt(){
+  currentPromptIdx = (currentPromptIdx + 1) % audioPrompts.length;
+  renderAudioPrompt();
+}
+function prevPrompt(){
+  currentPromptIdx = (currentPromptIdx - 1 + audioPrompts.length) % audioPrompts.length;
+  renderAudioPrompt();
+}
+renderAudioPrompt();
+
+// Waveform visualizer Canvas
+const canvas = document.getElementById('waveformCanvas');
+const canvasCtx = canvas.getContext('2d');
+canvas.width = canvas.parentElement.clientWidth || 500;
+canvas.height = 90;
+
+let audioContext = null;
+let mediaRecorder = null;
+let audioChunks = [];
+let recordedBlob = null;
+let isRecording = false;
+let animFrameId = null;
+let timerInterval = null;
+let recordSeconds = 0;
+
+function drawIdleWaveform(){
+  canvasCtx.fillStyle = '#030509';
+  canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+  canvasCtx.beginPath();
+  const sliceWidth = canvas.width / 50;
+  let x = 0;
+  for(let i = 0; i < 50; i++){
+    const y = canvas.height / 2 + Math.sin(i * 0.3) * 4;
+    if(i === 0) canvasCtx.moveTo(x, y);
+    else canvasCtx.lineTo(x, y);
+    x += sliceWidth;
+  }
+  canvasCtx.stroke();
+}
+drawIdleWaveform();
+
+async function toggleRecording(){
+  if(isRecording){
+    stopRecording();
+    return;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const source = audioContext.createMediaStreamSource(stream);
+    const analyser = audioContext.createAnalyser();
+    analyser.fftSize = 256;
+    source.connect(analyser);
+
+    mediaRecorder = new MediaRecorder(stream);
+    audioChunks = [];
+
+    mediaRecorder.ondataavailable = e => {
+      if(e.data.size > 0) audioChunks.push(e.data);
+    };
+
+    mediaRecorder.onstop = () => {
+      recordedBlob = new Blob(audioChunks, { type: 'audio/webm' });
+      const audioUrl = URL.createObjectURL(recordedBlob);
+      const audioPlayback = document.getElementById('audioPlayback');
+      audioPlayback.src = audioUrl;
+      audioPlayback.style.display = 'block';
+      document.getElementById('btnDownloadAudio').style.display = 'inline-flex';
+      showToast('রেকর্ডিং সম্পন্ন হয়েছে! শুনুন ও ডাউনলোড করুন।');
+      stream.getTracks().forEach(track => track.stop());
+    };
+
+    mediaRecorder.start();
+    isRecording = true;
+
+    document.getElementById('btnRecord').classList.add('recording');
+    document.getElementById('recordBtnText').textContent = 'রেকর্ডিং চলছে...';
+    document.getElementById('btnStop').style.display = 'inline-flex';
+    document.getElementById('recordTimer').style.display = 'inline-block';
+    recordSeconds = 0;
+    timerInterval = setInterval(() => {
+      recordSeconds++;
+      const mins = String(Math.floor(recordSeconds / 60)).padStart(2, '0');
+      const secs = String(recordSeconds % 60).padStart(2, '0');
+      document.getElementById('recordTimer').textContent = `${mins}:${secs}`;
+    }, 1000);
+
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    function drawLive(){
+      animFrameId = requestAnimationFrame(drawLive);
+      analyser.getByteFrequencyData(dataArray);
+
+      canvasCtx.fillStyle = '#030509';
+      canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const barWidth = (canvas.width / bufferLength) * 2.5;
+      let barX = 0;
+
+      for(let i = 0; i < bufferLength; i++){
+        const barHeight = (dataArray[i] / 255) * canvas.height * 0.9;
+        const grad = canvasCtx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight);
+        grad.addColorStop(0, '#006A4E');
+        grad.addColorStop(0.5, '#00e599');
+        grad.addColorStop(1, '#ff334b');
+        canvasCtx.fillStyle = grad;
+        canvasCtx.fillRect(barX, canvas.height - barHeight, barWidth, barHeight);
+        barX += barWidth + 1;
+      }
+    }
+    drawLive();
+
+  } catch(err){
+    console.error('Microphone error:', err);
+    // If microphone access is denied or not supported, simulate a sample recording
+    simulateAudioRecording();
+  }
+}
+
+function simulateAudioRecording(){
+  isRecording = true;
+  document.getElementById('btnRecord').classList.add('recording');
+  document.getElementById('recordBtnText').textContent = 'সিমুলেশন চলছে...';
+  document.getElementById('btnStop').style.display = 'inline-flex';
+  
+  let frame = 0;
+  function simDraw(){
+    if(!isRecording) return;
+    animFrameId = requestAnimationFrame(simDraw);
+    canvasCtx.fillStyle = '#030509';
+    canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+    canvasCtx.lineWidth = 2;
+    canvasCtx.strokeStyle = '#00e599';
+    canvasCtx.beginPath();
+    for(let x=0; x<canvas.width; x+=4){
+      const y = canvas.height/2 + Math.sin(x*0.05 + frame*0.1) * (15 + Math.random()*15);
+      if(x===0) canvasCtx.moveTo(x,y);
+      else canvasCtx.lineTo(x,y);
+    }
+    canvasCtx.stroke();
+    frame++;
+  }
+  simDraw();
+}
+
+function stopRecording(){
+  if(!isRecording) return;
+  isRecording = false;
+  clearInterval(timerInterval);
+  cancelAnimationFrame(animFrameId);
+
+  document.getElementById('btnRecord').classList.remove('recording');
+  document.getElementById('recordBtnText').textContent = '🎤 রেকর্ড শুরু করুন';
+  document.getElementById('btnStop').style.display = 'none';
+
+  if(mediaRecorder && mediaRecorder.state !== 'inactive'){
+    mediaRecorder.stop();
+  } else {
+    // Simulated stop
+    drawIdleWaveform();
+    showToast('নমুনা অডিও রেকর্ড সিমুলেশন সম্পন্ন!');
+  }
+}
+
+function downloadRecordedAudio(){
+  if(!recordedBlob){
+    alert('প্রথমে কোনো বাক্য রেকর্ড করুন!');
+    return;
+  }
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(recordedBlob);
+  a.download = `bangla_voice_${Date.now()}.webm`;
+  a.click();
+  showToast('অডিও ফাইল ডাউনলোড হচ্ছে!');
+}
+
+function playSampleAudio(){
+  if('speechSynthesis' in window){
+    const u = new SpeechSynthesisUtterance("কৃত্রিম বুদ্ধিমত্তা মানুষের জীবনমান উন্নত করবে।");
+    u.lang = 'bn-BD';
+    speechSynthesis.speak(u);
+  } else {
+    alert('ব্রাউজার স্পিচ সিন্থেসিস সমর্থন করে না।');
+  }
+}
+
+let validationVotes = 5;
+function voteAudio(isCorrect){
+  validationVotes++;
+  document.getElementById('userContributionScore').textContent = `৩টি রেকর্ড / ${validationVotes}টি যাচাই`;
+  showToast(isCorrect ? '✓ আপনার যাচাইকরণ সংরক্ষিত হয়েছে!' : '✕ প্রতিক্রিয়া ডেটাসেটে যোগ হয়েছে!');
+}
+
+// ── GLOSSARY RENDER & FILTER ──
+let activeGlossaryCat = 'all';
+function renderGlossary(){
+  const query = document.getElementById('glossarySearch').value.toLowerCase().trim();
+  const grid = document.getElementById('glossaryGrid');
+  
+  const filtered = glossaryData.filter(item => {
+    const matchesCat = (activeGlossaryCat === 'all' || item.cat === activeGlossaryCat);
+    const matchesQuery = (!query || 
+      item.en.toLowerCase().includes(query) || 
+      item.bn.toLowerCase().includes(query) || 
+      item.def.toLowerCase().includes(query)
+    );
+    return matchesCat && matchesQuery;
+  });
+
+  if(filtered.length === 0){
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-dim);">কোনো পরিভাষা খুঁজে পাওয়া যায়নি। আপনি কি নতুন কোনো শব্দ যোগ করতে চান?</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(item => `
+    <div class="g-card">
+      <div class="g-head">
+        <div class="g-en">${item.en}</div>
+        <div class="g-cat">${item.cat}</div>
+      </div>
+      <div class="g-bn">${item.bn}</div>
+      <div class="g-def">${item.def}</div>
+      ${item.eg ? `<div class="g-eg">উদা: ${item.eg}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+function setGlossaryCategory(cat, btn){
+  activeGlossaryCat = cat;
+  document.querySelectorAll('.gf-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderGlossary();
+}
+
+function filterGlossary(){
+  renderGlossary();
+}
+renderGlossary();
+
+// ── WORD OF THE DAY ──
+let currentWordIdx = 0;
+function renderWordOfDay(){
+  const w = wordsOfDay[currentWordIdx];
+  document.getElementById('wodWord').textContent = w.word;
+  document.getElementById('wodRoman').textContent = `/ ${w.roman} /`;
+  document.getElementById('wodDef').textContent = w.def;
+  document.getElementById('wodEg').textContent = `"${w.eg}"`;
+}
+function nextWord(){
+  currentWordIdx = (currentWordIdx + 1) % wordsOfDay.length;
+  renderWordOfDay();
+}
+function prevWord(){
+  currentWordIdx = (currentWordIdx - 1 + wordsOfDay.length) % wordsOfDay.length;
+  renderWordOfDay();
+}
+function speakCurrentWord(){
+  if('speechSynthesis' in window){
+    const u = new SpeechSynthesisUtterance(wordsOfDay[currentWordIdx].word);
+    u.lang = 'bn-BD';
+    speechSynthesis.speak(u);
+  } else {
+    alert('স্পিচ সিন্থেসিস সমর্থন করে না।');
+  }
+}
+renderWordOfDay();
+
+// ── PLEDGES & CANVAS CERTIFICATE ──
+const initialPledges = [
+  {name: 'জয় সরকার', country: '🇧🇩 বাংলাদেশ', commit: 'বাংলা ওপেন সোর্স এআই ও প্রমিত পরিভাষাকোষ তৈরিতে কোড লিখব', time: 'আজ'},
+  {name: 'প্রিয়া ব্যানার্জি', country: '🇮🇳 ভারত (কলকাতা)', commit: 'আমার সন্তান ও পরিবারে শুদ্ধ বাংলা চর্চা অব্যাহত রাখব', time: 'গতকাল'},
+  {name: 'আহমেদ তানভীর', country: '🇬🇧 যুক্তরাজ্য', commit: 'বাংলা ভয়েস স্টুডিও ও কমন ভয়েসে নিয়মিত অডিও রেকর্ড করব', time: '২ দিন আগে'},
+  {name: 'নাদিয়া চৌধুরী', country: '🇺🇸 নিউ ইয়র্ক', commit: 'বাংলা উইকিপিডিয়ায় প্রতি মাসে অন্তত একটি নতুন বিজ্ঞান নিবন্ধ লিখব', time: '৩ দিন আগে'},
+  {name: 'রাফিউল ইসলাম', country: '🇦🇪 দুবাই', commit: 'একজন অ-বাঙালি বন্ধুকে বাংলা ভাষা ও সংস্কৃতির সৌন্দর্য শেখাব', time: '৪ দিন আগে'}
+];
+
+function renderPledges(){
+  const list = document.getElementById('pledgeList');
+  const stored = JSON.parse(localStorage.getItem('gb_pledges') || '[]');
+  const all = [...stored, ...initialPledges];
+
+  list.innerHTML = all.map(p => `
+    <div class="pledge-card">
+      <div class="pledge-top">
+        <div class="pledge-avatar">${p.name.slice(0, 2)}</div>
+        <div>
+          <div class="pledge-name">${p.name}</div>
+          <div class="pledge-loc">${p.country} • ${p.time || 'নতুন'}</div>
+        </div>
+      </div>
+      <div class="pledge-text">"${p.commit}"</div>
+    </div>
+  `).join('');
+}
+renderPledges();
+
+let lastPledge = null;
+function handlePledgeSubmit(){
+  const name = document.getElementById('pName').value.trim();
+  const country = document.getElementById('pCountry').value;
+  const commit = document.getElementById('pCommit').value;
+  const note = document.getElementById('pNote').value.trim();
+
+  if(!name){ alert('অনুগ্রহ করে আপনার নাম লিখুন।'); return; };
+  if(!country){ alert('আপনার দেশ বা অঞ্চল নির্বাচন করুন।'); return; };
+  if(!commit){ alert('একটি অঙ্গীকার নির্বাচন করুন।'); return; };
+
+  const newPledge = {
+    name, country, commit, note,
+    time: 'এইমাত্র',
+    id: 'GB-2040-' + Math.floor(100000 + Math.random() * 900000)
+  };
+
+  const stored = JSON.parse(localStorage.getItem('gb_pledges') || '[]');
+  stored.unshift(newPledge);
+  localStorage.setItem('gb_pledges', JSON.stringify(stored));
+  renderPledges();
+
+  lastPledge = newPledge;
+  generateCertificate(newPledge);
+  openCertModal();
+  showToast('অভিনন্দন! আপনার সংকল্প সফলভাবে গৃহীত হয়েছে।');
+
+  // Reset inputs
+  document.getElementById('pName').value = '';
+  document.getElementById('pCountry').value = '';
+  document.getElementById('pCommit').value = '';
+  document.getElementById('pNote').value = '';
+}
+
+function generateCertificate(p){
+  const c = document.getElementById('certCanvas');
+  const ctx = c.getContext('2d');
+  const W = c.width;
+  const H = c.height;
+
+  // Background
+  const grad = ctx.createRadialGradient(W/2, H/2, 100, W/2, H/2, W/2);
+  grad.addColorStop(0, '#0f172a');
+  grad.addColorStop(1, '#060912');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, W, H);
+
+  // Borders
+  ctx.lineWidth = 14;
+  ctx.strokeStyle = '#006A4E';
+  ctx.strokeRect(20, 20, W - 40, H - 40);
+
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = '#f5b041';
+  ctx.strokeRect(36, 36, W - 72, H - 72);
+
+  // Golden Corners
+  function drawCorner(x, y){
+    ctx.fillStyle = '#f5b041';
+    ctx.beginPath();
+    ctx.arc(x, y, 8, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  drawCorner(36, 36);
+  drawCorner(W - 36, 36);
+  drawCorner(36, H - 36);
+  drawCorner(W - 36, H - 36);
+
+  // Watermark Emblem
+  ctx.save();
+  ctx.translate(W/2, H/2);
+  ctx.font = 'bold 240px "Hind Siliguri", sans-serif';
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.02)';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('বাংলা', 0, 0);
+  ctx.restore();
+
+  // Header Title
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#f5b041';
+  ctx.font = 'bold 22px "Inter", sans-serif';
+  ctx.letterSpacing = '4px';
+  ctx.fillText('GLOBAL BANGLA 2040 ALLIANCE', W/2, 105);
+
+  ctx.fillStyle = '#ff4d61';
+  ctx.font = 'bold 44px "Hind Siliguri", sans-serif';
+  ctx.fillText('গ্লোবাল বাংলা দূত সনদপত্র', W/2, 165);
+
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '500 20px "Hind Siliguri", sans-serif';
+  ctx.fillText('এই প্রত্যয়নপত্রটি অত্যন্ত সম্মানের সাথে প্রদান করা হলো:', W/2, 220);
+
+  // Contributor Name
+  ctx.fillStyle = '#ffffff';
+  ctx.font = 'bold 56px "Hind Siliguri", sans-serif';
+  ctx.fillText(p.name, W/2, 305);
+
+  // Underline bar
+  ctx.fillStyle = '#f5b041';
+  ctx.fillRect(W/2 - 160, 325, 320, 3);
+
+  // Country & Recognition
+  ctx.fillStyle = '#6ee7b7';
+  ctx.font = '600 24px "Hind Siliguri", sans-serif';
+  ctx.fillText(`অবস্থান: ${p.country}`, W/2, 375);
+
+  // Commitment text
+  ctx.fillStyle = '#e5e7eb';
+  ctx.font = '500 22px "Hind Siliguri", sans-serif';
+  ctx.fillText('যিনি বিশ্বের সপ্তম বৃহত্তম ভাষা বাংলাকে প্রযুক্তি, জ্ঞান ও অর্থনীতিতে', W/2, 440);
+  ctx.fillText('শীর্ষ বৈশ্বিক মর্যাদায় উন্নীত করতে নিম্নোক্ত সংকল্পে অঙ্গীকারাবদ্ধ হয়েছেন:', W/2, 475);
+
+  // Pledge Quote
+  ctx.fillStyle = '#fef08a';
+  ctx.font = 'italic bold 26px "Hind Siliguri", sans-serif';
+  ctx.fillText(`"${p.commit}"`, W/2, 545);
+
+  // Bottom Seals & Date
+  const d = new Date();
+  const dateStr = `${d.getDate()} অক্টোবর ${d.getFullYear()}`;
+
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '16px "Inter", sans-serif';
+  ctx.fillText(`সনদ নম্বর: ${p.id}`, 80, 680);
+  ctx.fillText(`তারিখ: ${dateStr}`, 80, 710);
+
+  // Official Seal
+  ctx.save();
+  ctx.translate(W - 160, 680);
+  ctx.beginPath();
+  ctx.arc(0, 0, 48, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(245, 176, 65, 0.15)';
+  ctx.fill();
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = '#f5b041';
+  ctx.stroke();
+
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#f5b041';
+  ctx.font = 'bold 12px "Inter", sans-serif';
+  ctx.fillText('GLOBAL BANGLA', 0, -10);
+  ctx.font = 'bold 18px "Hind Siliguri", sans-serif';
+  ctx.fillText('২০৪০', 0, 12);
+  ctx.font = '9px "Inter", sans-serif';
+  ctx.fillText('SEAL OF HONOR', 0, 26);
+  ctx.restore();
+
+  // Social share links
+  const shareText = encodeURIComponent(`আমি গ্লোবাল বাংলা আন্দোলনের অংশীদার হয়েছি। বাংলাকে বিশ্বের শীর্ষ ডিজিটাল ও অর্থনৈতিক ভাষা হিসেবে গড়ে তুলতে আমি সংকল্পবদ্ধ! #GlobalBangla #Bangla2040`);
+  document.getElementById('shareWa').href = `https://api.whatsapp.com/send?text=${shareText}`;
+  document.getElementById('shareFb').href = `https://www.facebook.com/sharer/sharer.php?quote=${shareText}`;
+  document.getElementById('shareX').href = `https://twitter.com/intent/tweet?text=${shareText}`;
+}
+
+function downloadCertificate(){
+  const c = document.getElementById('certCanvas');
+  const link = document.createElement('a');
+  link.download = `Global_Bangla_Ambassador_${lastPledge ? lastPledge.name : 'Certificate'}.png`;
+  link.href = c.toDataURL('image/png');
+  link.click();
+  showToast('সনদপত্র সফলভাবে ডাউনলোড হয়েছে!');
+}
+
+function openCertModal(){
+  document.getElementById('certModal').classList.add('active');
+}
+function closeCertModal(){
+  document.getElementById('certModal').classList.remove('active');
+}
+
+// ── BLUEPRINT MODAL & CHAPTER SELECTION ──
+function openBlueprintModal(){
+  document.getElementById('blueprintModal').classList.add('active');
+  selectChapter('০', document.querySelector('.bp-nav-btn'));
+}
+function closeBlueprintModal(){
+  document.getElementById('blueprintModal').classList.remove('active');
+}
+function selectChapter(num, btn){
+  document.querySelectorAll('.bp-nav-btn').forEach(b => b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  
+  const ch = chaptersSummary.find(c => c.num === num) || chaptersSummary[0];
+  document.getElementById('bpTitle').textContent = `খণ্ড ${ch.num}: ${ch.title}`;
+  document.getElementById('bpContent').innerHTML = `
+    <p style="font-size:1.1rem;margin-bottom:16px;color:#fff;">${ch.summary}</p>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:16px;margin-top:16px;">
+      <h4 style="color:var(--gold-lt);font-size:0.95rem;margin-bottom:8px;">💡 এই খণ্ডের মূল সিদ্ধান্ত:</h4>
+      <p style="font-size:0.9rem;color:var(--text-dim);line-height:1.6;">
+        বাংলা ভাষার অগ্রগতির প্রতিটি পদক্ষেপ অবশ্যই পরিমাপযোগ্য, টেকসই এবং বাস্তব অর্থনৈতিক উপযোগের ভিত্তিতে পরিচালিত হতে হবে। নিছক আবেগ নয় — অবকাঠামোগত নির্মাণই নিশ্চিত করবে চিরস্থায়ী বৈশ্বিক প্রভাব।
+      </p>
+    </div>
+  `;
+}
+
+// ── PROPOSE TERM MODAL ──
+function openProposeModal(){
+  document.getElementById('proposeModal').classList.add('active');
+}
+function closeProposeModal(){
+  document.getElementById('proposeModal').classList.remove('active');
+}
+function submitProposedTerm(){
+  const en = document.getElementById('propEn').value.trim();
+  const bn = document.getElementById('propBn').value.trim();
+  const cat = document.getElementById('propCat').value;
+  const def = document.getElementById('propDef').value.trim();
+
+  if(!en || !bn){
+    alert('অনুগ্রহ করে ইংরেজি ও বাংলা উভয় শব্দ লিখুন।');
+    return;
+  }
+
+  glossaryData.unshift({ en, bn, cat, def: def || 'কমিউনিটি কর্তৃক প্রস্তাবিত পরিভাষা।', eg: '' });
+  renderGlossary();
+  closeProposeModal();
+  showToast('নতুন পরিভাষা সফলভাবে তালিকায় যুক্ত হয়েছে!');
+
+  document.getElementById('propEn').value = '';
+  document.getElementById('propBn').value = '';
+  document.getElementById('propDef').value = '';
+}
+
+// ── TOAST NOTIFICATION ──
+function showToast(msg){
+  const toast = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3500);
+}
+
+// ── ESCAPE KEY CLOSE ──
+window.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape'){
+    closeCertModal();
+    closeBlueprintModal();
+    closeProposeModal();
+  }
+});
+</script>
+</body>
+</html>

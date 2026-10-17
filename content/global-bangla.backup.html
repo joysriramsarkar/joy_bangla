@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>গ্লোবাল বাংলা — বিশ্বে বাংলার পুনর্জাগরণ</title>
+<meta name="description" content="৩০ কোটি মানুষের ভাষাকে বিশ্বের অন্যতম শক্তিশালী ডিজিটাল, সাংস্কৃতিক ও অর্থনৈতিক ভাষায় পরিণত করার উন্মুক্ত আন্দোলন।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep:    #060912;
+  --bg-card:    rgba(255,255,255,0.04);
+  --bg-card-h:  rgba(255,255,255,0.08);
+  --green:      #006A4E;
+  --green-lt:   #00a577;
+  --red:        #E3001B;
+  --red-lt:     #ff2d44;
+  --gold:       #f0b429;
+  --gold-lt:    #ffe066;
+  --text:       #f0eee8;
+  --muted:      #8a8598;
+  --border:     rgba(255,255,255,0.08);
+  --radius:     16px;
+  --shadow:     0 8px 40px rgba(0,0,0,.5);
+  --glow-g:     0 0 60px rgba(0,106,78,.25);
+  --glow-r:     0 0 60px rgba(227,0,27,.25);
+  --glow-gold:  0 0 40px rgba(240,180,41,.2);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Hind Siliguri', 'Inter', sans-serif;
+  background: var(--bg-deep);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%; height: 64px;
+  background: rgba(6,9,18,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-brand {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em;
+}
+.nav-flag { width: 28px; height: 18px; border-radius: 3px; overflow: hidden; display: flex; }
+.nav-flag .f-g { flex: 1; background: var(--green); }
+.nav-flag .f-r { width: 12px; height: 12px; background: var(--red); border-radius: 50%; margin: auto; position: absolute; left: 50%; transform: translateX(-55%); }
+.nav-flag-wrap { position: relative; width: 28px; height: 18px; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: .88rem; font-weight: 500; transition: color .2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  background: var(--red); color: #fff; border: none; border-radius: 8px;
+  padding: 8px 20px; font-family: inherit; font-size: .88rem; font-weight: 600;
+  cursor: pointer; transition: background .2s, transform .15s;
+}
+.nav-cta:hover { background: var(--red-lt); transform: translateY(-1px); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 100px 6% 60px;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(227,0,27,.12) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(0,106,78,.15) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 90%, rgba(240,180,41,.08) 0%, transparent 60%);
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(227,0,27,.12); border: 1px solid rgba(227,0,27,.3);
+  border-radius: 100px; padding: 6px 16px; font-size: .8rem; font-weight: 600;
+  color: #ff8090; margin-bottom: 28px; position: relative; z-index: 1;
+}
+.hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:.3} }
+.hero h1 {
+  font-size: clamp(2.4rem, 7vw, 5.5rem); font-weight: 700;
+  line-height: 1.1; letter-spacing: -0.03em;
+  position: relative; z-index: 1;
+}
+.hero h1 .gr {
+  background: linear-gradient(135deg, var(--red-lt), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-size: clamp(1rem, 2.5vw, 1.25rem); color: var(--muted); max-width: 680px;
+  margin: 24px auto 0; position: relative; z-index: 1;
+}
+.hero-tagline {
+  display: inline-block; margin-top: 16px;
+  font-size: .95rem; color: var(--green-lt); font-weight: 600;
+  position: relative; z-index: 1;
+  border-left: 3px solid var(--green); padding-left: 14px;
+}
+.hero-stats {
+  display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+  margin: 48px 0 0; position: relative; z-index: 1;
+}
+.hstat {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 18px 24px; text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform .3s, border-color .3s;
+}
+.hstat:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.2); }
+.hstat-n { font-size: 1.8rem; font-weight: 700; line-height: 1; }
+.hstat-l { font-size: .78rem; color: var(--muted); margin-top: 4px; }
+.hero-actions {
+  display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+  margin-top: 40px; position: relative; z-index: 1;
+}
+.btn-primary {
+  background: var(--red); color: #fff; border: none; border-radius: 10px;
+  padding: 14px 32px; font-family: inherit; font-size: 1rem; font-weight: 600;
+  cursor: pointer; transition: all .2s;
+  box-shadow: 0 4px 24px rgba(227,0,27,.4);
+}
+.btn-primary:hover { background: var(--red-lt); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(227,0,27,.5); }
+.btn-ghost {
+  background: transparent; color: var(--text); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 32px; font-family: inherit;
+  font-size: 1rem; font-weight: 600; cursor: pointer; transition: all .2s;
+}
+.btn-ghost:hover { background: var(--bg-card); border-color: rgba(255,255,255,.2); transform: translateY(-2px); }
+
+/* ── MARQUEE ── */
+.marquee-wrap {
+  overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 14px 0; background: rgba(0,106,78,.06);
+}
+.marquee-inner { display: flex; gap: 48px; width: max-content; animation: marquee 30s linear infinite; }
+.marquee-inner span { white-space: nowrap; font-size: .82rem; font-weight: 500; color: var(--muted); }
+.marquee-inner span b { color: var(--green-lt); }
+@keyframes marquee { from{transform:translateX(0)}to{transform:translateX(-50%)} }
+
+/* ── SECTIONS ── */
+section { padding: 100px 6%; }
+.section-label {
+  font-size: .75rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700;
+  line-height: 1.15; letter-spacing: -0.025em; margin-bottom: 16px;
+}
+.section-sub { font-size: 1.05rem; color: var(--muted); max-width: 620px; margin-bottom: 56px; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+/* ── CRISIS SECTION ── */
+.crisis { background: rgba(227,0,27,.03); }
+.crisis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media(max-width:768px){ .crisis-grid { grid-template-columns: 1fr; } }
+.crisis-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px; transition: all .3s;
+}
+.crisis-card:hover { background: var(--bg-card-h); border-color: rgba(227,0,27,.3); transform: translateY(-3px); }
+.crisis-icon { font-size: 2rem; margin-bottom: 14px; }
+.crisis-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+.crisis-card p { font-size: .9rem; color: var(--muted); line-height: 1.7; }
+.crisis-stat {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(227,0,27,.1); border: 1px solid rgba(227,0,27,.2);
+  border-radius: 8px; padding: 4px 12px; font-size: .8rem; font-weight: 700;
+  color: #ff8090; margin-top: 12px;
+}
+
+/* ── PILLARS ── */
+.pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media(max-width:900px){ .pillars-grid { grid-template-columns: 1fr; } }
+.pillar {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 36px 28px; text-align: center;
+  position: relative; overflow: hidden; transition: all .3s;
+}
+.pillar::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+}
+.pillar.p1::before { background: linear-gradient(90deg, var(--red), var(--red-lt)); }
+.pillar.p2::before { background: linear-gradient(90deg, var(--gold), var(--gold-lt)); }
+.pillar.p3::before { background: linear-gradient(90deg, var(--green), var(--green-lt)); }
+.pillar:hover { transform: translateY(-6px); border-color: rgba(255,255,255,.18); box-shadow: var(--shadow); }
+.pillar-num { font-size: 3rem; font-weight: 900; opacity: .07; position: absolute; top: 16px; right: 20px; line-height:1; }
+.pillar-icon { font-size: 2.4rem; margin-bottom: 20px; display: block; }
+.pillar h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
+.pillar p { font-size: .88rem; color: var(--muted); line-height: 1.75; }
+
+/* ── BATTLEFRONTS ── */
+.fronts { background: rgba(0,106,78,.03); }
+.fronts-list { display: flex; flex-direction: column; gap: 16px; }
+.front-item {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px 28px;
+  display: grid; grid-template-columns: 60px 1fr auto;
+  align-items: center; gap: 24px;
+  transition: all .3s; cursor: default;
+}
+.front-item:hover { background: var(--bg-card-h); border-color: rgba(255,255,255,.16); transform: translateX(6px); }
+.front-num {
+  font-size: 1.6rem; font-weight: 900; line-height: 1;
+  background: linear-gradient(135deg, var(--red), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.front-content h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+.front-content p { font-size: .85rem; color: var(--muted); line-height: 1.6; }
+.front-tag {
+  font-size: .72rem; font-weight: 700; padding: 4px 12px; border-radius: 100px;
+  white-space: nowrap;
+}
+.tag-urgent { background: rgba(227,0,27,.15); color: #ff8090; border: 1px solid rgba(227,0,27,.3); }
+.tag-key    { background: rgba(240,180,41,.12); color: var(--gold-lt); border: 1px solid rgba(240,180,41,.3); }
+.tag-now    { background: rgba(0,106,78,.15); color: var(--green-lt); border: 1px solid rgba(0,106,78,.3); }
+
+/* ── PRIORITIES ── */
+.priorities-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media(max-width:768px){ .priorities-grid { grid-template-columns: 1fr; } }
+.priority-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 22px 24px;
+  display: flex; gap: 18px; align-items: flex-start;
+  transition: all .3s;
+}
+.priority-card:hover { background: var(--bg-card-h); border-color: rgba(255,255,255,.15); transform: translateY(-3px); }
+.pnum {
+  min-width: 38px; height: 38px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .85rem; font-weight: 800;
+  background: linear-gradient(135deg, rgba(227,0,27,.2), rgba(240,180,41,.15));
+  border: 1px solid rgba(240,180,41,.2); color: var(--gold-lt);
+}
+.priority-card h4 { font-size: .95rem; font-weight: 700; margin-bottom: 6px; }
+.priority-card p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+
+/* ── JOIN THE MOVEMENT ── */
+.join { background: rgba(240,180,41,.03); }
+.join-intro {
+  background: var(--bg-card); border: 1px solid rgba(240,180,41,.2);
+  border-radius: var(--radius); padding: 32px; margin-bottom: 40px;
+  text-align: center;
+}
+.join-intro h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; }
+.join-intro p { color: var(--muted); font-size: .95rem; }
+.join-tracks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+@media(max-width:900px){ .join-tracks { grid-template-columns: 1fr; } }
+.track {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden; transition: all .3s;
+}
+.track:hover { transform: translateY(-5px); border-color: rgba(255,255,255,.18); box-shadow: var(--shadow); }
+.track-head {
+  padding: 22px 24px; display: flex; align-items: center; gap: 14px;
+}
+.track-icon { font-size: 1.8rem; }
+.track-head h3 { font-size: 1rem; font-weight: 700; }
+.track-head span { font-size: .78rem; color: var(--muted); display: block; margin-top: 2px; }
+.track-body { padding: 0 24px 24px; }
+.track-step {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 0; border-top: 1px solid var(--border);
+}
+.track-step:first-child { border-top: none; }
+.step-dot { min-width: 8px; height: 8px; border-radius: 50%; margin-top: 8px; }
+.track-step p { font-size: .85rem; color: var(--muted); line-height: 1.6; }
+.track-step p b { color: var(--text); }
+.track-cta {
+  display: block; margin-top: 18px; width: 100%; padding: 12px;
+  border-radius: 10px; font-family: inherit; font-size: .88rem; font-weight: 600;
+  cursor: pointer; transition: all .2s; text-align: center; text-decoration: none;
+}
+
+/* ── ROADMAP ── */
+.roadmap { background: rgba(0,0,0,.2); }
+.timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
+.timeline::before {
+  content:''; position:absolute; left:28px; top:0; bottom:0; width:2px;
+  background: linear-gradient(to bottom, var(--red), var(--gold), var(--green));
+  opacity: .3;
+}
+.tl-item {
+  display: flex; gap: 28px; padding: 0 0 48px;
+  position: relative;
+}
+.tl-dot {
+  min-width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; font-weight: 800; position: relative; z-index: 1;
+  flex-shrink: 0;
+}
+.tl-dot.phase1 { background: rgba(227,0,27,.15); border: 2px solid var(--red); color: var(--red-lt); }
+.tl-dot.phase2 { background: rgba(240,180,41,.12); border: 2px solid var(--gold); color: var(--gold-lt); }
+.tl-dot.phase3 { background: rgba(0,106,78,.12); border: 2px solid var(--green); color: var(--green-lt); }
+.tl-content {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px 28px; flex: 1;
+  transition: all .3s;
+}
+.tl-content:hover { background: var(--bg-card-h); border-color: rgba(255,255,255,.15); }
+.tl-period { font-size: .78rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+.tl-content h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 14px; }
+.tl-items { display: flex; flex-direction: column; gap: 8px; }
+.tl-item-row { display: flex; align-items: flex-start; gap: 10px; font-size: .87rem; color: var(--muted); }
+.tl-item-row::before { content:'→'; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+/* ── GLOSSARY ── */
+.glossary { background: rgba(0,106,78,.03); }
+.glossary-filter {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px;
+}
+.gf-btn {
+  padding: 6px 16px; border-radius: 100px; font-family: inherit;
+  font-size: .8rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border);
+  background: var(--bg-card); color: var(--muted); transition: all .2s;
+}
+.gf-btn.active, .gf-btn:hover {
+  background: rgba(0,106,78,.2); border-color: var(--green); color: var(--green-lt);
+}
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.g-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 18px 20px; transition: all .3s;
+}
+.g-card:hover { background: var(--bg-card-h); border-color: rgba(0,165,119,.3); transform: translateY(-3px); }
+.g-en { font-size: .8rem; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+.g-bn { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.g-def { font-size: .82rem; color: var(--muted); line-height: 1.65; }
+.g-cat {
+  display: inline-block; margin-top: 10px;
+  font-size: .7rem; font-weight: 700; padding: 3px 10px; border-radius: 100px;
+  background: rgba(0,106,78,.12); border: 1px solid rgba(0,106,78,.25); color: var(--green-lt);
+}
+
+/* ── PLEDGE ── */
+.pledge { background: rgba(227,0,27,.04); }
+.pledge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+@media(max-width:900px){ .pledge-grid { grid-template-columns: 1fr; } }
+.pledge-form {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 36px;
+}
+.pledge-form h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 24px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: .83rem; font-weight: 600; color: var(--muted); margin-bottom: 8px; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; background: rgba(255,255,255,.05); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 16px; color: var(--text);
+  font-family: inherit; font-size: .9rem; transition: border-color .2s;
+  outline: none;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--red); box-shadow: 0 0 0 3px rgba(227,0,27,.1);
+}
+.form-group select option { background: #111; }
+.pledge-submit {
+  width: 100%; background: var(--red); color: #fff; border: none;
+  border-radius: 10px; padding: 14px; font-family: inherit;
+  font-size: 1rem; font-weight: 700; cursor: pointer; transition: all .2s;
+  box-shadow: 0 4px 24px rgba(227,0,27,.4); margin-top: 8px;
+}
+.pledge-submit:hover { background: var(--red-lt); transform: translateY(-2px); }
+.pledge-wall { }
+.pledge-wall h3 { font-size: 1rem; font-weight: 700; margin-bottom: 20px; color: var(--muted); }
+.pledge-items { display: flex; flex-direction: column; gap: 12px; max-height: 480px; overflow-y: auto; }
+.pledge-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px 20px;
+  animation: slideIn .4s ease;
+}
+@keyframes slideIn { from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)} }
+.pledge-card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.pledge-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--red), var(--gold));
+  display: flex; align-items: center; justify-content: center;
+  font-size: .9rem; font-weight: 700; color: #fff; flex-shrink: 0;
+}
+.pledge-name { font-weight: 700; font-size: .9rem; }
+.pledge-country { font-size: .75rem; color: var(--muted); }
+.pledge-text { font-size: .83rem; color: var(--muted); line-height: 1.6; font-style: italic; }
+
+/* ── WORD OF DAY ── */
+.wod { background: rgba(240,180,41,.03); }
+.wod-card {
+  max-width: 760px; margin: 0 auto;
+  background: var(--bg-card); border: 1px solid rgba(240,180,41,.25);
+  border-radius: 24px; padding: 48px; text-align: center;
+  box-shadow: var(--glow-gold);
+}
+.wod-label { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; font-weight: 700; }
+.wod-word { font-size: clamp(3rem, 8vw, 5rem); font-weight: 700; line-height: 1; margin-bottom: 8px; }
+.wod-roman { font-size: 1.1rem; color: var(--muted); font-style: italic; margin-bottom: 24px; }
+.wod-def {
+  background: rgba(255,255,255,.04); border-radius: 12px; padding: 20px 24px;
+  font-size: .95rem; color: var(--muted); margin-bottom: 24px; text-align: left;
+}
+.wod-example { font-size: .9rem; color: var(--green-lt); font-style: italic; margin-top: 10px; }
+.wod-nav { display: flex; gap: 12px; justify-content: center; }
+.wod-btn {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 10px 24px; font-family: inherit;
+  font-size: .88rem; color: var(--text); cursor: pointer; transition: all .2s;
+}
+.wod-btn:hover { background: var(--bg-card-h); border-color: rgba(255,255,255,.2); }
+.wod-btn.wod-speak {
+  background: rgba(240,180,41,.12); border-color: rgba(240,180,41,.3); color: var(--gold-lt);
+}
+
+/* ── COUNTER SECTION ── */
+.counters { text-align: center; padding: 80px 6%; }
+.counters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+@media(max-width:900px){ .counters-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:500px){ .counters-grid { grid-template-columns: 1fr; } }
+.counter-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 36px 24px;
+  transition: all .3s;
+}
+.counter-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,.2); }
+.counter-n { font-size: 2.4rem; font-weight: 800; line-height: 1; }
+.counter-l { font-size: .82rem; color: var(--muted); margin-top: 8px; }
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  margin: 0 6% 100px; border-radius: 24px; padding: 72px 6%;
+  background: linear-gradient(135deg, rgba(227,0,27,.12), rgba(0,106,78,.12));
+  border: 1px solid rgba(255,255,255,.08); text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-banner::before {
+  content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(240,180,41,.06) 0%, transparent 70%);
+}
+.cta-banner h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; margin-bottom: 16px; position: relative; }
+.cta-banner p { color: var(--muted); font-size: 1.05rem; max-width: 560px; margin: 0 auto 36px; position: relative; }
+.cta-banner .btn-primary { position: relative; font-size: 1.05rem; padding: 16px 40px; }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border); padding: 48px 6%;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+}
+.footer-left { font-size: .88rem; color: var(--muted); }
+.footer-left b { color: var(--text); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { color: var(--muted); font-size: .83rem; text-decoration: none; transition: color .2s; }
+.footer-links a:hover { color: var(--text); }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 999;
+  background: var(--green); color: #fff; border-radius: 12px;
+  padding: 14px 22px; font-weight: 600; font-size: .9rem;
+  transform: translateY(100px); opacity: 0; transition: all .4s;
+  box-shadow: 0 8px 32px rgba(0,106,78,.5);
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ── FLOATING BG CHARS ── */
+.bg-chars {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 0; overflow: hidden;
+}
+.bg-char {
+  position: absolute; font-size: 4rem; font-weight: 700; opacity: .018;
+  animation: floatChar linear infinite;
+}
+@keyframes floatChar {
+  0%   { transform: translateY(100vh) rotate(0deg); }
+  100% { transform: translateY(-20vh) rotate(360deg); }
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .nav-links { display: none; }
+  .front-item { grid-template-columns: 50px 1fr; }
+  .front-tag { display: none; }
+  .pledge-grid { grid-template-columns: 1fr; }
+  .counters-grid { grid-template-columns: repeat(2,1fr); }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- Floating background characters -->
+<div class="bg-chars" aria-hidden="true" id="bgChars"></div>
+
+<!-- Toast -->
+<div class="toast" id="toast">✅ আপনার অঙ্গীকার গৃহীত হয়েছে!</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-flag-wrap">
+      <div class="nav-flag"><div class="f-g"></div></div>
+      <div class="nav-flag" style="position:absolute;top:0;left:0;width:28px;height:18px;display:flex;align-items:center;justify-content:center;">
+        <div style="width:10px;height:10px;background:#E3001B;border-radius:50%;margin-left:4px;"></div>
+      </div>
+    </div>
+    গ্লোবাল বাংলা
+  </div>
+  <ul class="nav-links">
+    <li><a href="#crisis">সমস্যা</a></li>
+    <li><a href="#pillars">কৌশল</a></li>
+    <li><a href="#join">যোগ দিন</a></li>
+    <li><a href="#roadmap">রোডম্যাপ</a></li>
+    <li><a href="#glossary">পরিভাষা</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('pledge').scrollIntoView({behavior:'smooth'})">অঙ্গীকার করুন</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-badge"><div class="dot"></div>একটি উন্মুক্ত বৈশ্বিক আন্দোলন</div>
+  <h1>বাংলা আর <span class="gr">পিছিয়ে নেই।</span><br>এবার বিশ্বজয়।</h1>
+  <p class="hero-sub">৩০ কোটি মানুষের ভাষা — কিন্তু ইন্টারনেটের মাত্র ০.১%। এই বৈষম্য মুছে দিতে আমরা একটি আন্দোলন গড়ে তুলছি।</p>
+  <blockquote class="hero-tagline">"Bangla-first, not Bangla-only"</blockquote>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-n" style="color:#E3001B">৩০ কোটি+</div><div class="hstat-l">মাতৃভাষী বক্তা</div></div>
+    <div class="hstat"><div class="hstat-n" style="color:#f0b429">৭ম</div><div class="hstat-l">বিশ্বে ভাষার ক্রম</div></div>
+    <div class="hstat"><div class="hstat-n" style="color:#ff8090">০.১%</div><div class="hstat-l">ইন্টারনেট কনটেন্ট</div></div>
+    <div class="hstat"><div class="hstat-n" style="color:#00a577">২০৪০</div><div class="hstat-l">লক্ষ্যমাত্রার বছর</div></div>
+  </div>
+  <div class="hero-actions">
+    <button class="btn-primary" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">আন্দোলনে যোগ দিন</button>
+    <button class="btn-ghost" onclick="document.getElementById('crisis').scrollIntoView({behavior:'smooth'})">সমস্যাটা বুঝুন →</button>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span>🌐 ইন্টারনেটে বাংলা মাত্র <b>০.১%</b></span>
+    <span>📚 Duolingo-তে এখনো বাংলা কোর্স নেই</span>
+    <span>🤖 বড় AI মডেলগুলো বাংলায় <b>হোঁচট খায়</b></span>
+    <span>🎮 বিশ্বের শীর্ষ গেমগুলোতে বাংলা ভাষার অপশন নেই</span>
+    <span>📖 Wikipedia-তে বাংলা নিবন্ধ মাত্র <b>১.৬ লাখ</b> — ইংরেজিতে <b>৬৯ লাখ</b></span>
+    <span>💬 প্রবাসে দ্বিতীয় প্রজন্ম বাংলা <b>হারাচ্ছে</b></span>
+    <span>🌐 ইন্টারনেটে বাংলা মাত্র <b>০.১%</b></span>
+    <span>📚 Duolingo-তে এখনো বাংলা কোর্স নেই</span>
+    <span>🤖 বড় AI মডেলগুলো বাংলায় <b>হোঁচট খায়</b></span>
+    <span>🎮 বিশ্বের শীর্ষ গেমগুলোতে বাংলা ভাষার অপশন নেই</span>
+    <span>📖 Wikipedia-তে বাংলা নিবন্ধ মাত্র <b>১.৬ লাখ</b> — ইংরেজিতে <b>৬৯ লাখ</b></span>
+    <span>💬 প্রবাসে দ্বিতীয় প্রজন্ম বাংলা <b>হারাচ্ছে</b></span>
+  </div>
+</div>
+
+<!-- CRISIS -->
+<section class="crisis" id="crisis">
+  <div class="container">
+    <div class="section-label">সমস্যা</div>
+    <h2 class="section-title">সংখ্যায় বিশাল,<br>ডিজিটালে অদৃশ্য</h2>
+    <p class="section-sub">বাংলা ভাষার সবচেয়ে বড় সমস্যা বক্তার সংখ্যা নয়; সমস্যা হলো ডিজিটাল ও প্রযুক্তিগত উপস্থিতির মারাত্মক ঘাটতি।</p>
+    <div class="crisis-grid">
+      <div class="crisis-card">
+        <div class="crisis-icon">🌐</div>
+        <h3>ইন্টারনেটে প্রায় অনুপস্থিত</h3>
+        <p>W3Techs-এর তথ্য অনুযায়ী, পরিচিত Content Language-সহ ওয়েবসাইটের মাত্র ০.১% বাংলা ব্যবহার করে। অথচ ইংরেজি প্রায় ৪৯.৫%।</p>
+        <div class="crisis-stat">বাংলা: ০.১% vs ইংরেজি: ৪৯.৫%</div>
+      </div>
+      <div class="crisis-card">
+        <div class="crisis-icon">🤖</div>
+        <h3>AI ও প্রযুক্তিতে পিছিয়ে</h3>
+        <p>বৃহৎ ভাষা মডেল (LLM) গুলো বাংলায় হোঁচট খায়। স্পিচ ডেটাসেট, OCR, Machine Translation — সবই উন্নতির সুযোগ রয়েছে।</p>
+        <div class="crisis-stat">NLP ডেটাসেট: অপ্রতুল ও বিচ্ছিন্ন</div>
+      </div>
+      <div class="crisis-card">
+        <div class="crisis-icon">📚</div>
+        <h3>জ্ঞানভাণ্ডার সীমিত</h3>
+        <p>বিজ্ঞান, প্রযুক্তি, চিকিৎসা, আইন, অর্থনীতি — এই বিষয়গুলোতে বাংলায় মানসম্মত কনটেন্ট অত্যন্ত কম। Wikipedia-তে বাংলা নিবন্ধ মাত্র ১.৬ লাখ।</p>
+        <div class="crisis-stat">বাংলা উইকিপিডিয়া: ১.৬ লাখ vs ইংরেজি: ৬৯ লাখ</div>
+      </div>
+      <div class="crisis-card">
+        <div class="crisis-icon">👶</div>
+        <h3>প্রবাসে ভাষা হারিয়ে যাচ্ছে</h3>
+        <p>উত্তর আমেরিকা, ইউরোপ, মধ্যপ্রাচ্যে বেড়ে ওঠা দ্বিতীয়-তৃতীয় প্রজন্মের বাঙালি শিশু ধীরে ধীরে মাতৃভাষার সঙ্গে সংযোগ হারাচ্ছে।</p>
+        <div class="crisis-stat">লার্নিং ইকোসিস্টেম: দুর্বল ও পুরনো</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section id="pillars">
+  <div class="container">
+    <div class="section-label">কৌশলগত কাঠামো</div>
+    <h2 class="section-title">তিনটি স্তম্ভ,<br>একটি লক্ষ্য</h2>
+    <p class="section-sub">বাংলাকে শুধু আবেগের বন্দনায় আটকে রাখলে চলবে না। ভাষাটিকে করতে হবে ব্যবহারযোগ্য, আকর্ষণীয় এবং অর্থনৈতিকভাবে মূল্যবান।</p>
+    <div class="pillars-grid">
+      <div class="pillar p1">
+        <span class="pillar-num">১</span>
+        <span class="pillar-icon">⚙️</span>
+        <h3>উপযোগিতা (Utility)</h3>
+        <p>প্রযুক্তি, কোডিং, ব্যবসা, বিজ্ঞান ও AI — এই সব ক্ষেত্রে বাংলায় মানসম্মত সম্পদ নিশ্চিত করা। বাংলা শিখলে বাস্তব সুবিধা মিলবে।</p>
+      </div>
+      <div class="pillar p2">
+        <span class="pillar-num">২</span>
+        <span class="pillar-icon">✨</span>
+        <h3>মর্যাদা (Prestige)</h3>
+        <p>আন্তর্জাতিক মানের সিনেমা, গেম, অ্যানিমেশন ও সংগীত। বাংলা সংস্কৃতিকে K-pop-এর মতো বিশ্বব্যাপী আকর্ষণীয় করে তোলা।</p>
+      </div>
+      <div class="pillar p3">
+        <span class="pillar-num">৩</span>
+        <span class="pillar-icon">🏗️</span>
+        <h3>অবকাঠামো (Infrastructure)</h3>
+        <p>উন্মুক্ত অভিধান, স্পিচ কর্পাস, প্রযুক্তি পরিভাষাকোষ, CEFR-ভিত্তিক ভাষাশিক্ষা এবং AI ডেটাসেট — ভিত্তি ছাড়া উপরের দুই স্তম্ভ টেকে না।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BATTLEFRONTS -->
+<section class="fronts" id="fronts">
+  <div class="container">
+    <div class="section-label">পাঁচ রণক্ষেত্র</div>
+    <h2 class="section-title">একই সাথে পাঁচ দিকে লড়াই</h2>
+    <p class="section-sub">বাংলার পুনর্জাগরণ কোনো একটি ক্ষেত্রে সীমিত থাকলে চলবে না। পাঁচটি সমান্তরাল ফ্রন্টে একযোগে কাজ করতে হবে।</p>
+    <div class="fronts-list">
+      <div class="front-item">
+        <div class="front-num">০১</div>
+        <div class="front-content">
+          <h3>প্রযুক্তি ও কৃত্রিম বুদ্ধিমত্তা</h3>
+          <p>বাংলা AI মডেল, স্পিচ ডেটাসেট, OCR, মেশিন ট্রান্সলেশন, এবং বাংলা প্রযুক্তি পরিভাষাকোষ তৈরি। বড় AI প্ল্যাটফর্মে বাংলার প্রথম সারির সহায়তা নিশ্চিত করা।</p>
+        </div>
+        <div class="front-tag tag-urgent">জরুরি</div>
+      </div>
+      <div class="front-item">
+        <div class="front-num">০২</div>
+        <div class="front-content">
+          <h3>শিক্ষা ও ভাষা শিক্ষণ</h3>
+          <p>CEFR-ভিত্তিক বাংলা দক্ষতা কাঠামো, প্রবাসীদের শিশুদের জন্য গ্যামিফাইড লার্নিং, আন্তর্জাতিক বাংলা দক্ষতা পরীক্ষা (BPT) এবং বিদেশি শিক্ষার্থীদের জন্য কোর্স।</p>
+        </div>
+        <div class="front-tag tag-key">মূল</div>
+      </div>
+      <div class="front-item">
+        <div class="front-num">০৩</div>
+        <div class="front-content">
+          <h3>সংস্কৃতি ও বিনোদন</h3>
+          <p>বাংলা অ্যানিমেশন, সাই-ফাই সাহিত্য, ইন্ডি গেম, পডকাস্ট ও ডকুমেন্টারি — ফেলুদা থেকে ভবিষ্যতের গ্লোবাল আইপি। K-pop-এর মতো বাংলা সংস্কৃতিকে বৈশ্বিক করা।</p>
+        </div>
+        <div class="front-tag tag-now">এখনই</div>
+      </div>
+      <div class="front-item">
+        <div class="front-num">০৪</div>
+        <div class="front-content">
+          <h3>উন্মুক্ত জ্ঞানভাণ্ডার</h3>
+          <p>Wikipedia সম্প্রসারণ, বিজ্ঞান ও প্রযুক্তির সকল শাখায় মানসম্মত বাংলা কনটেন্ট, ওপেন পাবলিশিং মুভমেন্ট এবং সমান্তরাল অনুবাদ কর্পাস।</p>
+        </div>
+        <div class="front-tag tag-key">মূল</div>
+      </div>
+      <div class="front-item">
+        <div class="front-num">০৫</div>
+        <div class="front-content">
+          <h3>কূটনীতি ও অর্থনীতি</h3>
+          <p>বিদেশি বিশ্ববিদ্যালয়ে বাংলা চেয়ার, আন্তর্জাতিক বাংলা দক্ষতা পরীক্ষা (BPT), বৈশ্বিক বাঙালি উদ্যোক্তা নেটওয়ার্ক এবং ডিজিটাল অর্থনীতিতে বাংলার ভূমিকা বৃদ্ধি।</p>
+        </div>
+        <div class="front-tag tag-urgent">দীর্ঘমেয়াদি</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN THE MOVEMENT -->
+<section class="join" id="join">
+  <div class="container">
+    <div class="section-label">যোগ দিন</div>
+    <h2 class="section-title">কেউ বাদ যাবেন না</h2>
+    <p class="section-sub">কোডিং না জানলেও, প্রযুক্তি না বুঝলেও — প্রত্যেকে কোনো না কোনোভাবে এই আন্দোলনের অংশীদার হতে পারেন।</p>
+    <div class="join-intro">
+      <h3>আপনার জায়গা খুঁজে নিন</h3>
+      <p>নিচের চারটি ট্র্যাকের যেকোনো একটি বেছে নিন — বা একাধিকে অবদান রাখুন।</p>
+    </div>
+    <div class="join-tracks">
+
+      <!-- Track 1 -->
+      <div class="track">
+        <div class="track-head" style="background:rgba(227,0,27,.06);border-bottom:1px solid rgba(227,0,27,.15);">
+          <div class="track-icon">❤️</div>
+          <div>
+            <h3>সংস্কৃতি ও কনটেন্ট</h3>
+            <span>প্রযুক্তি না জেনেও করা যায়</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--red)"></div>
+            <p><b>বাংলায় লিখুন, পোস্ট করুন:</b> ফেসবুক, ইনস্টাগ্রাম, টুইটারে বাংলায় ক্যাপশন দিন। হ্যাশট্যাগ: <b>#GlobalBangla</b></p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--red)"></div>
+            <p><b>YouTube-এ বাংলা কনটেন্ট বানান:</b> বিজ্ঞান, ইতিহাস, রান্না, ভ্রমণ — যেকোনো বিষয়ে বাংলায় ভিডিও।</p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--red)"></div>
+            <p><b>বাংলা বই পড়ুন, রিভিউ লিখুন:</b> Goodreads-এ বাংলা বইয়ের রিভিউ ইংরেজিতে লিখলে বিদেশিরাও পড়বে।</p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--red)"></div>
+            <p><b>অনুবাদ করুন:</b> প্রিয় বাংলা কবিতা বা গল্পের ইংরেজি অনুবাদ করে শেয়ার করুন।</p>
+          </div>
+          <a href="mailto:joysriram.sarkar.56@gmail.com?subject=আমি যোগ দিতে চাই - কনটেন্ট ক্রিয়েটর" class="track-cta" style="background:rgba(227,0,27,.12);border:1px solid rgba(227,0,27,.3);color:#ff8090;">শুরু করুন →</a>
+        </div>
+      </div>
+
+      <!-- Track 2 -->
+      <div class="track">
+        <div class="track-head" style="background:rgba(0,106,78,.06);border-bottom:1px solid rgba(0,106,78,.15);">
+          <div class="track-icon">📖</div>
+          <div>
+            <h3>জ্ঞান ও শিক্ষা</h3>
+            <span>লেখালেখি ও অনুবাদে আগ্রহী হলেই হবে</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--green)"></div>
+            <p><b>Wikipedia-তে অবদান রাখুন:</b> <a href="https://bn.wikipedia.org" target="_blank" style="color:var(--green-lt)">bn.wikipedia.org</a>-এ একটিও নতুন নিবন্ধ লিখুন বা বিদ্যমান নিবন্ধ উন্নত করুন।</p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--green)"></div>
+            <p><b>প্রযুক্তি পরিভাষায় অবদান:</b> AI, বিজ্ঞান ও প্রযুক্তির নতুন শব্দের বাংলা পরিভাষা প্রস্তাব করুন।</p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--green)"></div>
+            <p><b>ডকুমেন্টেশন অনুবাদ:</b> Python, JavaScript, Linux-এর ডকুমেন্টেশন বাংলায় অনুবাদ করুন।</p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--green)"></div>
+            <p><b>Open Textbook তৈরি:</b> আপনার বিষয়ের ওপর বিনামূল্যের বাংলা পাঠ্যপুস্তক লিখুন।</p>
+          </div>
+          <a href="https://bn.wikipedia.org/wiki/উইকিপিডিয়া:নতুন_নিবন্ধ_তৈরি" target="_blank" class="track-cta" style="background:rgba(0,106,78,.12);border:1px solid rgba(0,106,78,.3);color:var(--green-lt);">Wikipedia-তে শুরু করুন →</a>
+        </div>
+      </div>
+
+      <!-- Track 3 -->
+      <div class="track">
+        <div class="track-head" style="background:rgba(240,180,41,.06);border-bottom:1px solid rgba(240,180,41,.15);">
+          <div class="track-icon">🎙️</div>
+          <div>
+            <h3>ভয়েস ডোনার</h3>
+            <span>শুধু বাংলায় কথা বলতে পারলেই যথেষ্ট</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--gold)"></div>
+            <p><b>Mozilla Common Voice:</b> <a href="https://commonvoice.mozilla.org/bn" target="_blank" style="color:var(--gold-lt)">commonvoice.mozilla.org/bn</a>-এ বাংলা বাক্য পড়ে রেকর্ড করুন।</p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--gold)"></div>
+            <p><b>অন্যদের কণ্ঠ যাচাই করুন:</b> একই প্ল্যাটফর্মে অন্যদের রেকর্ড করা বাক্য শুনে সঠিক/ভুল যাচাই করুন।</p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--gold)"></div>
+            <p><b>উপভাষা ডকুমেন্ট করুন:</b> আপনার অঞ্চলের বিশেষ শব্দ বা উচ্চারণ রেকর্ড করুন — সিলেটি, চাটগাঁইয়া, নোয়াখালী, রংপুরী।</p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:var(--gold)"></div>
+            <p><b>Forvo-তে উচ্চারণ:</b> <a href="https://forvo.com/languages/bn/" target="_blank" style="color:var(--gold-lt)">forvo.com</a>-এ বাংলা শব্দের উচ্চারণ রেকর্ড করুন।</p>
+          </div>
+          <a href="https://commonvoice.mozilla.org/bn" target="_blank" class="track-cta" style="background:rgba(240,180,41,.12);border:1px solid rgba(240,180,41,.3);color:var(--gold-lt);">কণ্ঠ দিন →</a>
+        </div>
+      </div>
+
+      <!-- Track 4 -->
+      <div class="track">
+        <div class="track-head" style="background:rgba(120,80,255,.06);border-bottom:1px solid rgba(120,80,255,.15);">
+          <div class="track-icon">💻</div>
+          <div>
+            <h3>ডেভেলপার ও গবেষক</h3>
+            <span>প্রযুক্তি ও AI জানলে সবচেয়ে বেশি প্রভাব ফেলতে পারবেন</span>
+          </div>
+        </div>
+        <div class="track-body">
+          <div class="track-step">
+            <div class="step-dot" style="background:#a78bfa"></div>
+            <p><b>Bangla NLP মডেল:</b> Hugging Face-এ বাংলা ভাষার মডেল ট্রেন করুন বা উন্নত করুন। <a href="https://huggingface.co/datasets?language=language:bn" target="_blank" style="color:#a78bfa">Hugging Face Bengali →</a></p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:#a78bfa"></div>
+            <p><b>Tech Glossary API:</b> বাংলা প্রযুক্তি পরিভাষাকোষের জন্য ওপেন সোর্স REST API তৈরিতে অবদান রাখুন।</p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:#a78bfa"></div>
+            <p><b>Unicode Tools:</b> বাংলা Unicode NFC normalizer, বানান পরীক্ষক ও লিপি রূপান্তরক তৈরি করুন।</p>
+          </div>
+          <div class="track-step">
+            <div class="step-dot" style="background:#a78bfa"></div>
+            <p><b>Benchmark Suite:</b> বিভিন্ন AI মডেলের বাংলা বোঝার ক্ষমতা যাচাইয়ের উন্মুক্ত বেঞ্চমার্ক তৈরি করুন।</p>
+          </div>
+          <a href="https://huggingface.co/datasets?language=language:bn" target="_blank" class="track-cta" style="background:rgba(120,80,255,.12);border:1px solid rgba(120,80,255,.3);color:#c4b5fd;">GitHub-এ শুরু করুন →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRIORITIES 2030 -->
+<section id="priorities">
+  <div class="container">
+    <div class="section-label">২০৩০ অগ্রাধিকার</div>
+    <h2 class="section-title">২০৩০ সালের মধ্যে<br>১০টি অবশ্য করণীয়</h2>
+    <p class="section-sub">এই দশটি কাজ বাস্তবায়িত হলে ২০৩০ সাল নাগাদ বাংলা ডিজিটাল বিশ্বে এক অপরিহার্য ভাষায় পরিণত হবে।</p>
+    <div class="priorities-grid">
+      <div class="priority-card"><div class="pnum">১</div><div><h4>Bengali Web</h4><p>ইন্টারনেটে উচ্চমানের বাংলা কনটেন্টের পরিমাণ ০.১% থেকে ২%-এ উন্নীত করা।</p></div></div>
+      <div class="priority-card"><div class="pnum">২</div><div><h4>Bengali AI</h4><p>স্পিচ, অনুবাদ, LLM ও OCR-এর বিশ্বমানের ওপেন সোর্স বাংলা AI মডেল।</p></div></div>
+      <div class="priority-card"><div class="pnum">৩</div><div><h4>Bengali Education</h4><p>স্কুল থেকে বিশ্ববিদ্যালয় পর্যন্ত সম্পূর্ণ বৈজ্ঞানিক জ্ঞানভাণ্ডার বাংলায়।</p></div></div>
+      <div class="priority-card"><div class="pnum">৪</div><div><h4>Bengali Developer Ecosystem</h4><p>প্রোগ্রামিং ভাষার ডকুমেন্টেশন ও টিউটোরিয়াল সম্পূর্ণ বাংলায়।</p></div></div>
+      <div class="priority-card"><div class="pnum">৫</div><div><h4>Bengali Children's Media</h4><p>দ্বিতীয় প্রজন্মের প্রবাসী শিশুদের উপযোগী অ্যানিমেশন ও ডিজিটাল শিক্ষা।</p></div></div>
+      <div class="priority-card"><div class="pnum">৬</div><div><h4>Bengali Entertainment</h4><p>বিশ্বমানের বাংলা চলচ্চিত্র, সাই-ফাই সিরিজ, অ্যানিমেশন ও ইন্ডি গেমস।</p></div></div>
+      <div class="priority-card"><div class="pnum">৭</div><div><h4>Bengali Learning App</h4><p>বিদেশিদের সহজে বাংলা শেখার জন্য Duolingo-মানের মোবাইল অ্যাপ্লিকেশন।</p></div></div>
+      <div class="priority-card"><div class="pnum">৮</div><div><h4>Translation Infrastructure</h4><p>বাংলা ↔ ইংরেজি ও অন্যান্য ভাষার উচ্চমানের সমান্তরাল অনুবাদ ইঞ্জিন।</p></div></div>
+      <div class="priority-card"><div class="pnum">৯</div><div><h4>Open Bangla Datasets</h4><p>AI গবেষকদের জন্য সম্পূর্ণ উন্মুক্ত পাবলিক টেক্সট ও অডিও ডেটাসেট।</p></div></div>
+      <div class="priority-card"><div class="pnum">১০</div><div><h4>Global Creator Network</h4><p>আন্তর্জাতিক মানের বুদ্ধিবৃত্তিক বাংলা কনটেন্ট ক্রিয়েটরদের বৈশ্বিক নেটওয়ার্ক।</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <div class="section-label">রোডম্যাপ</div>
+    <h2 class="section-title">২০২৬ থেকে ২০৪০</h2>
+    <p class="section-sub">তিনটি পর্যায়ে আমরা ডিজিটাল ভিত্তি গড়ব, বিস্তার ঘটাব এবং বৈশ্বিক প্রাধান্য অর্জন করব।</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot phase1">১</div>
+        <div class="tl-content">
+          <div class="tl-period">পর্ব ১ — ২০২৬ থেকে ২০২৭</div>
+          <h3>🔴 ডিজিটাল ভিত্তি ও উন্মুক্ত অবকাঠামো</h3>
+          <div class="tl-items">
+            <div class="tl-item-row">উন্মুক্ত বাংলা অভিধান ও REST API প্রকাশ (২ লাখ+ শব্দ)</div>
+            <div class="tl-item-row">AI ও প্রযুক্তির প্রমিত বাংলা পরিভাষাকোষ চালু (১,০০০+ শব্দ)</div>
+            <div class="tl-item-row">গ্লোবাল বাংলা কেন্দ্রীয় ওয়েব পোর্টাল</div>
+            <div class="tl-item-row">বাংলা Common Voice প্রাথমিক অডিও সংগ্রহ (৫০০+ ঘণ্টা)</div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot phase2">২</div>
+        <div class="tl-content">
+          <div class="tl-period">পর্ব ২ — ২০২৮ থেকে ২০৩০</div>
+          <h3>🟡 ইকোসিস্টেম সম্প্রসারণ</h3>
+          <div class="tl-items">
+            <div class="tl-item-row">বাংলা AI ইকোসিস্টেম: STT, TTS, LLM বেঞ্চমার্ক</div>
+            <div class="tl-item-row">CEFR-ভিত্তিক আন্তর্জাতিক বাংলা শিক্ষাক্রম (A1-C2)</div>
+            <div class="tl-item-row">প্রবাসের শিশুদের জন্য গ্যামিফাইড লার্নিং কিট</div>
+            <div class="tl-item-row">বিশ্বের ২০টি শীর্ষ বিশ্ববিদ্যালয়ে বাংলা চেয়ার</div>
+            <div class="tl-item-row">১ লাখ+ সক্রিয় বিদেশি বাংলা শিক্ষার্থী</div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot phase3">৩</div>
+        <div class="tl-content">
+          <div class="tl-period">পর্ব ৩ — ২০৩১ থেকে ২০৪০</div>
+          <h3>🟢 বৈশ্বিক প্রাধান্য — Global Bangla 2040</h3>
+          <div class="tl-items">
+            <div class="tl-item-row">১ কোটি সক্রিয় বিদেশি বাংলা শিক্ষার্থী</div>
+            <div class="tl-item-row">আন্তর্জাতিক বাংলা দক্ষতা পরীক্ষা (BPT) — IELTS-মানের</div>
+            <div class="tl-item-row">বিশ্বমানের বাংলা অ্যানিমেশন, গেম ও চলচ্চিত্র</div>
+            <div class="tl-item-row">১ লাখ+ ওপেন সোর্স বাংলা প্রজেক্ট</div>
+            <div class="tl-item-row">ডিজিটাল বিশ্বে বাংলার অনুপাত: ৫%+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOSSARY PREVIEW -->
+<section class="glossary" id="glossary">
+  <div class="container">
+    <div class="section-label">প্রযুক্তি পরিভাষাকোষ</div>
+    <h2 class="section-title">বাংলায় প্রযুক্তির ভাষা</h2>
+    <p class="section-sub">কম্পিউটার বিজ্ঞান, এআই ও আধুনিক প্রযুক্তির প্রমিত বাংলা পারিভাষিক শব্দ। কমিউনিটি যাচাইকৃত।</p>
+    <div class="glossary-filter">
+      <button class="gf-btn active" onclick="filterGlossary('all', this)">সব</button>
+      <button class="gf-btn" onclick="filterGlossary('AI', this)">কৃত্রিম বুদ্ধিমত্তা</button>
+      <button class="gf-btn" onclick="filterGlossary('Software', this)">সফটওয়্যার</button>
+      <button class="gf-btn" onclick="filterGlossary('Network', this)">নেটওয়ার্ক</button>
+      <button class="gf-btn" onclick="filterGlossary('Security', this)">নিরাপত্তা</button>
+    </div>
+    <div class="glossary-grid" id="glossaryGrid"></div>
+  </div>
+</section>
+
+<!-- WORD OF DAY -->
+<section class="wod" id="wod">
+  <div class="container">
+    <div class="section-label" style="text-align:center">আজকের শব্দ</div>
+    <h2 class="section-title" style="text-align:center">প্রতিদিন একটি নতুন শব্দ</h2>
+    <div class="wod-card">
+      <div class="wod-label" id="wodDate">আজ, ৬ অক্টোবর ২০২৬</div>
+      <div class="wod-word" id="wodWord">আকাশ</div>
+      <div class="wod-roman" id="wodRoman">/ ākāśa /</div>
+      <div class="wod-def">
+        <b id="wodPos">বিশেষ্য (Noun)</b><br>
+        <span id="wodDef">পৃথিবীর উপরের সুবিশাল নীল পরিধি; আকাশমণ্ডল। ইংরেজিতে — Sky। আকাশ বাংলা কবিতা ও সাহিত্যে অনন্তের প্রতীক হিসেবে বহুল ব্যবহৃত।</span>
+        <p class="wod-example" id="wodExample">"আকাশ ভরা সূর্য তারা, বিশ্ব ভরা প্রাণ।" — রবীন্দ্রনাথ ঠাকুর</p>
+      </div>
+      <div class="wod-nav">
+        <button class="wod-btn" onclick="prevWord()">← আগের শব্দ</button>
+        <button class="wod-btn wod-speak" onclick="speakWord()">🔊 উচ্চারণ শুনুন</button>
+        <button class="wod-btn" onclick="nextWord()">পরের শব্দ →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTERS -->
+<div class="counters">
+  <div class="container">
+    <div class="section-label" style="margin-bottom:40px">লক্ষ্যমাত্রা ২০৪০</div>
+    <div class="counters-grid">
+      <div class="counter-card">
+        <div class="counter-n" style="color:var(--red-lt)" id="c1">০</div>
+        <div class="counter-l">কোটি সক্রিয় বিদেশি শিক্ষার্থী</div>
+      </div>
+      <div class="counter-card">
+        <div class="counter-n" style="color:var(--gold-lt)" id="c2">০</div>
+        <div class="counter-l">কোটি+ উচ্চমানের ডিজিটাল রিসোর্স</div>
+      </div>
+      <div class="counter-card">
+        <div class="counter-n" style="color:var(--green-lt)" id="c3">০</div>
+        <div class="counter-l">লাখ+ ওপেন সোর্স প্রজেক্ট</div>
+      </div>
+      <div class="counter-card">
+        <div class="counter-n" style="color:#a78bfa" id="c4">০%</div>
+        <div class="counter-l">ইন্টারনেট কনটেন্টে বাংলার লক্ষ্যমাত্রা</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLEDGE -->
+<section class="pledge" id="pledge">
+  <div class="container">
+    <div class="section-label">অঙ্গীকার</div>
+    <h2 class="section-title">আপনার অঙ্গীকার<br>এই আন্দোলনকে এগিয়ে নেয়</h2>
+    <p class="section-sub">বিশ্বের যেখানেই থাকুন, আজই প্রতিশ্রুতি দিন।</p>
+    <div class="pledge-grid">
+      <div class="pledge-form">
+        <h3>✍️ অঙ্গীকার করুন</h3>
+        <div class="form-group">
+          <label for="pledgeName">আপনার নাম</label>
+          <input type="text" id="pledgeName" placeholder="আপনার নাম লিখুন">
+        </div>
+        <div class="form-group">
+          <label for="pledgeCountry">আপনি কোথায় আছেন?</label>
+          <select id="pledgeCountry">
+            <option value="">দেশ/অঞ্চল বেছে নিন</option>
+            <option>বাংলাদেশ</option>
+            <option>ভারত (পশ্চিমবঙ্গ)</option>
+            <option>ভারত (অন্যান্য)</option>
+            <option>যুক্তরাষ্ট্র</option>
+            <option>যুক্তরাজ্য</option>
+            <option>কানাডা</option>
+            <option>অস্ট্রেলিয়া</option>
+            <option>সংযুক্ত আরব আমিরাত</option>
+            <option>সৌদি আরব</option>
+            <option>কাতার</option>
+            <option>জার্মানি</option>
+            <option>ইতালি</option>
+            <option>জাপান</option>
+            <option>দক্ষিণ কোরিয়া</option>
+            <option>অন্যান্য</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pledgeCommit">আপনি কী করবেন?</label>
+          <select id="pledgeCommit">
+            <option value="">একটি অঙ্গীকার বেছে নিন</option>
+            <option>প্রতিদিন অন্তত একটি বাংলা কনটেন্ট তৈরি করব</option>
+            <option>আমার সন্তানকে বাংলায় কথা বলতে শেখাব</option>
+            <option>প্রতিদিন একজনকে একটি বাংলা শব্দ শেখাব</option>
+            <option>নিয়মিত বাংলা Wikipedia-তে অবদান রাখব</option>
+            <option>Mozilla Common Voice-এ বাংলা অডিও রেকর্ড করব</option>
+            <option>বাংলায় একটি ওপেন সোর্স প্রজেক্ট তৈরি করব</option>
+            <option>একজন বিদেশি বন্ধুকে বাংলা শেখাব</option>
+            <option>বাংলা বইয়ের অনুবাদ ও প্রচারে সহায়তা করব</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pledgeExtra">কিছু বলতে চান? (ঐচ্ছিক)</label>
+          <textarea id="pledgeExtra" rows="3" placeholder="বাংলার প্রতি আপনার ভালোবাসা জানান..."></textarea>
+        </div>
+        <button class="pledge-submit" onclick="submitPledge()">🤝 অঙ্গীকার করলাম — জয় বাংলা!</button>
+      </div>
+      <div class="pledge-wall">
+        <h3>🌍 বিশ্বজুড়ে বাঙালির অঙ্গীকার</h3>
+        <div class="pledge-items" id="pledgeItems"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>আজই শুরু করুন।<br>কাল দেরি হয়ে যাবে।</h2>
+  <p>একটি ভাষার পুনর্জাগরণ ঘটে প্রতিটি মানুষের ছোট ছোট পদক্ষেপের সমষ্টিতে। আপনার অংশগ্রহণ এই আন্দোলনকে এগিয়ে নেয়।</p>
+  <button class="btn-primary" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">আমার যাত্রা শুরু হোক</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <b>গ্লোবাল বাংলা</b> — একটি উন্মুক্ত বৈশ্বিক আন্দোলন।<br>
+    বাংলা: ষষ্ঠ/সপ্তম বৃহত্তম ভাষা → বিশ্বের অন্যতম শক্তিশালী ডিজিটাল ভাষা।<br>
+    <small style="color:#555">কোনো দল, দেশ বা সরকারের মুখপাত্র নয়।</small>
+  </div>
+  <div class="footer-links">
+    <a href="https://bn.wikipedia.org" target="_blank">উইকিপিডিয়া</a>
+    <a href="https://commonvoice.mozilla.org/bn" target="_blank">Common Voice</a>
+    <a href="https://huggingface.co/datasets?language=language:bn" target="_blank">Hugging Face</a>
+    <a href="mailto:joysriram.sarkar.56@gmail.com">যোগাযোগ</a>
+  </div>
+</footer>
+
+<script>
+// ── FLOATING BG CHARS ──
+const chars = ['অ','আ','ক','খ','গ','ঘ','চ','ছ','জ','ট','ড','ত','দ','ন','প','ব','ম','য','র','ল','শ','স','হ','ড়','ঢ়','য়'];
+const bgChars = document.getElementById('bgChars');
+for(let i=0;i<18;i++){
+  const el = document.createElement('div');
+  el.className = 'bg-char';
+  el.textContent = chars[Math.floor(Math.random()*chars.length)];
+  el.style.left = Math.random()*100 + '%';
+  el.style.animationDuration = (20+Math.random()*30)+'s';
+  el.style.animationDelay = (-Math.random()*30)+'s';
+  el.style.fontSize = (3+Math.random()*5)+'rem';
+  bgChars.appendChild(el);
+}
+
+// ── GLOSSARY DATA ──
+const glossaryData = [
+  {en:'Large Language Model (LLM)', bn:'বৃহৎ ভাষা মডেল', def:'বিপুল পরিমাণ টেক্সট দ্বারা প্রশিক্ষিত নিউরাল নেটওয়ার্ক যা স্বাভাবিক ভাষা বুঝতে ও তৈরি করতে পারে।', cat:'AI'},
+  {en:'Neural Network', bn:'কৃত্রিম স্নায়ুজালিকা', def:'মানব মস্তিষ্কের জৈবিক স্নায়ুকোষের অনুকরণে তৈরি গাণিতিক সংযোগ স্তর।', cat:'AI'},
+  {en:'Machine Learning', bn:'যন্ত্র-শিখন', def:'কম্পিউটারকে সরাসরি প্রোগ্রাম না করে ডেটা থেকে নিজে শেখার পদ্ধতি।', cat:'AI'},
+  {en:'Speech-to-Text', bn:'কণ্ঠ-থেকে-পাঠ্য রূপান্তর', def:'মৌখিক কণ্ঠস্বরকে বিশ্লেষণ করে কম্পিউটারের পাঠযোগ্য লেখায় রূপান্তরের প্রযুক্তি।', cat:'AI'},
+  {en:'Open Source', bn:'উন্মুক্ত উৎস', def:'যে সফটওয়্যারের সোর্স কোড সর্বসাধারণের দেখা, পরিবর্তন ও বিতরণের জন্য উন্মুক্ত।', cat:'Software'},
+  {en:'Algorithm', bn:'অ্যালগরিদম / পদ্ধতিক্রম', def:'কোনো সমস্যা সমাধানের জন্য সুনির্দিষ্ট ধাপে ধাপে নির্দেশনার সেট।', cat:'Software'},
+  {en:'Compiler', bn:'সংকলক', def:'উচ্চস্তরের প্রোগ্রামিং ভাষাকে মেশিন কোডে রূপান্তরকারী বিশেষ প্রোগ্রাম।', cat:'Software'},
+  {en:'Database', bn:'তথ্যভাণ্ডার', def:'সুশৃঙ্খলভাবে সংরক্ষিত ও পরিচালিত ডেটার সমষ্টি যা সহজে অ্যাক্সেস করা যায়।', cat:'Software'},
+  {en:'Bandwidth', bn:'তথ্যপ্রবাহ-প্রস্থ', def:'একটি নেটওয়ার্ক সংযোগ নির্দিষ্ট সময়ে যত পরিমাণ ডেটা আদান-প্রদান করতে পারে।', cat:'Network'},
+  {en:'Latency', bn:'বিলম্বিতা', def:'একটি ডেটা প্যাকেট প্রেরক থেকে প্রাপকের কাছে পৌঁছাতে যে সময়ের ব্যবধান।', cat:'Network'},
+  {en:'Firewall', bn:'অগ্নিপ্রাচীর', def:'অননুমোদিত নেটওয়ার্ক অ্যাক্সেস প্রতিরোধের জন্য ডিজাইন করা নিরাপত্তা ব্যবস্থা।', cat:'Security'},
+  {en:'Encryption', bn:'সংকেতায়ন / তথ্য-গুপ্তিকরণ', def:'তথ্যকে এমন সাংকেতিক ভাষায় রূপান্তর যাতে অনুমোদিত ব্যক্তি ছাড়া অন্য কেউ পড়তে না পারে।', cat:'Security'},
+];
+
+let activeFilter = 'all';
+function renderGlossary(filter){
+  const grid = document.getElementById('glossaryGrid');
+  const data = filter==='all' ? glossaryData : glossaryData.filter(d=>d.cat===filter);
+  grid.innerHTML = data.map(d=>`
+    <div class="g-card">
+      <div class="g-en">${d.en}</div>
+      <div class="g-bn">${d.bn}</div>
+      <div class="g-def">${d.def}</div>
+      <div class="g-cat">${d.cat}</div>
+    </div>`).join('');
+}
+function filterGlossary(cat, btn){
+  activeFilter = cat;
+  document.querySelectorAll('.gf-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderGlossary(cat);
+}
+renderGlossary('all');
+
+// ── WORD OF DAY ──
+const words = [
+  {word:'আকাশ', roman:'ākāśa', pos:'বিশেষ্য (Noun)', def:'পৃথিবীর উপরের সুবিশাল নীল পরিধি; আকাশমণ্ডল। আকাশ বাংলা কবিতায় অনন্তের প্রতীক।', example:'"আকাশ ভরা সূর্য তারা, বিশ্ব ভরা প্রাণ।" — রবীন্দ্রনাথ ঠাকুর'},
+  {word:'নদী', roman:'nadī', pos:'বিশেষ্য (Noun)', def:'পর্বত বা বৃষ্টির পানি যে প্রবাহিত জলধারায় সমুদ্রে মেলে। বাংলাদেশ ও পশ্চিমবঙ্গের জীবন নদীকেন্দ্রিক।', example:'"আমাদের ছোট নদী চলে বাঁকে বাঁকে।" — রবীন্দ্রনাথ ঠাকুর'},
+  {word:'স্বপ্ন', roman:'sbapna', pos:'বিশেষ্য (Noun)', def:'ঘুমের মধ্যে দেখা দৃশ্য; বা আকাঙ্ক্ষা ও আশার প্রতীক।', example:'"স্বপ্ন দেখেছিলাম মুক্তির, সেই স্বপ্ন আজ বাস্তব।"'},
+  {word:'অনুভব', roman:'anubhaba', pos:'বিশেষ্য / ক্রিয়া (Noun/Verb)', def:'কোনো কিছুকে অন্তর দিয়ে অনুধাবন বা অনুভূতি লাভ করা।', example:'"ভাষার প্রেম হৃদয় দিয়ে অনুভব করতে হয়।"'},
+  {word:'মুক্তি', roman:'mukti', pos:'বিশেষ্য (Noun)', def:'বন্ধন থেকে মুক্ত হওয়া; স্বাধীনতা। একুশে ফেব্রুয়ারির চেতনায় মুক্তি অন্যতম কেন্দ্রীয় শব্দ।', example:'"ভাষার মুক্তি মানুষের মুক্তি।"'},
+  {word:'প্রবাহ', roman:'prabāha', pos:'বিশেষ্য (Noun)', def:'অবিরাম চলমান ধারা; নদীর জলপ্রবাহ বা জীবনের নিরন্তর গতি।', example:'"সময়ের প্রবাহে ভাষা পরিবর্তিত হয়, কিন্তু তার আত্মা অমর।"'},
+];
+let wordIdx = 0;
+function showWord(i){
+  const w = words[i];
+  document.getElementById('wodWord').textContent = w.word;
+  document.getElementById('wodRoman').textContent = '/ ' + w.roman + ' /';
+  document.getElementById('wodPos').textContent = w.pos;
+  document.getElementById('wodDef').textContent = w.def;
+  document.getElementById('wodExample').textContent = w.example;
+}
+function nextWord(){ wordIdx=(wordIdx+1)%words.length; showWord(wordIdx); }
+function prevWord(){ wordIdx=(wordIdx-1+words.length)%words.length; showWord(wordIdx); }
+function speakWord(){
+  if('speechSynthesis' in window){
+    const u = new SpeechSynthesisUtterance(words[wordIdx].word);
+    u.lang='bn-BD'; u.rate=0.8;
+    speechSynthesis.speak(u);
+  } else { alert('আপনার ব্রাউজার speech synthesis সমর্থন করে না।'); }
+}
+
+// ── PLEDGE WALL ──
+const initialPledges = [
+  {name:'রাফিউল ইসলাম', country:'🇧🇩 বাংলাদেশ', commit:'প্রতিদিন অন্তত একটি বাংলা কনটেন্ট তৈরি করব'},
+  {name:'Priya Banerjee', country:'🇮🇳 ভারত', commit:'আমার সন্তানকে বাংলায় কথা বলতে শেখাব'},
+  {name:'Ahmed Rahman', country:'🇦🇪 দুবাই', commit:'Mozilla Common Voice-এ বাংলা অডিও রেকর্ড করব'},
+  {name:'Nadia Chowdhury', country:'🇺🇸 নিউ ইয়র্ক', commit:'নিয়মিত বাংলা Wikipedia-তে অবদান রাখব'},
+  {name:'Tanvir Hossain', country:'🇬🇧 লন্ডন', commit:'একজন বিদেশি বন্ধুকে বাংলা শেখাব'},
+];
+function renderPledge(p){
+  const initials = p.name.split(' ').map(n=>n[0]).join('').slice(0,2).toUpperCase();
+  return `<div class="pledge-card">
+    <div class="pledge-card-top">
+      <div class="pledge-avatar">${initials}</div>
+      <div><div class="pledge-name">${p.name}</div><div class="pledge-country">${p.country}</div></div>
+    </div>
+    <div class="pledge-text">"${p.commit}"</div>
+  </div>`;
+}
+const pledgeContainer = document.getElementById('pledgeItems');
+initialPledges.forEach(p=>{ pledgeContainer.innerHTML += renderPledge(p); });
+
+function submitPledge(){
+  const name = document.getElementById('pledgeName').value.trim();
+  const country = document.getElementById('pledgeCountry').value;
+  const commit = document.getElementById('pledgeCommit').value;
+  if(!name){ document.getElementById('pledgeName').focus(); return; }
+  if(!country){ document.getElementById('pledgeCountry').focus(); return; }
+  if(!commit){ document.getElementById('pledgeCommit').focus(); return; }
+  const newPledge = {name, country:'🌍 '+country, commit};
+  pledgeContainer.insertAdjacentHTML('afterbegin', renderPledge(newPledge));
+  document.getElementById('pledgeName').value='';
+  document.getElementById('pledgeCountry').value='';
+  document.getElementById('pledgeCommit').value='';
+  document.getElementById('pledgeExtra').value='';
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'), 3500);
+}
+
+// ── COUNTER ANIMATION ──
+function animateCounter(id, target, suffix='', duration=2000){
+  const el = document.getElementById(id);
+  let start = 0; const step = target/60;
+  const interval = setInterval(()=>{
+    start = Math.min(start+step, target);
+    el.textContent = (start>=target?target:Math.floor(start))+suffix;
+    if(start>=target) clearInterval(interval);
+  }, duration/60);
+}
+const countersSection = document.querySelector('.counters');
+const observer = new IntersectionObserver(entries=>{
+  if(entries[0].isIntersecting){
+    animateCounter('c1',1,'');
+    animateCounter('c2',1,'');
+    animateCounter('c3',1,'');
+    animateCounter('c4',5,'%');
+    observer.disconnect();
+  }
+},{threshold:0.3});
+observer.observe(countersSection);
+
+// ── DATE ──
+const months=['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর'];
+const d=new Date();
+document.getElementById('wodDate').textContent=`আজ, ${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+
+// ── NAV SCROLL HIGHLIGHT ──
+window.addEventListener('scroll',()=>{
+  const nav=document.querySelector('nav');
+  nav.style.background=window.scrollY>50?'rgba(6,9,18,0.95)':'rgba(6,9,18,0.85)';
+});
+</script>
+</body>
+</html>

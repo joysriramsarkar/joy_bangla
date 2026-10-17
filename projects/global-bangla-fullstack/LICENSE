@@ -1,0 +1,50 @@
+# ওপেনসোর্স লাইসেন্স (Open Source Licenses)
+
+গ্লোবাল বাংলা প্ল্যাটফর্ম (Global Bangla Advancement Platform) একটি সম্পূর্ণ উন্মুক্ত ও সর্বজনীন উদ্যোগ। এই প্ল্যাটফর্মের সমস্ত উপাদান মুক্ত লাইসেন্সের অধীনে প্রকাশিত:
+
+---
+
+## ১. সফটওয়্যার কোড (Software & Codebase)
+**MIT License**
+
+Copyright (c) 2026 Global Bangla Community & Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## ২. উন্মুক্ত ডেটা, অভিধান, পরিভাষা ও গবেষণা (Datasets, Dictionary & Content)
+**Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**
+
+প্ল্যাটফর্মে সংগৃহীত ও প্রস্তুতকৃত উন্মুক্ত বাংলা পরিভাষাকোষ, অভিধান তথ্য, গবেষণাপত্র ও অনুবাদসমূহ CC BY-SA 4.0 লাইসেন্সের অধীন।
+
+আপনি অবাধে:
+- **শেয়ার করতে পারেন:** যেকোনো মাধ্যমে বা ফরম্যাটে উপাদানটি পুনঃউৎপাদন ও পুনর্বিতরণ করতে পারেন।
+- **রূপান্তর করতে পারেন:** উপাদানটি নিয়ে কাজ করতে, রূপান্তর ঘটাতে এবং এর ওপর ভিত্তি করে নতুন উপাদান তৈরি করতে পারেন (যেকোনো উদ্দেশ্যে, এমনকি বাণিজ্যিকভাবেও)।
+
+শর্তসমূহ:
+- **স্বীকৃতি প্রদান (Attribution):** আপনাকে অবশ্যই উপযুক্ত স্বীকৃতি প্রদান করতে হবে এবং লাইসেন্সের একটি লিঙ্ক প্রদান করতে হবে।
+- **একই শর্তে বণ্টন (ShareAlike):** আপনি যদি বিষয়বস্তুর ওপর ভিত্তি করে কিছু রূপান্তর বা পরিবর্তন করেন, তবে আপনাকে অবশ্যই আপনার অবদান মূল বিষয়ের মতো একই লাইসেন্সের অধীনে বিতরণ করতে হবে।
+
+---
+
+## ৩. কমন ভয়েস অডিও নমুনা (Speech & Audio Corpus)
+**Creative Commons Zero (CC0 1.0 Universal - Public Domain Dedication)**
+
+কমিউনিটি দ্বারা প্রদত্ত অডিও নমুনা ও ভয়েস ডোনেশন সম্পূর্ণরূপে পাবলিক ডোমেইন (CC0)-এ উন্মুক্ত, যাতে বিশ্বের যেকোনো গবেষক বা প্রতিষ্ঠান বাংলা এআই মডেল ও স্পিচ রিকগনিশন তৈরির কাজে কোনো আইনি বাধা ছাড়াই এটি ব্যবহার করতে পারেন।

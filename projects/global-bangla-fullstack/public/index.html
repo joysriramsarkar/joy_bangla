@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>জয় বাংলা — গ্লোবাল বাংলা প্ল্যাটফর্ম (Global Bangla Platform)</title>
+  <meta name="description" content="বাংলা ভাষা, সাহিত্য, সংস্কৃতি ও বিজ্ঞানের অগ্রগতির পূর্ণাঙ্গ ফুলস্ট্যাক ডিজিটাল হাব।">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&family=Inter:wght@400;600;700;800;900&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Floating Background Bengali Characters -->
+  <div class="floating-bg" id="floatingBg" aria-hidden="true"></div>
+
+  <!-- Header & Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="গ্লোবাল বাংলা হোম">
+        <div class="flag-badge"></div>
+        <div>
+          <span>গ্লোবাল বাংলা</span>
+          <span class="brand-text-sub">Global Bangla 2040</span>
+        </div>
+      </a>
+
+      <nav aria-label="প্রধান নেভিগেশন">
+        <ul class="nav-links">
+          <li><a href="#pillars">স্তম্ভসমূহ</a></li>
+          <li><a href="#interactiveHub">উদ্ভাবনী ল্যাব</a></li>
+          <li><a href="#literature">সাহিত্যাগার</a></li>
+          <li><a href="#glossarySection">পরিভাষাকোষ</a></li>
+          <li><a href="#pledgeSection">অঙ্গীকার</a></li>
+          <li><a href="#ideasSection">আইডিয়া বোর্ড</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#pledgeSection" class="btn-pledge-nav">
+          <span>✍️</span> অঙ্গীকার করুন
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    
+    <div class="hero-pill">
+      <span class="pulse-dot"></span>
+      <span>৩০ কোটি মানুষের বৈশ্বিক আন্দোলন • ভিশন ২০৪০</span>
+    </div>
+
+    <h1 class="hero-title">
+      বাংলাকে করুন বিশ্বের অন্যতম <br>
+      <span class="gradient-text">প্রযুক্তি, বিজ্ঞান ও সংস্কৃতির শক্তিকেন্দ্র</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      <b>Bangla-First, Not Bangla-Only:</b> আবেগের বন্দনা পেরিয়ে বাংলাকে করে তুলতে হবে বাস্তব জীবনে <b>ব্যবহারযোগ্য (Utility)</b>, বিশ্বমঞ্চে <b>মর্যাদাপূর্ণ ও আকর্ষণীয় (Prestige)</b> এবং সবার জন্য <b>অর্থনৈতিকভাবে লাভজনক (Economic Value)</b>।
+    </p>
+
+    <div class="hero-tagline-quote">
+      "বাংলা + সাহিত্য + সংস্কৃতি + বিজ্ঞান + প্রযুক্তি = গ্লোবাল বাংলা"
+    </div>
+
+    <div class="hero-actions">
+      <a href="#pledgeSection" class="btn-primary-hero">
+        <span>🚀</span> বাঙালির অঙ্গীকারে যুক্ত হোন
+      </a>
+      <a href="#interactiveHub" class="btn-secondary-hero">
+        <span>🔬</span> ভার্চুয়াল ল্যাব এক্সপ্লোর করুন
+      </a>
+    </div>
+
+    <!-- Live Stats Banner -->
+    <div class="stats-banner">
+      <div class="stat-item">
+        <div class="stat-num red" id="statSpeakers">৩০ কোটি+</div>
+        <div class="stat-label">মাতৃভাষী জনগোষ্ঠী (বিশ্বে ৭ম)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num gold">০.১% ➔ ৫%+</div>
+        <div class="stat-label">ইন্টারনেট কনটেন্ট ২০৪০ লক্ষ্যমাত্রা</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num green" id="statPledges">৮</div>
+        <div class="stat-label">বিশ্বব্যাপী নিবন্ধিত অঙ্গীকার</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num sky" id="statGlossary">১০</div>
+        <div class="stat-label">প্রমিত প্রযুক্তি পরিভাষা</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Decorative Alpana Band -->
+  <div class="alpana-band" aria-hidden="true"></div>
+
+  <!-- Four Strategic Pillars Section -->
+  <section class="section" id="pillars">
+    <div class="container">
+      <div class="section-head">
+        <span class="pill-badge pill-red">কৌশলগত ভিত্তি</span>
+        <h2 class="section-title">চারটি মূল স্তম্ভে বাংলার অগ্রগতি</h2>
+        <p class="section-desc">
+          ভাষাকে টেকসই করতে হলে প্রযুক্তি, সাহিত্য, সংস্কৃতি ও বিজ্ঞানের সুসমন্বিত অগ্রগতি প্রয়োজন।
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar-card tech">
+          <div class="pillar-icon">🤖</div>
+          <h3 class="pillar-title">ভাষা প্রযুক্তি ও এআই</h3>
+          <p class="pillar-text">
+            উন্মুক্ত বৃহৎ ভাষা মডেল (LLM) বেঞ্চমার্ক, ২০,০০০ ঘণ্টার বাংলা কমন ভয়েস কর্পাস এবং ব্যাকরণ ও বানান শুদ্ধিকরণ রাইটিং অ্যাসিস্ট্যান্ট।
+          </p>
+          <ul class="pillar-features">
+            <li>ওপেন স্পিচ-টু-টেক্সট ও টিটিএস</li>
+            <li>স্মার্ট সাবওয়ার্ড টোকেনায়ন মডেল</li>
+            <li>প্রাচীন ও হস্তলিখিত পাণ্ডুলিপির ওসিআর</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card lit">
+          <div class="pillar-icon">📚</div>
+          <h3 class="pillar-title">সাহিত্য ও অনুবাদ বিপ্লব</h3>
+          <p class="pillar-text">
+            রবীন্দ্র-নজরুলসহ সমস্ত ক্লাসিক সাহিত্যের ওপেন ডিজিটাল লাইব্রেরি এবং বাংলা সাহিত্যের আন্তর্জাতিক ওটিটি ও গ্রাফিক নভেল আইপিতে রূপান্তর।
+          </p>
+          <ul class="pillar-features">
+            <li>প্রজেক্ট গুটেনবার্গ স্টাইল ই-বুকস</li>
+            <li>দ্বিমুখী অনুবাদ আন্দোলন ও কর্পাস</li>
+            <li>মুক্ত প্রকাশনা (Open Publishing)</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card culture">
+          <div class="pillar-icon">🎭</div>
+          <h3 class="pillar-title">সংস্কৃতি ও পপ-কালচার</h3>
+          <p class="pillar-text">
+            ভাষাকে মিউজিয়ামে বন্দী না রেখে আন্তর্জাতিক মানের অ্যানিমেশন স্টুডিও, সাই-ফাই সিনেমা, বৌদ্ধিক পডকাস্ট এবং ৩ডি ডিজিটাল হেরিটেজ মিউজিয়াম।
+          </p>
+          <ul class="pillar-features">
+            <li>ঠাকুরমার ঝুলি ও সাই-ফাই অ্যানিমেশন</li>
+            <li>ইউটিউবে ১০টি গ্লোবাল নলেজ ধারা</li>
+            <li>ঐতিহাসিক স্থানগুলোর ৩ডি ভার্চুয়াল ট্যুর</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card science">
+          <div class="pillar-icon">🔬</div>
+          <h3 class="pillar-title">বিজ্ঞান ও উন্মুক্ত জ্ঞান</h3>
+          <p class="pillar-text">
+            "বাংলায় সবকিছু শেখা সম্ভব"—স্কুল থেকে পিএইচডি পর্যন্ত বিজ্ঞানের প্রতিটি শাখার ব্যাখ্যা, ভার্চুয়াল সায়েন্স ল্যাব ও অফিশিয়াল কোডিং ডক্স।
+          </p>
+          <ul class="pillar-features">
+            <li>ইন্টারঅ্যাক্টিভ পদার্থ ও গণিত সিমুলেশন</li>
+            <li>আধুনিক প্রযুক্তি পরিভাষাকোষ</li>
+            <li>Python ও Web Dev-এর পূর্ণাঙ্গ বাংলা ডক্স</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Innovation Hub Section -->
+  <section class="section interactive-hub" id="interactiveHub">
+    <div class="container">
+      <div class="section-head">
+        <span class="pill-badge pill-green">সরাসরি ইন্টারঅ্যাকশন</span>
+        <h2 class="section-title">উদ্ভাবনী ডিজিটাল ল্যাব ও টুলস হাব</h2>
+        <p class="section-desc">
+          নীচের ট্যাবগুলো ক্লিক করে সরাসরি ব্রাউজারেই এআই টোকেনায়ন, ভার্চুয়াল পদার্থবিজ্ঞান ল্যাব, অডিও ভয়েস ডোনেশন ও শব্দভাণ্ডার পরখ করুন।
+        </p>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="tabs-nav" role="tablist">
+        <button class="tab-btn main-tab-btn active" data-target="panelTokenizer" role="tab" id="tabTokenizer">
+          <span>🔤</span> এআই টোকেনায়ন ল্যাব
+        </button>
+        <button class="tab-btn main-tab-btn" data-target="panelScience" role="tab" id="tabScience">
+          <span>⚛️</span> ভার্চুয়াল সায়েন্স ল্যাব
+        </button>
+        <button class="tab-btn main-tab-btn" data-target="panelVoice" role="tab" id="tabVoice">
+          <span>🎙️</span> কমন ভয়েস রেকর্ডার
+        </button>
+        <button class="tab-btn main-tab-btn" data-target="panelDictionary" role="tab" id="tabDictionary">
+          <span>📖</span> উন্মুক্ত বাংলা অভিধান
+        </button>
+        <button class="tab-btn main-tab-btn" data-target="panelGlossary" role="tab" id="tabGlossary">
+          <span>💻</span> প্রযুক্তি পরিভাষাকোষ
+        </button>
+      </div>
+
+      <!-- Tab 1: Tokenizer Lab -->
+      <div class="tab-content-panel active" id="panelTokenizer" role="tabpanel">
+        <div class="glass-panel">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+            <h3 style="font-size: 1.4rem; font-weight: 800; color: #fff;">বাংলা সাবওয়ার্ড বনাম ক্যারেক্টার টোকেনায়ন পরীক্ষা</h3>
+            <span class="tok-badge good" id="efficiencyBadge">০% সাশ্রয়</span>
+          </div>
+          <p style="font-size: 0.94rem; color: #9ca3af; margin-bottom: 20px;">
+            বিশ্বের বড় এআই মডেলগুলো (LLMs) বাংলা লেখাকে কীভাবে টোকেনাইজের মাধ্যমে মেমোরিতে প্রসেস করে তা সরাসরি দেখুন।
+          </p>
+
+          <div class="tok-presets">
+            <span style="font-size: 0.8rem; color: #6b7280; font-weight: 700;">উদাহরণ বাক্য:</span>
+            <button class="tok-preset-btn" data-text="বিশ্ববিদ্যালয়ে গবেষণারত শিক্ষার্থীরা বাংলায় কৃত্রিম বুদ্ধিমত্তা চর্চা করছেন।">শিক্ষার্থী ও এআই</button>
+            <button class="tok-preset-btn" data-text="রবীন্দ্রনাথ ঠাকুরের গীতাঞ্জলি বিশ্বসাহিত্যের এক চিরন্তন ও অনন্য গৌরব।">গীতাঞ্জলি সাহিত্য</button>
+            <button class="tok-preset-btn" data-text="কোয়ান্টাম মেকানিক্সে কণার উপরিপাতন ধর্ম আধুনিক কম্পিউটিংকে দ্রুততর করছে।">কোয়ান্টাম বিজ্ঞান</button>
+          </div>
+
+          <div style="margin: 18px 0;">
+            <textarea id="tokenizerInput" class="form-textarea" style="font-size: 1.05rem;" placeholder="যেকোনো বাংলা বাক্য এখানে লিখুন...">বিশ্ববিদ্যালয়ে গবেষণারত শিক্ষার্থীরা বাংলায় কৃত্রিম বুদ্ধিমত্তা চর্চা করছেন।</textarea>
+          </div>
+
+          <button class="btn-primary-hero" id="btnRunTokenizer" style="padding: 10px 22px; font-size: 0.95rem;">
+            <span>⚡</span> টোকেন বিশ্লেষণ করুন
+          </button>
+
+          <div class="tok-grid">
+            <!-- Smart Subwords -->
+            <div class="tok-card">
+              <div class="tok-card-header">
+                <span style="font-weight: 700; color: #00e599;">আধুনিক বাংলা সাবওয়ার্ড টোকেন (BPE)</span>
+                <span class="tok-badge good" id="countSmart">৮ টোকেন</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #9ca3af; margin-bottom: 12px;">অর্থপূর্ণ শব্দখণ্ড অনুযায়ী বিভক্ত হওয়ায় কম টোকেনে বেশি তথ্য প্রকাশ পায়:</p>
+              <div class="tok-chips-container" id="chipsSmart"></div>
+            </div>
+
+            <!-- Legacy / Char Split -->
+            <div class="tok-card">
+              <div class="tok-card-header">
+                <span style="font-weight: 700; color: #ff334b;">আদিম ক্যারেক্টার / বাইট স্প্লিটিং</span>
+                <span class="tok-badge bad" id="countLegacy">৬৩ অক্ষর/বাইট</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #9ca3af; margin-bottom: 12px;">অপ্রমিত টোকেনাইজারে প্রতিটি যুক্তবর্ণ একাধিক টোকেনে ভেঙে অপচয় ঘটায়:</p>
+              <div class="tok-chips-container" id="chipsLegacy"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Virtual Science Lab -->
+      <div class="tab-content-panel" id="panelScience" role="tabpanel">
+        <div class="glass-panel">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 style="font-size: 1.4rem; font-weight: 800; color: #fff;">ইন্টারঅ্যাক্টিভ পদার্থবিজ্ঞান সিমুলেটর</h3>
+              <p style="font-size: 0.9rem; color: #9ca3af;">রিয়েল-টাইম ক্যানভাসে বলবিদ্যা ও আলোকবিজ্ঞানের সূত্রসমূহ পরীক্ষা করুন।</p>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="sub-tab-btn active" id="simTabPendulum" style="padding: 6px 14px; font-size: 0.85rem;">সরল দোলক</button>
+              <button class="sub-tab-btn" id="simTabRefraction" style="padding: 6px 14px; font-size: 0.85rem;">আলোর প্রতিসরণ</button>
+            </div>
+          </div>
+
+          <div class="sim-container">
+            <!-- Canvas -->
+            <div class="canvas-wrapper">
+              <canvas id="scienceCanvas"></canvas>
+            </div>
+
+            <!-- Controls Panel -->
+            <div class="sim-controls">
+              <!-- Pendulum Controls -->
+              <div id="controlsPendulum" style="display: flex; flex-direction: column; gap: 16px;">
+                <div class="sim-control-group">
+                  <div class="sim-label">
+                    <span>রশির দৈর্ঘ্য (L):</span>
+                    <span id="valLength" style="color: var(--green-neon); font-family: monospace;">180 px</span>
+                  </div>
+                  <input type="range" id="pendulumLength" class="sim-slider" min="80" max="280" value="180">
+                </div>
+
+                <div class="sim-control-group">
+                  <div class="sim-label">
+                    <span>অভিকর্ষজ ত্বরণ (g):</span>
+                    <span id="valGravity" style="color: var(--gold-antique); font-family: monospace;">9.8 m/s²</span>
+                  </div>
+                  <input type="range" id="pendulumGravity" class="sim-slider" min="1.6" max="25" step="0.2" value="9.8">
+                  <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: #64748b;">
+                    <span>চাঁদ (১.৬)</span>
+                    <span>পৃথিবী (৯.৮)</span>
+                    <span>বৃহস্পতি (২৪.৮)</span>
+                  </div>
+                </div>
+
+                <div class="sim-control-group">
+                  <div class="sim-label">
+                    <span>ববের ভর (m):</span>
+                    <span id="valMass" style="color: var(--red-neon); font-family: monospace;">15 kg</span>
+                  </div>
+                  <input type="range" id="pendulumMass" class="sim-slider" min="5" max="30" value="15">
+                </div>
+              </div>
+
+              <!-- Refraction Controls -->
+              <div id="controlsRefraction" style="display: none; flex-direction: column; gap: 16px;">
+                <div class="sim-control-group">
+                  <div class="sim-label">
+                    <span>আপতন কোণ (θ₁):</span>
+                    <span id="valIncident" style="color: #ff334b; font-family: monospace;">45°</span>
+                  </div>
+                  <input type="range" id="incidentAngle" class="sim-slider" min="5" max="85" value="45">
+                </div>
+
+                <div class="sim-control-group">
+                  <div class="sim-label">
+                    <span>দ্বিতীয় মাধ্যম (Medium 2):</span>
+                  </div>
+                  <select id="mediumSelect" class="form-select">
+                    <option value="1.33">জল (Water, n₂ = 1.33)</option>
+                    <option value="1.52">ক্রাউন কাচ (Glass, n₂ = 1.52)</option>
+                    <option value="2.42">হীরা (Diamond, n₂ = 2.42)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Common Voice Hub -->
+      <div class="tab-content-panel" id="panelVoice" role="tabpanel">
+        <div class="glass-panel">
+          <div class="voice-hub-box">
+            <h3 style="font-size: 1.45rem; font-weight: 800; color: #fff; margin-bottom: 6px;">বাংলা কমন ভয়েস সংগ্রহ ও ভেরিফিকেশন হাব</h3>
+            <p style="font-size: 0.94rem; color: #9ca3af; margin-bottom: 24px;">
+              নিচের বাক্যটি নিজের স্বাভাবিক কণ্ঠে পাঠ করে উন্মুক্ত এআই গবেষণায় অডিও ডেটা দান করুন।
+            </p>
+
+            <div class="prompt-sentence-card" id="voicePromptText">
+              "আমাদের মাতৃভাষা বাংলা বিশ্বের দরবারে একদিন প্রযুক্তির শীর্ষ স্থানে পৌঁছাবে।"
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <button class="tok-preset-btn" id="btnNextPrompt">🔄 নতুন বাক্য আনুন</button>
+            </div>
+
+            <canvas id="audioVisualizer" class="voice-visualizer-canvas"></canvas>
+
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 18px;">
+              <button id="btnRecordVoice" class="voice-btn-record" aria-label="রেকর্ড শুরু বা সমাপ্ত করুন">
+                🎙️
+              </button>
+            </div>
+            <div id="voiceStatus" style="font-size: 0.88rem; color: var(--green-neon); font-weight: 600; min-height: 24px;">
+              মাইক্রোফোন বোতামে ক্লিক করে বলা শুরু করুন।
+            </div>
+
+            <!-- Speaker Details Form -->
+            <div class="form-row" style="max-width: 520px; margin: 24px auto 32px; text-align: left;">
+              <div>
+                <label style="font-size: 0.82rem; color: #9ca3af; display: block; margin-bottom: 4px;">আপনার নাম (ঐচ্ছিক):</label>
+                <input type="text" id="voiceSpeakerName" class="form-input" placeholder="উন্মুক্ত কণ্ঠদাতা">
+              </div>
+              <div>
+                <label style="font-size: 0.82rem; color: #9ca3af; display: block; margin-bottom: 4px;">উপভাষা (Dialect):</label>
+                <select id="voiceDialect" class="form-select">
+                  <option value="প্রমিত মান বাংলা">প্রমিত মান বাংলা</option>
+                  <option value="চাটগাঁইয়া">চট্টগ্রাম (চাটগাঁইয়া)</option>
+                  <option value="সিলেটি">সিলেট (সিলেটি)</option>
+                  <option value="রাঢ়ী (কলকাতা/পশ্চিমবঙ্গ)">কলকাতা / রাঢ়ী</option>
+                  <option value="বরেন্দ্রী (রংপুর/রাজশাহী)">বরেন্দ্রী (উত্তরবঙ্গ)</option>
+                  <option value="নোয়াখালী">নোয়াখালী</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Recent Voice Donations -->
+            <div style="text-align: left; border-top: 1px solid var(--border); padding-top: 24px;">
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 14px;">সাম্প্রতিক অডিও অবদান ও কমিউনিটি যাচাইকরণ:</h4>
+              <div id="voiceSamplesList" style="display: flex; flex-direction: column; gap: 10px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Open Dictionary -->
+      <div class="tab-content-panel" id="panelDictionary" role="tabpanel">
+        <div class="glass-panel">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+            <div>
+              <h3 style="font-size: 1.4rem; font-weight: 800; color: #fff;">উন্মুক্ত বাংলা শব্দভাণ্ডার ও এপিআই</h3>
+              <p style="font-size: 0.9rem; color: #9ca3af;">ব্যুৎপত্তি, পদ, প্রমিত উচ্চারণ ও উদাহরণসহ সমৃদ্ধ শব্দকোষ।</p>
+            </div>
+          </div>
+
+          <div class="dict-search-box">
+            <input type="text" id="dictSearchInput" class="dict-input" placeholder="শব্দ খুঁজুন (যেমন: আড্ডা, মায়া, অভিমান, বিজ্ঞান, সংহতি)...">
+          </div>
+
+          <div class="pledge-wall-grid" id="dictResults" style="margin-top: 20px;"></div>
+        </div>
+      </div>
+
+      <!-- Tab 5: Tech Glossary -->
+      <div class="tab-content-panel" id="panelGlossary" role="tabpanel">
+        <div class="glass-panel" id="glossarySection">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+            <div>
+              <h3 style="font-size: 1.4rem; font-weight: 800; color: #fff;">প্রযুক্তি ও বৈজ্ঞানিক পরিভাষাকোষ</h3>
+              <p style="font-size: 0.9rem; color: #9ca3af;">Natural Bengali + International Standard Terminology</p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <input type="text" id="glossarySearchInput" class="form-input" style="width: 200px; padding: 8px 14px;" placeholder="অনুসন্ধান...">
+              <select id="glossaryCategoryFilter" class="form-select" style="width: 180px; padding: 8px 14px;">
+                <option value="all">সকল বিভাগ</option>
+                <option value="কৃত্রিম বুদ্ধিমত্তা">কৃত্রিম বুদ্ধিমত্তা</option>
+                <option value="মেশিন লার্নিং">মেশিন লার্নিং</option>
+                <option value="সফটওয়্যার ইঞ্জিনিয়ারিং">সফটওয়্যার</option>
+                <option value="পদার্থবিজ্ঞান">পদার্থবিজ্ঞান</option>
+                <option value="জীববিজ্ঞান ও জেনেটিক্স">জেনেটিক্স</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="pledge-wall-grid" id="glossaryResults"></div>
+
+          <!-- Suggest New Term Accordion -->
+          <div style="margin-top: 40px; background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px;">
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin-bottom: 14px;">নতুন প্রযুক্তি পরিভাষা প্রস্তাব করুন:</h4>
+            <form id="formNewTerm" class="custom-form">
+              <div class="form-row">
+                <input type="text" id="termEn" class="form-input" placeholder="ইংরেজি শব্দ (যেমন: Vector Embedding)" required>
+                <input type="text" id="termBn" class="form-input" placeholder="প্রস্তাবিত বাংলা পরিভাষা (যেমন: ভেক্টর এমবেডিং)" required>
+              </div>
+              <div class="form-row">
+                <input type="text" id="termPhonetic" class="form-input" placeholder="উচ্চারণ (যেমন: ভেক্টর এমবেডিং)">
+                <select id="termCategory" class="form-select">
+                  <option value="কৃত্রিম বুদ্ধিমত্তা">কৃত্রিম বুদ্ধিমত্তা</option>
+                  <option value="সফটওয়্যার ইঞ্জিনিয়ারিং">সফটওয়্যার ইঞ্জিনিয়ারিং</option>
+                  <option value="ক্লাউড ও নেটওয়ার্ক">ক্লাউড ও নেটওয়ার্ক</option>
+                  <option value="পদার্থবিজ্ঞান">পদার্থবিজ্ঞান</option>
+                  <option value="জেনেটিক্স">জেনেটিক্স</option>
+                </select>
+              </div>
+              <textarea id="termDef" class="form-textarea" placeholder="শব্দের সংজ্ঞা ও ব্যাখ্যা..." required></textarea>
+              <input type="text" id="termEx" class="form-input" placeholder="ব্যবহারিক বাক্যে উদাহরণ">
+              <button type="submit" class="btn-submit" style="align-self: flex-start; padding: 10px 24px;">
+                <span>➕</span> পরিভাষা জমা দিন
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Literature & Digital Classics Explorer Section -->
+  <section class="section" id="literature">
+    <div class="container">
+      <div class="section-head">
+        <span class="pill-badge pill-gold">মুক্ত সাহিত্যাগার</span>
+        <h2 class="section-title">ডিজিটাল বাংলা ক্লাসিক সংগ্রহাগার</h2>
+        <p class="section-desc">
+          প্রজেক্ট গুটেনবার্গের আদলে রবীন্দ্র, নজরুল, জীবনানন্দ, বিভূতিভূষণ ও রোকেয়ার মাস্টারপিসসমূহ অনলাইনে পড়ুন সম্পূর্ণ বিনামূল্যে।
+        </p>
+      </div>
+
+      <div class="literature-grid" id="literatureGrid">
+        <!-- Dynamically populated by reader.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Pledge Section (বাঙালির অঙ্গীকার) -->
+  <section class="section" id="pledgeSection" style="background: #080c18; border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="pill-badge pill-red">একাত্মতা ও অঙ্গীকার</span>
+        <h2 class="section-title">বিশ্বব্যাপী বাঙালির যৌথ অঙ্গীকার</h2>
+        <p class="section-desc">
+          মাতৃভাষার মর্যাদা ও ডিজিটালাইজেশনে আপনার ভূমিকা কী হবে? নিচের ফর্মে এক বাক্যে লিখে বিশ্বের মানচিত্রে যুক্ত হোন।
+        </p>
+      </div>
+
+      <!-- Pledge Form -->
+      <div class="glass-panel" style="max-width: 680px; margin: 0 auto 48px;">
+        <form id="formPledge" class="custom-form">
+          <div class="form-row">
+            <div>
+              <label style="font-size: 0.85rem; color: #9ca3af; display: block; margin-bottom: 6px;">আপনার নাম:</label>
+              <input type="text" id="pledgeName" class="form-input" placeholder="যেমন: ফারহান আহমেদ" required>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; color: #9ca3af; display: block; margin-bottom: 6px;">দেশ / শহর:</label>
+              <input type="text" id="pledgeCountry" class="form-input" placeholder="যেমন: বাংলাদেশ / লন্ডন, যুক্তরাজ্য" required>
+            </div>
+          </div>
+          <div>
+            <label style="font-size: 0.85rem; color: #9ca3af; display: block; margin-bottom: 6px;">আপনার পেশা বা ভূমিকা:</label>
+            <input type="text" id="pledgeRole" class="form-input" placeholder="যেমন: সফটওয়্যার প্রকৌশলী / শিক্ষার্থী / শিক্ষক">
+          </div>
+          <div>
+            <label style="font-size: 0.85rem; color: #9ca3af; display: block; margin-bottom: 6px;">আপনার অঙ্গীকার (এক বা দুই বাক্যে):</label>
+            <textarea id="pledgeCommitment" class="form-textarea" placeholder="বাংলা ভাষা ও বিজ্ঞানের জন্য আগামী দিনে আপনি কী অবদান রাখবেন..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span>✍️</span> অঙ্গীকার ওয়াল-এ যুক্ত করুন
+          </button>
+        </form>
+      </div>
+
+      <!-- Pledge Wall Grid -->
+      <div class="pledge-wall-grid" id="pledgeWallGrid">
+        <!-- Dynamically loaded from SQLite /api/pledges -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Ideas Board Section -->
+  <section class="section" id="ideasSection">
+    <div class="container">
+      <div class="section-head">
+        <span class="pill-badge pill-purple">উন্মুক্ত আইডিয়াবোর্ড</span>
+        <h2 class="section-title">কমিউনিটি আইডিয়া ও ভোটিং</h2>
+        <p class="section-desc">
+          বিশ্বে বাংলা ভাষার প্রসারে নিত্যনতুন পরিকল্পনা প্রস্তাব করুন এবং সেরা আইডিয়াগুলোতে ভোট দিয়ে অগ্রাধিকার নির্ধারণ করুন।
+        </p>
+      </div>
+
+      <!-- Idea Submit Form -->
+      <div class="glass-panel" style="max-width: 680px; margin: 0 auto 48px;">
+        <form id="formIdea" class="custom-form">
+          <div class="form-row">
+            <div>
+              <label style="font-size: 0.85rem; color: #9ca3af; display: block; margin-bottom: 6px;">আইডিয়ার শিরোনাম:</label>
+              <input type="text" id="ideaTitle" class="form-input" placeholder="সংক্ষিপ্ত আকর্ষণীয় শিরোনাম" required>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; color: #9ca3af; display: block; margin-bottom: 6px;">বিভাগ:</label>
+              <select id="ideaCategory" class="form-select">
+                <option value="এআই ও প্রযুক্তি">এআই ও প্রযুক্তি</option>
+                <option value="শিক্ষা ও শিশু">শিক্ষা ও শিশু</option>
+                <option value="সাহিত্য ও প্রকাশনা">সাহিত্য ও প্রকাশনা</option>
+                <option value="বিজ্ঞান ও গবেষণা">বিজ্ঞান ও গবেষণা</option>
+                <option value="মিডিয়া ও অ্যানিমেশন">মিডিয়া ও অ্যানিমেশন</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label style="font-size: 0.85rem; color: #9ca3af; display: block; margin-bottom: 6px;">আপনার নাম:</label>
+              <input type="text" id="ideaAuthor" class="form-input" placeholder="আপনার নাম">
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; color: #9ca3af; display: block; margin-bottom: 6px;">দেশ:</label>
+              <input type="text" id="ideaCountry" class="form-input" placeholder="দেশ">
+            </div>
+          </div>
+          <div>
+            <label style="font-size: 0.85rem; color: #9ca3af; display: block; margin-bottom: 6px;">বিস্তারিত পরিকল্পনা:</label>
+            <textarea id="ideaDesc" class="form-textarea" placeholder="আইডিয়াটির রূপরেখা ও বাস্তবায়নের উপায় সংক্ষেপে লিখুন..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" style="background: linear-gradient(135deg, var(--purple-neon), #6d28d9);">
+            <span>💡</span> আইডিয়া সাবমিট করুন
+          </button>
+        </form>
+      </div>
+
+      <!-- Ideas Grid -->
+      <div class="pledge-wall-grid" id="ideasGrid">
+        <!-- Dynamically loaded from /api/ideas -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Literature Reader Modal -->
+  <div class="modal-overlay" id="readerModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="readerCloseBtn" aria-label="বন্ধ করুন">✕</button>
+      
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 20px;">
+        <div>
+          <h2 id="readerTitle" style="font-size: 1.8rem; font-weight: 800; color: #fff;"></h2>
+          <div id="readerAuthor" style="font-size: 1rem; color: var(--gold-antique); font-weight: 700;"></div>
+          <div id="readerEra" style="font-size: 0.82rem; color: #9ca3af;"></div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="tok-preset-btn" id="btnFontMinus">A-</button>
+          <button class="tok-preset-btn" id="btnFontPlus">A+</button>
+        </div>
+      </div>
+
+      <div class="reader-text-body" id="readerBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+            <div class="flag-badge"></div>
+            <span style="font-size: 1.25rem; font-weight: 800; color: #fff;">জয় বাংলা — গ্লোবাল বাংলা</span>
+          </div>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; max-width: 320px;">
+            বিশ্বব্যাপী ৩০ কোটি মানুষের মাতৃভাষা বাংলাকে একবিংশ শতাব্দীর অন্যতম শীর্ষ ডিজিটাল, বৈজ্ঞানিক ও অর্থনৈতিক ভাষায় রূপান্তরের উন্মুক্ত প্ল্যাটফর্ম।
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">৪টি মূল স্তম্ভ</h4>
+          <ul class="footer-links">
+            <li><a href="#pillars">ভাষা ও এআই প্রযুক্তি</a></li>
+            <li><a href="#pillars">সাহিত্য ও বিশ্বায়ন</a></li>
+            <li><a href="#pillars">সংস্কৃতি ও অ্যানিমেশন</a></li>
+            <li><a href="#pillars">বিজ্ঞান ও নলেজ হাব</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">ডিজিটাল টুলস</h4>
+          <ul class="footer-links">
+            <li><a href="#interactiveHub">টোকেনায়ন ল্যাব</a></li>
+            <li><a href="#interactiveHub">ভার্চুয়াল সায়েন্স ল্যাব</a></li>
+            <li><a href="#interactiveHub">কমন ভয়েস রেকর্ডার</a></li>
+            <li><a href="#interactiveHub">প্রযুক্তি পরিভাষাকোষ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">উন্মুক্ত আন্দোলন</h4>
+          <ul class="footer-links">
+            <li><a href="#pledgeSection">বাঙালির অঙ্গীকার</a></li>
+            <li><a href="#ideasSection">কমিউনিটি আইডিয়া</a></li>
+            <li><a href="#literature">ডিজিটাল ক্লাসিক্স</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">ওপেন সোর্স গিটহাব</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© ২০২৬ জয় বাংলা — গ্লোবাল বাংলা ইনিশিয়েটিভ। সর্বস্বত্ব উন্মুক্ত (MIT & CC-BY)।</div>
+        <div>Made with ❤️ for thirty crore Bengalis worldwide.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/science-lab.js"></script>
+  <script src="js/voice-recorder.js"></script>
+  <script src="js/reader.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

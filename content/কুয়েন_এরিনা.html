@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিশ্বব্যাপী বাংলা ভাষা জনপ্রিয়করণ - Global Bengali Language Promotion Strategy</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Hind Siliguri', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0c0a09 0%, #1c1917 50%, #0c4a6e 100%);
+            min-height: 100vh;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+        }
+
+        .card-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card-glass:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 40px rgba(220, 38, 38, 0.5);
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(185, 28, 28, 0.1));
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+
+        .strategy-card {
+            border-left: 4px solid #dc2626;
+        }
+
+        .priority-high {
+            border-left-color: #ef4444;
+        }
+
+        .priority-medium {
+            border-left-color: #f59e0b;
+        }
+
+        .priority-low {
+            border-left-color: #22c55e;
+        }
+
+        .bangla-flag {
+            background: linear-gradient(90deg, #006a4e 50%, #dc2626 50%);
+            border-radius: 8px;
+        }
+
+        .language-icon {
+            font-size: 3rem;
+            filter: drop-shadow(0 0 20px rgba(220, 38, 38, 0.5));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0a09;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dc2626;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Hero Section -->
+    <header class="hero-gradient min-h-[60vh] flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-red-600 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-green-600 rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 py-20 text-center relative z-10">
+            <div class="mb-6 floating">
+                <span class="text-8xl">🇧🇩</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 glow-text">বিশ্বব্যাপী বাংলা ভাষা জনপ্রিয়করণ</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-2">Global Bengali Language Promotion Strategy</p>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-8">২৭ কোটি+ ভাষী, বিশ্বের ৭ম বৃহত্তম ভাষা — কিন্তু ওয়েব কন্টেন্টের মাত্র ০.৫%! কীভাবে এই ব্যবধান পূরণ করব?</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <div class="stat-card rounded-full px-6 py-3 flex items-center gap-2">
+                    <span class="text-2xl">👥</span>
+                    <div>
+                        <div class="text-xl font-bold">২৭৩ মিলিয়ন</div>
+                        <div class="text-xs text-gray-300">মোট ভাষী</div>
+                    </div>
+                </div>
+                <div class="stat-card rounded-full px-6 py-3 flex items-center gap-2">
+                    <span class="text-2xl">🌐</span>
+                    <div>
+                        <div class="text-xl font-bold">&lt;০.৫%</div>
+                        <div class="text-xs text-gray-300">ওয়েব কন্টেন্ট</div>
+                    </div>
+                </div>
+                <div class="stat-card rounded-full px-6 py-3 flex items-center gap-2">
+                    <span class="text-2xl">📈</span>
+                    <div>
+                        <div class="text-xl font-bold">৭ম</div>
+                        <div class="text-xs text-gray-300">বিশ্ব র‍্যাঙ্কিং</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#current-status" class="bg-white text-red-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition">
+                    বর্তমান অবস্থা
+                </a>
+                <a href="#strategies" class="border border-white/50 text-white font-semibold px-8 py-3 rounded-full hover:bg-white/10 transition">
+                    কৌশলসমূহ
+                </a>
+                <a href="#digital" class="border border-white/50 text-white font-semibold px-8 py-3 rounded-full hover:bg-white/10 transition">
+                    ডিজিটাল প্ল্যান
+                </a>
+                <a href="#action" class="border border-white/50 text-white font-semibold px-8 py-3 rounded-full hover:bg-white/10 transition">
+                    অ্যাকশন প্ল্যান
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Current Status Section -->
+    <section id="current-status" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-10 glow-text">📊 বর্তমান অবস্থা ও চ্যালেঞ্জ</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+            <div class="card-glass rounded-xl p-6 text-center">
+                <div class="text-4xl mb-3">🌍</div>
+                <div class="text-3xl font-bold text-red-400 mb-2">২৭৩M</div>
+                <div class="text-sm text-gray-400">মোট ভাষী (বিশ্বব্যাপী)</div>
+            </div>
+            <div class="card-glass rounded-xl p-6 text-center">
+                <div class="text-4xl mb-3">📱</div>
+                <div class="text-3xl font-bold text-green-400 mb-2">২৩০M</div>
+                <div class="text-sm text-gray-400">নেটিভ স্পিকার</div>
+            </div>
+            <div class="card-glass rounded-xl p-6 text-center">
+                <div class="text-4xl mb-3">🌐</div>
+                <div class="text-3xl font-bold text-yellow-400 mb-2">০.৫%</div>
+                <div class="text-sm text-gray-400">ওয়েব কন্টেন্ট শেয়ার</div>
+            </div>
+            <div class="card-glass rounded-xl p-6 text-center">
+                <div class="text-4xl mb-3">📈</div>
+                <div class="text-3xl font-bold text-blue-400 mb-2">৭ম</div>
+                <div class="text-sm text-gray-400">বিশ্ব ভাষা র‍্যাঙ্কিং</div>
+            </div>
+        </div>
+
+        <!-- Key Challenges -->
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-2xl font-semibold mb-6 text-red-300">⚠️ মূল চ্যালেঞ্জসমূহ</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-glass rounded-xl p-6 strategy-card priority-high">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-2xl">🔴</span>
+                        <div>
+                            <h4 class="text-lg font-semibold text-red-300">ডিজিটাল উপস্থিতির অভাব</h4>
+                            <p class="text-gray-400 text-sm mt-2">
+                                ২৭৩ মিলিয়ন ভাষী হলেও ওয়েব কন্টেন্টের মাত্র ০.৫% বাংলায়। ইংরেজি, চাইনিজ, স্প্যানিশের তুলনায় অনেক পিছিয়ে।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-xl p-6 strategy-card priority-high">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-2xl">🔴</span>
+                        <div>
+                            <h4 class="text-lg font-semibold text-red-300">টেকনোলজি সাপোর্ট সীমিত</h4>
+                            <p class="text-gray-400 text-sm mt-2">
+                                Google Translate, AI টুলস, ভয়েস রিকগনিশনে বাংলা সাপোর্ট দুর্বল। ইউনিকোড এবং ফন্ট সমস্যা এখনও বিদ্যমান।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-xl p-6 strategy-card priority-medium">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-2xl">🟠</span>
+                        <div>
+                            <h4 class="text-lg font-semibold text-orange-300">কন্টেন্ট ক্রিয়েটরের অভাব</h4>
+                            <p class="text-gray-400 text-sm mt-2">
+                                ইউটিউব, ব্লগ, পডকাস্টে গুণগত বাংলা কন্টেন্ট কম। অধিকাংশ ক্রিয়েটর ইংরেজি বা বাংলিশে কাজ করতে স্বাচ্ছন্দ্যবোধ করেন।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-xl p-6 strategy-card priority-medium">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-2xl">🟠</span>
+                        <div>
+                            <h4 class="text-lg font-semibold text-orange-300">আন্তর্জাতিক মার্কেটিং নেই</h4>
+                            <p class="text-gray-400 text-sm mt-2">
+                                বাংলা ভাষা শেখার আন্তর্জাতিক প্ল্যাটফর্ম (Duolingo, Babbel-এ) নেই। বিদেশিদের জন্য শেখার সুযোগ সীমিত।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-xl p-6 strategy-card priority-low">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-2xl">🟢</span>
+                        <div>
+                            <h4 class="text-lg font-semibold text-green-300">সরকারি পলিসি দুর্বল</h4>
+                            <p class="text-gray-400 text-sm mt-2">
+                                ডিজিটাল বাংলা, ক্লাউড স্টোরেজ, ওপেন সোর্স টুলসে সরকারি বিনিয়োগ কম। প্রাইভেট সেক্টরও আগ্রহী নয়।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-xl p-6 strategy-card priority-low">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-2xl">🟢</span>
+                        <div>
+                            <h4 class="text-lg font-semibold text-green-300">ডায়াস্পোরা সংযোগ নেই</h4>
+                            <p class="text-gray-400 text-sm mt-2">
+                                বিশ্বের ৫০+ দেশে বাংলাভাষী প্রবাসীরা ভাষা হারাচ্ছেন। দ্বিতীয়-তৃতীয় প্রজন্মের সাথে সংযোগ নেই।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategies Section -->
+    <section id="strategies" class="py-16 bg-gray-900/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 glow-text">🎯 জনপ্রিয়করণ কৌশলসমূহ</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">৫টি মূল স্তম্ভের উপর ভিত্তি করে সামগ্রিক পরিকল্পনা</p>
+
+            <div class="max-w-6xl mx-auto">
+                <!-- Strategy 1: Digital Content -->
+                <div class="card-glass rounded-2xl p-8 mb-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-red-600 rounded-xl flex items-center justify-center text-3xl">💻</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-red-300">১. ডিজিটাল কন্টেন্ট বিপ্লব</h3>
+                            <p class="text-gray-400">ওয়েব কন্টেন্ট ০.৫% → ৫% (১০ গুণ বৃদ্ধি)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <h4 class="font-semibold text-blue-300 mb-3">📝 ব্লগ ও ওয়েবসাইট</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• ১০,০০০+ বাংলা ব্লগ তৈরি</li>
+                                <li>• উইকিপিডিয়া ১০০,০০০+ আর্টিকেল</li>
+                                <li>• নিউজ পোর্টাল আন্তর্জাতিক মানের</li>
+                                <li>• SEO অপ্টিমাইজড কন্টেন্ট</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <h4 class="font-semibold text-green-300 mb-3">📺 ভিডিও কন্টেন্ট</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• ইউটিউব চ্যানেল ৫০,০০০+</li>
+                                <li>• এডুকেশনাল ভিডিও (খান একাডেমি স্টাইল)</li>
+                                <li>• টেক টিউটোরিয়াল বাংলায়</li>
+                                <li>• শর্ট ফর্ম কন্টেন্ট (Reels, TikTok)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <h4 class="font-semibold text-purple-300 mb-3">🎙️ পডকাস্ট ও অডিও</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• স্পটিফাই, Apple Podcasts-এ বাংলা</li>
+                                <li>• অডিওবুক প্ল্যাটফর্ম</li>
+                                <li>• রেডিও ড্রামা ডিজিটালাইজেশন</li>
+                                <li>• সাউন্ডক্লাউদ চ্যানেল</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategy 2: Technology -->
+                <div class="card-glass rounded-2xl p-8 mb-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center text-3xl">🤖</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-300">২. প্রযুক্তি ও টুলস উন্নয়ন</h3>
+                            <p class="text-gray-400">AI, ML, NLP-এ বাংলা ইন্টিগ্রেশন</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-yellow-300 mb-2">⌨️ কিবোর্ড ও ইনপুট</h4>
+                                <p class="text-gray-400 text-sm">অভ্র, বিজয়, গুগল ইনপুট টুলস উন্নত করা। ভয়েস টাইপিং, হ্যান্ডরাইটিং রিকগনিশন যোগ করা।</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-green-300 mb-2">🧠 AI ও মেশিন লার্নিং</h4>
+                                <p class="text-gray-400 text-sm">বাংলা NLP মডেল তৈরি। ChatGPT, Gemini-তে বাংলা সাপোর্ট উন্নত করা। ওপেন সোর্স ডেটাসেট তৈরি।</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-purple-300 mb-2">🌐 ওয়েব ও অ্যাপ লোকালাইজেশন</h4>
+                                <p class="text-gray-400 text-sm">Facebook, Google, Microsoft-এর সব প্রোডাক্টে পূর্ণাঙ্গ বাংলা সাপোর্ট। অ্যাপ স্টোরে বাংলা অ্যাপ বৃদ্ধি।</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-red-300 mb-2">📚 ডিজিটাল লাইব্রেরি</h4>
+                                <p class="text-gray-400 text-sm">বই, গবেষণাপত্র, সাময়িকী ডিজিটালাইজেশন। ওপেন অ্যাক্সেস প্ল্যাটফর্ম তৈরি।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategy 3: Education -->
+                <div class="card-glass rounded-2xl p-8 mb-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center text-3xl">📚</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-green-300">৩. শিক্ষা ও শেখার প্ল্যাটফর্ম</h3>
+                            <p class="text-gray-400">বিশ্বজুড়ে বাংলা শেখার সুযোগ তৈরি</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <div class="text-3xl mb-3">🎓</div>
+                            <h4 class="font-semibold text-blue-300 mb-3">অনলাইন কোর্স</h4>
+                            <p class="text-gray-400 text-sm mb-3">Duolingo, Coursera, edX-এ বাংলা কোর্স যোগ করা। ফ্রি এবং প্রিমিয়াম উভয় টায়ার।</p>
+                            <div class="text-xs text-gray-500">লক্ষ্য: ১ মিলিয়ন+ শিক্ষার্থী/বছর</div>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <div class="text-3xl mb-3">🏫</div>
+                            <h4 class="font-semibold text-green-300 mb-3">বিশ্ববিদ্যালয় কোর্স</h4>
+                            <p class="text-gray-400 text-sm mb-3">বিশ্বের শীর্ষ বিশ্ববিদ্যালয়ে বাংলা বিভাগ চালু। স্কলারশিপ ও এক্সচেঞ্জ প্রোগ্রাম।</p>
+                            <div class="text-xs text-gray-500">লক্ষ্য: ১০০+ বিশ্ববিদ্যালয়</div>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <div class="text-3xl mb-3">👨‍🏫</div>
+                            <h4 class="font-semibold text-purple-300 mb-3">শিক্ষক প্রশিক্ষণ</h4>
+                            <p class="text-gray-400 text-sm mb-3">আন্তর্জাতিক মানের বাংলা শিক্ষক তৈরি। অনলাইন সার্টিফিকেশন প্রোগ্রাম।</p>
+                            <div class="text-xs text-gray-500">লক্ষ্য: ১০,০০০+ সার্টিফাইড শিক্ষক</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategy 4: Culture & Media -->
+                <div class="card-glass rounded-2xl p-8 mb-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center text-3xl">🎭</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-purple-300">৪. সংস্কৃতি ও মিডিয়া প্রচার</h3>
+                            <p class="text-gray-400">বাংলা সংস্কৃতি বিশ্বদরবারে</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-red-300 mb-2">🎬 চলচ্চিত্র ও ওটিটি</h4>
+                                <p class="text-gray-400 text-sm">নেটফ্লিক্স, অ্যামাজন প্রাইমে বাংলা কন্টেন্ট বৃদ্ধি। সাবটাইটেল ২০+ ভাষায়। আন্তর্জাতিক ফিল্ম ফেস্টিভ্যালে অংশগ্রহণ।</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-yellow-300 mb-2">🎵 সংগীত ও বিনোদন</h4>
+                                <p class="text-gray-400 text-sm">স্পটিফাই, Apple Music-এ বাংলা গান প্রমোট। আন্তর্জাতিক কনসার্ট। কোলাবোরেশন (A.R. Rahman, শাকিরা ইত্যাদি)।</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-blue-300 mb-2">📖 সাহিত্য ও প্রকাশনা</h4>
+                                <p class="text-gray-400 text-sm">রবীন্দ্রনাথ, নজরুল, শরৎচন্দ্রের অনুবাদ প্রকাশ। আন্তর্জাতিক বইমেলায় অংশগ্রহণ। সাহিত্য পুরস্কার তৈরি।</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-green-300 mb-2">🎪 উৎসব ও ইভেন্ট</h4>
+                                <p class="text-gray-400 text-sm">আন্তর্জাতিক মাতৃভাষা দিবস (২১শে ফেব্রুয়ারি) বিশ্বব্যাপী পালন। বাংলা নববর্ষ (পহেলা বৈশাখ) গ্লোবাল ইভেন্ট।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategy 5: Policy & Community -->
+                <div class="card-glass rounded-2xl p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-yellow-600 rounded-xl flex items-center justify-center text-3xl">🤝</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-yellow-300">৫. নীতিমালা ও কমিউনিটি বিল্ডিং</h3>
+                            <p class="text-gray-400">সরকার, প্রাইভেট, এনজিও সমন্বয়</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <h4 class="font-semibold text-red-300 mb-3">🏛️ সরকারি পলিসি</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• ডিজিটাল বাংলা বাধ্যতামূলক</li>
+                                <li>• সকল সরকারি ওয়েবসাইট বাংলায়</li>
+                                <li>• ট্যাক্স ইনসেনটিভ (বাংলা কন্টেন্ট)</li>
+                                <li>• গবেষণা গ্রান্ট বৃদ্ধি</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <h4 class="font-semibold text-blue-300 mb-3">🏢 প্রাইভেট সেক্টর</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• CSR ফান্ড বাংলা প্রমোশনে</li>
+                                <li>• টেক কোম্পানি বাংলা সাপোর্ট</li>
+                                <li>• মিডিয়া হাউস আন্তর্জাতিক কন্টেন্ট</li>
+                                <li>• স্টার্টআপ ইনকিউবেটর</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <h4 class="font-semibold text-green-300 mb-3">👥 কমিউনিটি</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• ডায়াস্পোরা নেটওয়ার্ক (৫০+ দেশ)</li>
+                                <li>• ভলান্টিয়ার প্রোগ্রাম</li>
+                                <li>• ওপেন সোর্স কন্ট্রিবিউশন</li>
+                                <li>• সোশ্যাল মিডিয়া ক্যাম্পেইন</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Action Plan -->
+    <section id="digital" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 glow-text">💡 ডিজিটাল অ্যাকশন প্ল্যান</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">ব্যক্তিগত ও প্রতিষ্ঠানিক পর্যায়ে করণীয়</p>
+
+            <div class="max-w-6xl mx-auto">
+                <!-- For Individuals -->
+                <div class="card-glass rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-blue-300 mb-6 flex items-center gap-3">
+                        <span class="text-3xl">👤</span>
+                        ব্যক্তিগত পর্যায়ে করণীয়
+                    </h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-green-400">✓</span>
+                                <h4 class="font-semibold text-white">সোশ্যাল মিডিয়া বাংলায়</h4>
+                            </div>
+                            <p class="text-gray-400 text-sm">ফেসবুক, টুইটার, ইনস্টাগ্রামে বাংলা পোস্ট। ইংরেজির পাশাপাশি বাংলা ক্যাপশন যোগ করা।</p>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-green-400">✓</span>
+                                <h4 class="font-semibold text-white">ইউটিউব চ্যানেল</h4>
+                            </div>
+                            <p class="text-gray-400 text-sm">আপনার এক্সপার্টিজ নিয়ে বাংলা টিউটোরিয়াল তৈরি। সাবটাইটেল ইংরেজিতে যোগ করা।</p>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-green-400">✓</span>
+                                <h4 class="font-semibold text-white">ব্লগ লেখা</h4>
+                            </div>
+                            <p class="text-gray-400 text-sm">মিডিয়াম, লিংকডইন, ব্যক্তিগত ব্লগে বাংলা আর্টিকেল। SEO অপ্টিমাইজেশন শিখুন।</p>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-green-400">✓</span>
+                                <h4 class="font-semibold text-white">উইকিপিডিয়া এডিট</h4>
+                            </div>
+                            <p class="text-gray-400 text-sm">বাংলা উইকিপিডিয়ায় নতুন আর্টিকেল তৈরি, বিদ্যমান আর্টিকেল আপডেট করা।</p>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-green-400">✓</span>
+                                <h4 class="font-semibold text-white">ওপেন সোর্স কন্ট্রিবিউট</h4>
+                            </div>
+                            <p class="text-gray-400 text-sm">GitHub-এ বাংলা প্রজেক্ট। ফন্ট, কিবোর্ড, ট্রান্সলেশন টুলস তৈরি।</p>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-green-400">✓</span>
+                                <h4 class="font-semibold text-white">পডকাস্ট শুরু</h4>
+                            </div>
+                            <p class="text-gray-400 text-sm">স্পটিফাই, Apple Podcasts-এ বাংলা পডকাস্ট। সাপ্তাহিক এপিসোড আপলোড।</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- For Organizations -->
+                <div class="card-glass rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-green-300 mb-6 flex items-center gap-3">
+                        <span class="text-3xl">🏢</span>
+                        প্রতিষ্ঠানিক পর্যায়ে করণীয়
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-purple-300 mb-2">ওয়েবসাইট লোকালাইজেশন</h4>
+                                <p class="text-gray-400 text-sm">সকল অফিশিয়াল ওয়েবসাইট, অ্যাপ, ইমেইল টেমপ্লেট বাংলায় তৈরি। ইংরেজি-বাংলা বাইলিঙ্গুয়াল অপশন রাখা।</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-yellow-300 mb-2">কন্টেন্ট মার্কেটিং</h4>
+                                <p class="text-gray-400 text-sm">ব্লগ, ভিডিও, ইনফোগ্রাফিক্স বাংলায় তৈরি। সোশ্যাল মিডিয়া ক্যাম্পেইন পরিচালনা।</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-red-300 mb-2">কর্মী প্রশিক্ষণ</h4>
+                                <p class="text-gray-400 text-sm">কর্মীদের বাংলা টাইপিং, ডিজিটাল টুলস ব্যবহারে প্রশিক্ষণ। ইনসেনটিভ প্রোগ্রাম।</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-blue-300 mb-2">CSR ইনিশিয়েটিভ</h4>
+                                <p class="text-gray-400 text-sm">বাংলা ভাষা প্রমোশনে বাজেট বরাদ্দ। স্কুল, কলেজ, কমিউনিটি সেন্টারে সহায়তা।</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-green-300 mb-2">প্রযুক্তি বিনিয়োগ</h4>
+                                <p class="text-gray-400 text-sm">AI, NLP, ভয়েস টেকনোলজিতে বাংলা সাপোর্ট উন্নয়নে বিনিয়োগ। স্টার্টআপ ফান্ডিং।</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-xl p-4">
+                                <h4 class="font-semibold text-purple-300 mb-2">পার্টনারশিপ</h4>
+                                <p class="text-gray-400 text-sm">বিশ্ববিদ্যালয়, এনজিও, সরকারি সংস্থার সাথে সহযোগিতা। জয়েন্ট প্রজেক্ট ও গবেষণা।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- For Government -->
+                <div class="card-glass rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-red-300 mb-6 flex items-center gap-3">
+                        <span class="text-3xl">🏛️</span>
+                        সরকারি পর্যায়ে করণীয়
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <h4 class="font-semibold text-blue-300 mb-3">📋 নীতিমালা</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• সকল সরকারি যোগাযোগ বাংলায় বাধ্যতামূলক</li>
+                                <li>• ডিজিটাল সার্ভিস ১০০% বাংলায়</li>
+                                <li>• শিক্ষাক্রমে বাংলা ভাষা গুরুত্ব বৃদ্ধি</li>
+                                <li>• আন্তর্জাতিক ভাষা নীতি প্রণয়ন</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <h4 class="font-semibold text-green-300 mb-3">💰 বিনিয়োগ</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• বাংলা টেক ডেভেলপমেন্টে ১০০০ কোটি টাকা</li>
+                                <li>• গবেষণা গ্রান্ট ৫ গুণ বৃদ্ধি</li>
+                                <li>• স্টার্টআপ ফান্ড (ভাষা প্রযুক্তি)</li>
+                                <li>• ইনফ্রাস্ট্রাকচার ডেভেলপমেন্ট</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-xl p-5">
+                            <h4 class="font-semibold text-purple-300 mb-3">🌍 আন্তর্জাতিক</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• UNESCO-র সাথে সহযোগিতা</li>
+                                <li>• আন্তর্জাতিক মাতৃভাষা দিবস গ্লোবাল ইভেন্ট</li>
+                                <li>• ডায়াস্পোরা এম্বাসেডর প্রোগ্রাম</li>
+                                <li>• ভাষা দূত নিয়োগ (৫০+ দেশ)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline & Goals -->
+    <section id="action" class="py-16 bg-gray-900/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 glow-text">📅 টাইমলাইন ও লক্ষ্যমাত্রা</h2>
+            
+            <div class="max-w-5xl mx-auto">
+                <!-- Short Term -->
+                <div class="card-glass rounded-2xl p-8 mb-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-bold text-green-300">স্বল্পমেয়াদী (১-২ বছর)</h3>
+                        <span class="bg-green-600 px-4 py-2 rounded-full text-sm font-semibold">২০২৬-২০২৭</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">📱 সোশ্যাল মিডিয়া</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• ১ মিলিয়ন+ বাংলা কন্টেন্ট ক্রিয়েটর</li>
+                                <li>• #BanglaContent ক্যাম্পেইন লঞ্চ</li>
+                                <li>• ভাইরাল চ্যালেঞ্জ (TikTok, Reels)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">🎓 শিক্ষা</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• Duolingo-তে বাংলা কোর্স যোগ</li>
+                                <li>• ১০০০+ স্কুলে ডিজিটাল বাংলা</li>
+                                <li>• অনলাইন টিচার ট্রেনিং</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">🤖 প্রযুক্তি</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• Google Translate উন্নয়ন</li>
+                                <li>• বাংলা ভয়েস টাইপিং</li>
+                                <li>• ওপেন সোর্স ফন্ট রিলিজ</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">📊 ওয়েব কন্টেন্ট</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• ০.৫% → ১.৫% ওয়েব শেয়ার</li>
+                                <li>• ৫০,০০০+ নতুন বাংলা ওয়েবসাইট</li>
+                                <li>• উইকিপিডিয়া ১৫০,০০০ আর্টিকেল</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium Term -->
+                <div class="card-glass rounded-2xl p-8 mb-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-bold text-yellow-300">মধ্যমেয়াদী (৩-৫ বছর)</h3>
+                        <span class="bg-yellow-600 px-4 py-2 rounded-full text-sm font-semibold">২০২৭-২০৩০</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">🌍 আন্তর্জাতিক</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• ৫০+ দেশে বাংলা কোর্স</li>
+                                <li>• ১০০+ বিশ্ববিদ্যালয়ে বাংলা বিভাগ</li>
+                                <li>• আন্তর্জাতিক ভাষা দূত নিয়োগ</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">🎬 মিডিয়া</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• নেটফ্লিক্সে ১০০+ বাংলা শো</li>
+                                <li>• স্পটিফাই টপ ১০-এ বাংলা গান</li>
+                                <li>• আন্তর্জাতিক ফিল্ম ফেস্টিভ্যাল</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">💼 ব্যবসা</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• ১০,০০০+ বাংলা ই-কমার্স</li>
+                                <li>• বাংলা পেমেন্ট গেটওয়ে</li>
+                                <li>• ডিজিটাল মার্কেটিং এজেন্সি</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">📈 ওয়েব কন্টেন্ট</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• ১.৫% → ৩% ওয়েব শেয়ার</li>
+                                <li>• ৫০০,০০০+ বাংলা ওয়েবসাইট</li>
+                                <li>• উইকিপিডিয়া ৩০০,০০০ আর্টিকেল</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Long Term -->
+                <div class="card-glass rounded-2xl p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-bold text-blue-300">দীর্ঘমেয়াদী (৫-১০ বছর)</h3>
+                        <span class="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold">২০৩০-২০৩৫</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">🏆 গ্লোবাল স্ট্যাটাস</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• টপ ৫ গ্লোবাল ল্যাঙ্গুয়েজ</li>
+                                <li>• UN অফিশিয়াল ল্যাঙ্গুয়েজ</li>
+                                <li>• আন্তর্জাতিক ভাষা দিবস (UN স্বীকৃত)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">🤖 AI ও প্রযুক্তি</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• ChatGPT-তে নেটিভ বাংলা</li>
+                                <li>• বাংলা AI অ্যাসিস্ট্যান্ট</li>
+                                <li>• ১০০% ভয়েস রিকগনিশন</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">📚 শিক্ষা</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• ১০ মিলিয়ন+ অনলাইন শিক্ষার্থী</li>
+                                <li>• ৫০০+ বিশ্ববিদ্যালয়ে বাংলা</li>
+                                <li>• আন্তর্জাতিক সিলেবাস</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-white mb-2">🌐 ওয়েব কন্টেন্ট</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• ৩% → ৫%+ ওয়েব শেয়ার</li>
+                                <li>• ২ মিলিয়ন+ বাংলা ওয়েবসাইট</li>
+                                <li>• উইকিপিডিয়া ১ মিলিয়ন আর্টিকেল</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6 glow-text">🚀 আজই শুরু করুন!</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    বাংলা ভাষার ভবিষ্যত আমাদের হাতে। ছোট ছোট পদক্ষেপে বড় পরিবর্তন আনা সম্ভব।
+                </p>
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="card-glass rounded-xl p-6">
+                        <div class="text-4xl mb-3">✍️</div>
+                        <h3 class="font-bold text-lg mb-2">লেখা শুরু করুন</h3>
+                        <p class="text-gray-400 text-sm">ব্লগ, সোশ্যাল মিডিয়া, উইকিপিডিয়া — যেকোনো প্ল্যাটফর্মে বাংলায় লিখুন।</p>
+                    </div>
+                    <div class="card-glass rounded-xl p-6">
+                        <div class="text-4xl mb-3">🎥</div>
+                        <h3 class="font-bold text-lg mb-2">ভিডিও তৈরি করুন</h3>
+                        <p class="text-gray-400 text-sm">ইউটিউব, টিকটক, রিলস — বাংলা কন্টেন্ট তৈরি করে মিলিয়নদের কাছে পৌঁছান।</p>
+                    </div>
+                    <div class="card-glass rounded-xl p-6">
+                        <div class="text-4xl mb-3">🤝</div>
+                        <h3 class="font-bold text-lg mb-2">কমিউনিটি গড়ুন</h3>
+                        <p class="text-gray-400 text-sm">স্থানীয় ও আন্তর্জাতিক বাংলাভাষীদের সাথে যুক্ত হোন, নেটওয়ার্ক তৈরি করুন।</p>
+                    </div>
+                </div>
+                <div class="bangla-flag h-2 w-full mb-8"></div>
+                <p class="text-2xl font-bold text-red-400">
+                    "আমার ভাইয়ের রক্তে রাঙানো একুশে ফেব্রুয়ারি, আমি কি ভুলিতে পারি?"
+                </p>
+                <p class="text-gray-400 mt-4">— শহীদ মিনার, ঢাকা</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <span class="text-3xl">🇧🇩</span>
+                <span class="text-3xl">🇮🇳</span>
+            </div>
+            <p class="text-gray-500 text-sm mb-2">বিশ্বব্যাপী বাংলা ভাষা জনপ্রিয়করণ অভিযান</p>
+            <p class="text-gray-600 text-xs">Global Bengali Language Promotion Initiative</p>
+            <p class="text-gray-700 text-xs mt-4">২১শে ফেব্রুয়ারি • আন্তর্জাতিক মাতৃভাষা দিবস</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Animate on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card-glass').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
